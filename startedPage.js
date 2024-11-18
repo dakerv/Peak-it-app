@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity, Image, Button } from 'react-native';
 
-export default function orderPage( { navigation }) {
+export default function startedPage( { navigation }) {
   const handlePress = () => {
     alert ("Skip clicked!");
   };
@@ -17,14 +17,14 @@ export default function orderPage( { navigation }) {
       </TouchableOpacity>
 
       <View style={styles.welcomeContainer}>
-        <Text style = {styles.welcomeText}> Receive Food Orders </Text>
+        <Text style = {styles.welcomeText}> Get started </Text>
       </View>
 
       <Image style = {styles.imagePositioning} 
-        source ={require('./assets/images/undraw_Accept_request_re_d81h 1.png')}  />
+        source ={require('./assets/images/undraw_term_sheet_re_ju7s 1.png')}  />
 
       <View style = {styles.greetingContainer}>
-        <Text style = {styles.greetingText}> Get food orders tailored to your menu and location </Text>
+        <Text style = {styles.greetingText}> You are one step away from taking orders and growing your business. Let's get started </Text>
       </View>
 
       <View style = {styles.buttonSpace}>
@@ -78,14 +78,14 @@ const styles = StyleSheet.create({
     top: '23%',
   },
   greetingContainer: {
-    top: '39%',
+    top: '40.5%',
   },
   greetingText: {
     color: "grey",
     textAlign: "center"
   },
   buttonSpace: {
-    top: '44%',
+    top: '46.2%',
   },
   greenButton: {
     backgroundColor: '#228B22',
