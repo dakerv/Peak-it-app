@@ -7,7 +7,7 @@ export default function startedPage( { navigation }) {
   };
 
   const handleNavigation = () => {
-    navigation.navigate ('startedPage');
+    navigation.navigate ('signup');
   };
 
   return (
