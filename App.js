@@ -8,6 +8,7 @@ import servicePage from './servicePage';
 import availabilityPage from './availabilityPage';
 import orderPage from './orderPage';
 import startedPage from './startedPage';
+import signup from './signup';
 
 const Stack = createNativeStackNavigator ();
 
@@ -38,6 +39,10 @@ export default function App () {
         <Stack.Screen 
           name="startedPage"
           component={startedPage} />
+
+        <Stack.Screen 
+          name="signup"
+          component={signup} />
 
       </Stack.Navigator> 
     </NavigationContainer>

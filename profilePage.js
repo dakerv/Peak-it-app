@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TouchableOpacity, Image, Button } from 'react-n
 
 export default function profilePage( { navigation }) {
   const handlePress = () => {
-    alert ("Skip clicked!");
+    navigation.navigate ('signup');
   };
 
   const handleNavigation = () => {
