@@ -1,13 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity, Image, Button } from 'react-native';
 
-export default function servicePage( { navigation }) {
+export default function availabilityPage( { navigation }) {
   const handlePress = () => {
     alert ("Skip clicked!");
   };
 
   const handleNavigation = () => {
-    navigation.navigate ('availabilityPage');
+    navigation.navigate ('welcomePage');
   };
 
   return (
@@ -17,14 +17,14 @@ export default function servicePage( { navigation }) {
       </TouchableOpacity>
 
       <View style={styles.welcomeContainer}>
-        <Text style = {styles.welcomeText}> List Your Services </Text>
+        <Text style = {styles.welcomeText}> Set Your Availability </Text>
       </View>
 
       <Image style = {styles.imagePositioning} 
-        source ={require('./assets/images/undraw_Terms_re_6ak4 1.png')}  />
+        source ={require('./assets/images/undraw_season_change_f99v 1.png')}  />
 
       <View style = {styles.greetingContainer}>
-        <Text style = {styles.greetingText}> Highlight the services you excel at, from chef to catery services </Text>
+        <Text style = {styles.greetingText}> Choose when you are available to take on orders and deliver to clients </Text>
       </View>
 
       <View style = {styles.buttonSpace}>
@@ -75,17 +75,17 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   imagePositioning: {
-    top: 100,
+    top: '23%',
   },
   greetingContainer: {
-    top: '32%',
+    top: '42%',
   },
   greetingText: {
     color: "grey",
     textAlign: "center"
   },
   buttonSpace: {
-    top: '36%',
+    top: '46.5%',
   },
   greenButton: {
     backgroundColor: '#228B22',

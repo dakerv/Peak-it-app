@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import welcomePage from './welcomePage';
 import profilePage from './profilePage';
 import servicePage from './servicePage';
+import availabilityPage from './availabilityPage';
 
 const Stack = createNativeStackNavigator ();
 
@@ -23,8 +24,12 @@ export default function App () {
         <Stack.Screen
           name="servicePage"
           component={servicePage} />
-          
+
+        <Stack.Screen
+          name="availabilityPage"
+          component={availabilityPage} />
+
       </Stack.Navigator> 
     </NavigationContainer>
-  )
-}
+  );
+};
