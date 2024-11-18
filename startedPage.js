@@ -93,12 +93,12 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     height: 50,
     borderRadius: 5,
-    padding: 12
+    padding: 15
   },
   nextText: {
     color: 'white',
     fontSize: 18,
     alignSelf: "center",
-    fontWeight: "bold"
+    fontWeight: "bold",
   }
 });
