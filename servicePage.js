@@ -21,10 +21,10 @@ export default function servicePage( { navigation }) {
       </View>
 
       <Image style = {styles.imagePositioning} 
-        source ={require('./assets/images/undraw_Profile_data_re_v81r 1.png')}  />
+        source ={require('./assets/images/undraw_Terms_re_6ak4 1.png')}  />
 
       <View style = {styles.greetingContainer}>
-        <Text style = {styles.greetingText}> Set up your Vendor Dashboard/Restaurant to showcase your menu. </Text>
+        <Text style = {styles.greetingText}> Highlight the services you excel at, from chef to catery services </Text>
       </View>
 
       <View style = {styles.buttonSpace}>
@@ -78,14 +78,14 @@ const styles = StyleSheet.create({
     top: 100,
   },
   greetingContainer: {
-    top: '38%',
+    top: '32%',
   },
   greetingText: {
     color: "grey",
     textAlign: "center"
   },
   buttonSpace: {
-    top: '45%',
+    top: '36%',
   },
   greenButton: {
     backgroundColor: '#228B22',
