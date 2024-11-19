@@ -1,7 +1,7 @@
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, Image } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Image, KeyboardAvoidingView } from 'react-native';
 
 export default function signup ({ navigation }) {
 
@@ -37,16 +37,24 @@ export default function signup ({ navigation }) {
 
             <TextInput
             style = {styles.input}
-            onChangeText = {onChangeText}
-            value = {text}
-            placeholder='Full Name'>
+            onChangeText = {onChangeNumber}
+            value = {number}
+            placeholder='Phone number'
+            keyboardType='numeric'>
             </TextInput>
 
             <TextInput
             style = {styles.input}
             onChangeText = {onChangeText}
             value = {text}
-            placeholder='Full Name'>
+            placeholder='Password'>
+            </TextInput>
+
+            <TextInput
+            style = {styles.input}
+            onChangeText = {onChangeText}
+            value = {text}
+            placeholder='Retype password'>
             </TextInput>
 
             </View>
@@ -84,15 +92,16 @@ const styles = StyleSheet.create ({
     },
 
     textBoxes: {
-        top: '10%'
+        top: '10%',
     },
 
     input: {
-        height: 40,
+        height: 50,
         borderWidth: 1,
-        margin: 12,
+        margin: 7,
         padding: 12,
-        borderColor: "grey"
+        borderColor: "lightgray",
+        borderRadius: 5
     }
 
 }
