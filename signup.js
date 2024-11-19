@@ -1,21 +1,25 @@
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-import React from 'react';
+import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, Image, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Image, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard, ScrollView } from 'react-native';
 
 export default function signup ({ navigation }) {
 
-    const [name, onChangeName] = React.useState()
-    const [email, onChangeEmail] = React.useState()
-    const [password, onChangePassword] = React.useState()
-    const [retype, onChangeRetype] = React.useState()
-    const [number, onChangeNumber] = React.useState ()
+    const [name, onChangeName] = React.useState();
+    const [email, onChangeEmail] = React.useState();
+    const [password, onChangePassword] = React.useState();
+    const [retype, onChangeRetype] = React.useState();
+    const [number, onChangeNumber] = React.useState ();
+
+    const [passwordVisible, setPasswordVisible] = useState(false);
+    const [retypepasswordVisible, setRetypePassword] = useState(false);
+
     return (
         <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-        keyboardVerticalOffset={80}
         style = {styles.container}>
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+            <ScrollView showsVerticalScrollIndicator = {false} >
             <View style = {{flex: 1}}>
 
             <View style = {styles.logoContainer}>
@@ -67,7 +71,10 @@ export default function signup ({ navigation }) {
             </TextInput>
 
             </View>
-                </View>
+                    
+                
+                    </View>
+                  </ScrollView>
             </TouchableWithoutFeedback>
         </KeyboardAvoidingView>
     );
@@ -104,6 +111,7 @@ const styles = StyleSheet.create ({
 
     textBoxes: {
         top: '10%',
+        height: 500
     },
 
     input: {
