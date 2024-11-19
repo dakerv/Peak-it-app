@@ -1,14 +1,23 @@
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, Image, KeyboardAvoidingView } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Image, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard } from 'react-native';
 
 export default function signup ({ navigation }) {
 
-    const [text, onChangeText] = React.useState()
+    const [name, onChangeName] = React.useState()
+    const [email, onChangeEmail] = React.useState()
+    const [password, onChangePassword] = React.useState()
+    const [retype, onChangeRetype] = React.useState()
     const [number, onChangeNumber] = React.useState ()
     return (
-        <View style = {styles.container}>
+        <KeyboardAvoidingView
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        keyboardVerticalOffset={80}
+        style = {styles.container}>
+            <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+            <View style = {{flex: 1}}>
+
             <View style = {styles.logoContainer}>
             <Image source = {require ('./assets/images/Logo SVG 1.png')} /> 
             <Image source = {require ('./assets/images/PickEAT PickIT.png')} />
@@ -16,22 +25,22 @@ export default function signup ({ navigation }) {
 
             <View style = {styles.introContainer}>
                 <Text style = {styles.personalInfo}> Personal Info </Text>
-                <Text style = {styles.introText2}> To continue, kindly fill the following boxeses </Text>
+                <Text style = {styles.introText2}> To continue, kindly fill the following boxes: </Text>
             </View>
 
             <View style = {styles.textBoxes}>
 
             <TextInput
             style = {styles.input}
-            onChangeText = {onChangeText}
-            value = {text}
+            onChangeText = {onChangeName}
+            value = {name}
             placeholder='Full Name'>
             </TextInput>
 
             <TextInput
             style = {styles.input}
-            onChangeText = {onChangeText}
-            value = {text}
+            onChangeText = {onChangeEmail}
+            value = {email}
             placeholder='Email address'>
             </TextInput>
 
@@ -45,20 +54,22 @@ export default function signup ({ navigation }) {
 
             <TextInput
             style = {styles.input}
-            onChangeText = {onChangeText}
-            value = {text}
+            onChangeText = {onChangePassword}
+            value = {password}
             placeholder='Password'>
             </TextInput>
 
             <TextInput
             style = {styles.input}
-            onChangeText = {onChangeText}
-            value = {text}
+            onChangeText = {onChangeRetype}
+            value = {retype}
             placeholder='Retype password'>
             </TextInput>
 
             </View>
-        </View>
+                </View>
+            </TouchableWithoutFeedback>
+        </KeyboardAvoidingView>
     );
 }
 
