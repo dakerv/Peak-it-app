@@ -1,7 +1,7 @@
-import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, Image, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Image, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard, ScrollView, TouchableOpacity } from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons';
 
 export default function signup ({ navigation }) {
 
@@ -48,6 +48,7 @@ export default function signup ({ navigation }) {
             placeholder='Email address'>
             </TextInput>
 
+            
             <TextInput
             style = {styles.input}
             onChangeText = {onChangeNumber}
@@ -56,18 +57,33 @@ export default function signup ({ navigation }) {
             keyboardType='numeric'>
             </TextInput>
 
+            <View style = {styles.passwordContainer}>
             <TextInput
             style = {styles.input}
             onChangeText = {onChangePassword}
             value = {password}
-            placeholder='Password'>
+            placeholder='Password'
+            secureTextEntry={!passwordVisible}>
             </TextInput>
+
+            <TouchableOpacity
+            onPress={() => setPasswordVisible(!passwordVisible)}>
+            <MaterialIcons
+            name={passwordVisible ? 'visibility': 'visibility-off'}
+            size={24}
+            color={'grey'}
+            style={styles.revealIcon} />
+            </TouchableOpacity>
+
+            
+            </View>
 
             <TextInput
             style = {styles.input}
             onChangeText = {onChangeRetype}
             value = {retype}
-            placeholder='Retype password'>
+            placeholder='Retype password'
+            secureTextEntry={!retypepasswordVisible}>
             </TextInput>
 
             </View>
@@ -121,7 +137,20 @@ const styles = StyleSheet.create ({
         padding: 12,
         borderColor: "lightgray",
         borderRadius: 5
-    }
+    },
 
+    passwordContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        borderWidth: 1,
+        borderColor: 'lightgray',
+        borderRadius: 5,
+        marginVertical: 7,
+        paddingHorizontal: 12,
+    },
+
+    revealIcon: {
+    marginLeft: 190
+    }
 }
 );
