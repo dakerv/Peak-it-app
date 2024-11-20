@@ -72,11 +72,9 @@ export default function signup ({ navigation }) {
             onBlur={() => setTextHighlight(null)}>
             </TextInput>
 
-            <View style={styles.passwordContainer}>
+            <View style={[styles.passwordContainer, texthighlight === 'password' && styles.textHighlightFeatures]}>
             <TextInput
-            style = {[styles.passwordInput, 
-                texthighlight === 'password' && styles.textHighlightFeatures
-            ]}
+            style = {styles.passwordInput}
             onChangeText = {onChangePassword}
             value = {password}
             placeholder='Password'
@@ -188,7 +186,7 @@ const styles = StyleSheet.create ({
   },
   textHighlightFeatures: {
     borderColor: "green",
-    borderWidth: 2
+    borderWidth: 2,
   }
 }
 );
