@@ -93,13 +93,15 @@ export default function signup ({ navigation }) {
             </TouchableOpacity>
             </View>
             
-            <View style={styles.passwordContainer}>
+            <View style={[styles.passwordContainer, texthighlight === 'retype' && styles.textHighlightFeatures]}>
             <TextInput
             style = {styles.passwordInput}
             onChangeText = {onChangeRetype}
             value = {retype}
             placeholder='Retype password'
-            secureTextEntry={!retypepasswordVisible}>
+            secureTextEntry={!retypepasswordVisible}
+            onFocus={() => setTextHighlight ('retype')}
+            onBlur={() => setTextHighlight (null)}>
             </TextInput>
 
             <TouchableOpacity
