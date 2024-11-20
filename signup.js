@@ -16,6 +16,10 @@ export default function signup ({ navigation }) {
 
     const [texthighlight, setTextHighlight] = useState(null);
 
+    const handleNavigation = () => {
+    navigation.navigate ('availabilityPage');
+    };
+
     return (
         <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -121,6 +125,13 @@ export default function signup ({ navigation }) {
             <Text style={styles.signInText}> Sign in </Text>
             </View>
 
+            <View style = {styles.buttonSpace}>
+            <TouchableOpacity onPress={handleNavigation} 
+            style = {styles.greenButton}> 
+            <Text style = {styles.nextText}> Sign Up </Text>
+            </TouchableOpacity>
+            </View>
+
                     </View>
                   </ScrollView>
             </TouchableWithoutFeedback>
@@ -195,6 +206,7 @@ const styles = StyleSheet.create ({
     borderWidth: 2,
   },
   alreadySignedUpContainer: {
+    bottom: '10%',
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'center'
@@ -204,6 +216,23 @@ const styles = StyleSheet.create ({
   },
   signInText: {
     fontWeight: '700'
+  },
+  buttonSpace: {
+    
+  },
+  greenButton: {
+    backgroundColor: '#228B22',
+    width: "80%",
+    alignSelf: "center",
+    height: 50,
+    borderRadius: 5,
+    padding: 15
+  },
+  nextText: {
+    color: 'white',
+    fontSize: 18,
+    alignSelf: "center",
+    fontWeight: "bold"
   }
 }
 );
