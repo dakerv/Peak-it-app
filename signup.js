@@ -193,6 +193,17 @@ const styles = StyleSheet.create ({
   textHighlightFeatures: {
     borderColor: "green",
     borderWidth: 2,
+  },
+  alreadySignedUpContainer: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'center'
+  },
+  alreadySignedUp: {
+    color: 'grey'
+  },
+  signInText: {
+    fontWeight: '700'
   }
 }
 );
