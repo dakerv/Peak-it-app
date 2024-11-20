@@ -14,7 +14,7 @@ export default function signup ({ navigation }) {
     const [passwordVisible, setPasswordVisible] = useState(false);
     const [retypepasswordVisible, setRetypePassword] = useState(false);
 
-    const [texthighlight, setTextHighlight] = useState(false);
+    const [texthighlight, setTextHighlight] = useState(null);
 
     return (
         <KeyboardAvoidingView
@@ -38,7 +38,9 @@ export default function signup ({ navigation }) {
 
             
             <TextInput
-            style = {styles.input}
+           style={[
+            styles.input,
+            texthighlight === 'name' && styles.textHighlightFeatures]}
             onChangeText = {onChangeName}
             value = {name}
             placeholder='Full Name'>
