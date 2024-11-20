@@ -17,7 +17,7 @@ export default function signup ({ navigation }) {
     const [texthighlight, setTextHighlight] = useState(null);
 
     const handleNavigation = () => {
-    navigation.navigate ('availabilityPage');
+    navigation.navigate ('enterPin');
     };
 
     return (
