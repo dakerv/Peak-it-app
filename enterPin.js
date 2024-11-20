@@ -29,7 +29,7 @@ export default function enterPin ({ navigation }) {
         
         <MaterialIcons
         name='mail'
-        color={[texthighlight === 'email' ? 'green' : 'lightgray']}
+        color={'lightgray'}
         size={24}>
         </MaterialIcons>
 
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
         borderColor: 'lightgray',
         height: 50,
         flexDirection: 'row',
-        top: '20%',
+        top: '8%',
         padding: 12,
         borderRadius: 5,
         alignItems: 'center',
