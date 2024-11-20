@@ -9,6 +9,9 @@ export default function enterPin ({ navigation }) {
     navigation.navigate ('EnterPin');
     };
 
+    const [texthighlight, setTextHighlight] = useState(null)
+    const [email, onChangeEmail] = useState ()
+
     return(
 
     <View style={styles.container}>
@@ -19,7 +22,26 @@ export default function enterPin ({ navigation }) {
 
         <View style = {styles.introContainer}>
                 <Text style = {styles.personalInfo}> Enter Pin </Text>
-                <Text style = {styles.introText2}> To continue, kindly enter the pin sent to your email address: </Text>
+                <Text style = {styles.introText2}> Kindly enter the pin sent to your mail address </Text>
+        </View>
+
+        <View style={[styles.emailContainer, texthighlight === 'email' && styles.textHighlightFeatures]}>
+        
+        <MaterialIcons
+        name='mail'
+        color={'lightgrey'}
+        size={24}>
+        </MaterialIcons>
+
+        <TextInput
+        style = {styles.emailInput}
+        onChangeText = {onChangeEmail}
+        value = {email}
+        placeholder='Enter email'
+        onFocus={() => setTextHighlight ('email')}
+        onBlur={() => setTextHighlight (null)}>
+        </TextInput>
+
         </View>
     </View>
     )
@@ -48,6 +70,21 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: '200'
     },
+    emailContainer: {
+        borderWidth: 1,
+        borderColor: 'lightgray',
+        height: 50,
+        flexDirection: 'row',
+        top: '20%',
+        padding: 12,
+        borderRadius: 5,
+        alignItems: 'center',
+        columnGap: 10
+    },
+    textHighlightFeatures: {
+        borderColor: 'green',
+        borderWidth: 2
+    }
 }
   
 )
