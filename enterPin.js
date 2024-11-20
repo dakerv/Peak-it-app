@@ -18,8 +18,8 @@ export default function enterPin ({ navigation }) {
         </View>
 
         <View style = {styles.introContainer}>
-                <Text style = {styles.personalInfo}> Personal Info </Text>
-                <Text style = {styles.introText2}> To continue, kindly fill the following boxes: </Text>
+                <Text style = {styles.personalInfo}> Enter Pin </Text>
+                <Text style = {styles.introText2}> To continue, kindly enter the pin sent to your email address: </Text>
         </View>
     </View>
     )
