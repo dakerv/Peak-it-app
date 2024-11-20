@@ -2,7 +2,7 @@ import { React } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import welcomePage from './welcomePage';
+import welcomePage from './welcomepage';
 import profilePage from './profilePage';
 import servicePage from './servicePage';
 import availabilityPage from './availabilityPage';
