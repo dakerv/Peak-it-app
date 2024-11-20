@@ -61,11 +61,15 @@ export default function signup ({ navigation }) {
 
             
             <TextInput
-            style = {styles.input}
+            style = {[styles.input,
+                texthighlight === 'number' && styles.textHighlightFeatures
+            ]}
             onChangeText = {onChangeNumber}
             value = {number}
             placeholder='Phone number'
-            keyboardType='numeric'>
+            keyboardType='numeric'
+            onFocus={() => setTextHighlight('number')}
+            onBlur={() => setTextHighlight(null)}>
             </TextInput>
 
             <View style={styles.passwordContainer}>
