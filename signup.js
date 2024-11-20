@@ -14,6 +14,8 @@ export default function signup ({ navigation }) {
     const [passwordVisible, setPasswordVisible] = useState(false);
     const [retypepasswordVisible, setRetypePassword] = useState(false);
 
+    const [texthighlight, setTextHighlight] = useState(false);
+
     return (
         <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -34,6 +36,7 @@ export default function signup ({ navigation }) {
 
             <View style = {styles.textBoxes}>
 
+            
             <TextInput
             style = {styles.input}
             onChangeText = {onChangeName}
@@ -57,9 +60,9 @@ export default function signup ({ navigation }) {
             keyboardType='numeric'>
             </TextInput>
 
-            <View style = {styles.passwordContainer}>
+            <View style={styles.passwordContainer}>
             <TextInput
-            style = {styles.input}
+            style = {styles.passwordInput}
             onChangeText = {onChangePassword}
             value = {password}
             placeholder='Password'
@@ -67,24 +70,33 @@ export default function signup ({ navigation }) {
             </TextInput>
 
             <TouchableOpacity
-            onPress={() => setPasswordVisible(!passwordVisible)}>
+            onPress={() => setPasswordVisible(!passwordVisible)}
+            style={styles.revealIcon}>
             <MaterialIcons
             name={passwordVisible ? 'visibility': 'visibility-off'}
             size={24}
-            color={'grey'}
-            style={styles.revealIcon} />
+            color={'grey'}/>
             </TouchableOpacity>
-
-            
             </View>
-
+            
+            <View style={styles.passwordContainer}>
             <TextInput
-            style = {styles.input}
+            style = {styles.passwordInput}
             onChangeText = {onChangeRetype}
             value = {retype}
             placeholder='Retype password'
             secureTextEntry={!retypepasswordVisible}>
             </TextInput>
+
+            <TouchableOpacity
+            onPress={() => setRetypePassword(!retypepasswordVisible)}
+            style={styles.revealIcon}>
+            <MaterialIcons
+            name={passwordVisible ? 'visibility': 'visibility-off'}
+            size={24}
+            color={'grey'}/>
+            </TouchableOpacity>
+            </View>
 
             </View>
                     
@@ -136,21 +148,26 @@ const styles = StyleSheet.create ({
         margin: 7,
         padding: 12,
         borderColor: "lightgray",
-        borderRadius: 5
+        borderRadius: 5,
+        width: '95%'
     },
 
     passwordContainer: {
-        flexDirection: 'row',
-        alignItems: 'center',
+        marginVertical: 7,
         borderWidth: 1,
         borderColor: 'lightgray',
         borderRadius: 5,
-        marginVertical: 7,
-        paddingHorizontal: 12,
-    },
+        flexDirection: 'row',
+        alignItems: 'center',
+  },
+    passwordInput: {
+        flex: 1,
+        height: 50,
+        padding: 12,
+  },
 
     revealIcon: {
-    marginLeft: 190
+    right: 13
     }
 }
 );
