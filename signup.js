@@ -115,8 +115,12 @@ export default function signup ({ navigation }) {
             </View>
 
             </View>
-                    
-                
+
+            <View style={styles.alreadySignedUpContainer}>
+            <Text style={styles.alreadySignedUp}> Already have an account? </Text>
+            <Text style={styles.signInText}> Sign in </Text>
+            </View>
+
                     </View>
                   </ScrollView>
             </TouchableWithoutFeedback>
