@@ -1,20 +1,65 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, Image, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard, ScrollView, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Image, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard, ScrollView, TouchableOpacity, Alert } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
 export default function signup ({ navigation }) {
 
-    const [name, onChangeName] = React.useState();
-    const [email, onChangeEmail] = React.useState();
-    const [password, onChangePassword] = React.useState();
-    const [retype, onChangeRetype] = React.useState();
-    const [number, onChangeNumber] = React.useState ();
+    const [name, onChangeName] = useState();
+    const [email, onChangeEmail] = useState();
+    const [password, onChangePassword] = useState();
+    const [retype, onChangeRetype] = useState();
+    const [number, onChangeNumber] = useState ();
 
     const [passwordVisible, setPasswordVisible] = useState(false);
     const [retypepasswordVisible, setRetypePassword] = useState(false);
 
     const [texthighlight, setTextHighlight] = useState(null);
+
+    const submit = async () => {
+      // Basic validation
+      if (!name || !email || !password || !retype || !number) {
+        console.error("Please fill out all fields.");
+        return;
+      }
+  
+      if (password !== retype) {
+        console.error("Passwords do not match.");
+        return;
+      }
+  
+      
+      const userData = {
+        name,
+        email,
+        password,
+        number,
+      };
+  
+      try {
+        const response = await fetch("http://localhost:8080/api/register", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(userData),
+        });
+  
+        if (!response.ok) {
+          const error = await response.json();
+          throw new Error(error.message || "Failed to register");
+          alert("Failed to register")
+        }
+  
+        const data = await response.json();
+        console.log(data)
+        alert("Registration successful", data)
+        console.log("Registration successful:", data);
+      } catch (error) {
+        console.error("Error during registration:", error.message);
+      }
+    };
+    
 
     return (
         <KeyboardAvoidingView
