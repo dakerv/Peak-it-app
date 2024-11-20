@@ -10,10 +10,13 @@ export default function enterPin ({ navigation }) {
     };
 
     return(
+
+    <View style={styles.container}>
         <View style = {styles.logoContainer}>
             <Image source = {require ('./assets/images/Logo SVG 1.png')} /> 
             <Image source = {require ('./assets/images/PickEAT PickIT.png')} />
             </View>
+    </View>
     )
 }
 
@@ -21,7 +24,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
-        paddingTop: 30,
+        paddingTop: 40,
         paddingLeft: 20,
         paddingRight: 20,
         flexDirection: "column"

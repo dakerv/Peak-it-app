@@ -17,7 +17,7 @@ export default function signup ({ navigation }) {
     const [texthighlight, setTextHighlight] = useState(null);
 
     const submit = async () => {
-      // Basic validation
+      // B3
       if (!name || !email || !password || !retype || !number) {
         console.error("Please fill out all fields.");
         return;

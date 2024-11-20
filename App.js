@@ -2,13 +2,14 @@ import { React } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import welcomePage from './welcomepage';
+import welcomePage from './welcomePage';
 import profilePage from './profilePage';
 import servicePage from './servicePage';
 import availabilityPage from './availabilityPage';
 import orderPage from './orderPage';
 import startedPage from './startedPage';
 import signup from './signup';
+import enterPin from './enterPin';
 
 const Stack = createNativeStackNavigator ();
 
@@ -43,6 +44,10 @@ export default function App () {
         <Stack.Screen 
           name="signup"
           component={signup} />
+
+        <Stack.Screen 
+          name="enterPin"
+          component={enterPin} /> 
 
       </Stack.Navigator> 
     </NavigationContainer>
