@@ -74,11 +74,15 @@ export default function signup ({ navigation }) {
 
             <View style={styles.passwordContainer}>
             <TextInput
-            style = {styles.passwordInput}
+            style = {[styles.passwordInput, 
+                texthighlight === 'password' && styles.textHighlightFeatures
+            ]}
             onChangeText = {onChangePassword}
             value = {password}
             placeholder='Password'
-            secureTextEntry={!passwordVisible}>
+            secureTextEntry={!passwordVisible}
+            onFocus={() => setTextHighlight('password')}
+            onBlur={() => setTextHighlight (null)}>
             </TextInput>
 
             <TouchableOpacity
