@@ -15,7 +15,12 @@ export default function enterPin ({ navigation }) {
         <View style = {styles.logoContainer}>
             <Image source = {require ('./assets/images/Logo SVG 1.png')} /> 
             <Image source = {require ('./assets/images/PickEAT PickIT.png')} />
-            </View>
+        </View>
+
+        <View style = {styles.introContainer}>
+                <Text style = {styles.personalInfo}> Personal Info </Text>
+                <Text style = {styles.introText2}> To continue, kindly fill the following boxes: </Text>
+        </View>
     </View>
     )
 }
@@ -28,9 +33,20 @@ const styles = StyleSheet.create({
         paddingLeft: 20,
         paddingRight: 20,
         flexDirection: "column"
-      },
+    },
       logoContainer : {
         alignItems: "center",
+    },
+    introContainer: {
+        top: "4%"
+    },
+    personalInfo: {
+        fontSize: 20,
+        fontWeight: '600',
+    },
+    introText2: {
+        fontSize: 14,
+        fontWeight: '200'
     },
 }
   
