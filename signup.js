@@ -38,19 +38,25 @@ export default function signup ({ navigation }) {
 
             
             <TextInput
-           style={[
+            style={[
             styles.input,
             texthighlight === 'name' && styles.textHighlightFeatures]}
             onChangeText = {onChangeName}
             value = {name}
-            placeholder='Full Name'>
+            placeholder='Full Name'
+            onFocus={() => setTextHighlight('name')}
+            onBlur={() => setTextHighlight(null)}>
             </TextInput>
 
             <TextInput
-            style = {styles.input}
+            style = {[styles.input,
+                texthighlight === 'email' && styles.textHighlightFeatures
+            ]}
             onChangeText = {onChangeEmail}
             value = {email}
-            placeholder='Email address'>
+            placeholder='Email address'
+            onFocus={() => setTextHighlight('email')}
+            onBlur={() => setTextHighlight(null)}>
             </TextInput>
 
             
@@ -167,9 +173,12 @@ const styles = StyleSheet.create ({
         height: 50,
         padding: 12,
   },
-
     revealIcon: {
     right: 13
-    }
+  },
+  textHighlightFeatures: {
+    borderColor: "green",
+    borderWidth: 2
+  }
 }
 );
