@@ -175,6 +175,8 @@ const styles = StyleSheet.create ({
         borderRadius: 5,
         flexDirection: 'row',
         alignItems: 'center',
+        width: '96%',
+        left: 5.5
   },
     passwordInput: {
         flex: 1,
