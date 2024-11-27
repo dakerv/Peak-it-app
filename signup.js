@@ -173,7 +173,7 @@ export default function signup ({ navigation }) {
             <View style = {styles.buttonSpace}>
             <TouchableOpacity onPress={handleNavigation} 
             style = {styles.greenButton}> 
-            <Text style = {styles.nextText}> Sign Up </Text>
+            <Text style = {styles.nextText}> Sign Up Now </Text>
             </TouchableOpacity>
             </View>
 
