@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
         color: 'green'
     },
     OTPcontainer: {
-        top: '20%',
+        top: '18%',
         flexDirection: 'row',
         justifyContent: 'center',
        columnGap: 10
