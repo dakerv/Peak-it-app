@@ -43,6 +43,10 @@ export default function enterPin ({ navigation }) {
         </TextInput>
 
         </View>
+
+        <View style = {styles.OTPspace}> 
+        <Text> hi </Text> 
+        </View>
     </View>
     )
 }
@@ -87,6 +91,11 @@ const styles = StyleSheet.create({
     },
     iconHighlight: {
         color: 'green'
+    },
+    OTPspace: {
+        top: 70,
+        alignContent: 'center',
+        justifyContent: 'center'
     }
 }
   
