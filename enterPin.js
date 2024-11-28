@@ -11,8 +11,8 @@ export default function enterPin ({ navigation }) {
 
     const [texthighlight, setTextHighlight] = useState(null)
     const [email, onChangeEmail] = useState ()
-    const [ otp, setOtp ] = useState('')
-    const handleOtpEntry = useRef (null)
+    const [ otp, setOtp ] = useState(['','','','']);
+    const handleOtpEntry = [useRef (null), useRef(null), useRef(null), useRef(null)]
 
     return(
 
@@ -48,12 +48,12 @@ export default function enterPin ({ navigation }) {
 
         <View style = {styles.OTPcontainer}> 
         <TextInput
-        style={styles.OTPspace}
+        style={styles.OTPdesign}
         ref={handleOtpEntry}
         inputCount={4}
         handleTextChange = {(code) => setOtp(code)}
         keyboardType='numeric'
-        maxLength={4}
+        
         >
             
         </TextInput> 
@@ -113,10 +113,12 @@ const styles = StyleSheet.create({
         height: '5%',
         alignItems: "center",
     },
-    OTPspace: {
-        width: 57,
-        height: 57,
+    OTPdesign: {
+        width: 50,
+        height: 50,
         borderRadius: 10,
+        borderWidth: 1,
+        borderColor: 'black'
 
     },
     instructionText: {
