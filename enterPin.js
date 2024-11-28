@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, Image, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard, ScrollView, TouchableOpacity } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -9,18 +9,10 @@ export default function enterPin ({ navigation }) {
     navigation.navigate ('EnterPin');
     };
 
-    const handleOtpEntry = (text) => {
-    const numericText = text.replace(/[^0-9]/g, '');
-    if (numericText.length <= 4) {
-        setOtp(numericText);
-    }
-    }
-
-
-
     const [texthighlight, setTextHighlight] = useState(null)
     const [email, onChangeEmail] = useState ()
     const [ otp, setOtp ] = useState('')
+    const handleOtpEntry = useRef (null)
 
     return(
 
@@ -57,11 +49,11 @@ export default function enterPin ({ navigation }) {
         <View style = {styles.OTPcontainer}> 
         <TextInput
         style={styles.OTPspace}
+        ref={handleOtpEntry}
+        inputCount={4}
+        handleTextChange = {(code) => setOtp(code)}
         keyboardType='numeric'
         maxLength={4}
-        value={otp}
-        onChangeText={handleOtpEntry}
-        textAlign='center'
         >
             
         </TextInput> 
@@ -122,9 +114,10 @@ const styles = StyleSheet.create({
         alignItems: "center"
     },
     OTPspace: {
-        width: 40,
-        height: 5,
-        backgroundColor: 'black'
+        width: 57,
+        height: 57,
+        borderRadius: 10,
+
     },
     instructionText: {
         textAlign: 'center',
