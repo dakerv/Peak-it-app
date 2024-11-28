@@ -9,8 +9,18 @@ export default function enterPin ({ navigation }) {
     navigation.navigate ('EnterPin');
     };
 
+    const handleOtpEntry = (text) => {
+    const numericText = text.replace(/[^0-9]/g, '');
+    if (numericText.length <= 4) {
+        setOtp(numericText);
+    }
+    }
+
+
+
     const [texthighlight, setTextHighlight] = useState(null)
     const [email, onChangeEmail] = useState ()
+    const [ otp, setOtp ] = useState('')
 
     return(
 
@@ -46,7 +56,17 @@ export default function enterPin ({ navigation }) {
 
         <View style = {styles.OTPcontainer}> 
         <TextInput
-        style={styles.OTPspace}></TextInput> 
+        style={styles.OTPspace}
+        keyboardType='numeric'
+        maxLength={4}
+        value={otp}
+        onChangeText={handleOtpEntry}
+        textAlign='center'
+        >
+            
+        </TextInput> 
+
+        <Text style= {styles.instructionText}> Enter the four digit code sent to your email </Text>
         </View>
     </View>
     )
@@ -98,7 +118,18 @@ const styles = StyleSheet.create({
         alignContent: 'center',
         justifyContent: 'center',
         width: 'auto',
-        height: '5%'
+        height: '5%',
+        alignItems: "center"
+    },
+    OTPspace: {
+        width: 40,
+        height: 5,
+        backgroundColor: 'black'
+    },
+    instructionText: {
+        textAlign: 'center',
+        color: 'grey',
+        width: '55%',
     }
 }
   
