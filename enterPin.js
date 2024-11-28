@@ -106,13 +106,12 @@ const styles = StyleSheet.create({
         color: 'green'
     },
     OTPcontainer: {
-        top: '10%',
+        top: '20%',
         alignContent: 'center',
         justifyContent: 'center',
         width: 'auto',
         height: '5%',
         alignItems: "center",
-        backgroundColor: 'pink'
     },
     OTPspace: {
         width: 57,
