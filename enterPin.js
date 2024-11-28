@@ -63,16 +63,17 @@ export default function enterPin ({ navigation }) {
         </View>
 
         <View style = {styles.OTPcontainer}> 
+        {otp.map((digit, index) => (
         <TextInput
+        key={index}
         style={styles.OTPdesign}
-        ref={handleOtpEntry}
-        inputCount={4}
-        handleTextChange = {(code) => setOtp(code)}
+        ref={inputRefs[index]}
+        maxLength={1}
+        onChangeText={(value) => handleOtpEntry(value, index)}
         keyboardType='numeric'
-        
-        >
-            
+        value={digit}>
         </TextInput> 
+        ))}
         </View>
 
         <Text style= {styles.instructionText}> Enter the four digit code sent to your email </Text>
@@ -123,18 +124,17 @@ const styles = StyleSheet.create({
     },
     OTPcontainer: {
         top: '20%',
-        alignContent: 'center',
+        flexDirection: 'row',
         justifyContent: 'center',
-        width: 'auto',
-        height: '5%',
-        alignItems: "center",
+       columnGap: 10
     },
     OTPdesign: {
         width: 50,
         height: 50,
         borderRadius: 10,
         borderWidth: 1,
-        borderColor: 'black'
+        borderColor: 'black',
+        textAlign: 'center'
 
     },
     instructionText: {
