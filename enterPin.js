@@ -57,9 +57,9 @@ export default function enterPin ({ navigation }) {
         >
             
         </TextInput> 
+        </View>
 
         <Text style= {styles.instructionText}> Enter the four digit code sent to your email </Text>
-        </View>
     </View>
     )
 }
@@ -106,12 +106,13 @@ const styles = StyleSheet.create({
         color: 'green'
     },
     OTPcontainer: {
-        top: '20%',
+        top: '10%',
         alignContent: 'center',
         justifyContent: 'center',
         width: 'auto',
         height: '5%',
-        alignItems: "center"
+        alignItems: "center",
+        backgroundColor: 'pink'
     },
     OTPspace: {
         width: 57,
@@ -123,6 +124,8 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: 'grey',
         width: '55%',
+        top: '20%',
+        alignSelf: 'center'
     }
 }
   
