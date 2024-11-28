@@ -10,6 +10,7 @@ export default function enterPin ({ navigation }) {
     };
 
     const [texthighlight, setTextHighlight] = useState(null)
+    const [otphighlight, setOtpHighlight] = useState(null)
     const [email, onChangeEmail] = useState ()
     const [ otp, setOtp ] = useState(['','','','']);
     const inputRefs = [useRef (null), useRef(null), useRef(null), useRef(null)]
@@ -71,7 +72,9 @@ export default function enterPin ({ navigation }) {
         maxLength={1}
         onChangeText={(value) => handleOtpEntry(value, index)}
         keyboardType='numeric'
-        value={digit}>
+        value={digit}
+        onFocus={() => setOtpHighlight ('value')}
+        onBlur={() => setOtpHighlight (null)}>
         </TextInput> 
         ))}
         </View>
@@ -133,7 +136,7 @@ const styles = StyleSheet.create({
         height: 50,
         borderRadius: 10,
         borderWidth: 1,
-        borderColor: 'black',
+        borderColor: 'grey',
         textAlign: 'center'
 
     },
