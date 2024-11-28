@@ -12,7 +12,23 @@ export default function enterPin ({ navigation }) {
     const [texthighlight, setTextHighlight] = useState(null)
     const [email, onChangeEmail] = useState ()
     const [ otp, setOtp ] = useState(['','','','']);
-    const handleOtpEntry = [useRef (null), useRef(null), useRef(null), useRef(null)]
+    const inputRefs = [useRef (null), useRef(null), useRef(null), useRef(null)]
+
+    const handleOtpEntry = (value, index) => {
+        const newOtp = [...otp]
+        newOtp[index] = value
+        setOtp(newOtp);
+
+        if (value.length === 1 && index < 3) {
+            inputRefs[index + 1].current.focus();
+        }
+
+        if (value === '' && index > 0) {
+            inputRefs[index -1].current.focus();
+        }
+    }
+
+    
 
     return(
 
