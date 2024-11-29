@@ -41,7 +41,7 @@ export default function enterPin ({ navigation }) {
 
         <View style = {styles.introContainer}>
                 <Text style = {styles.personalInfo}> Enter Pin </Text>
-                <Text style = {styles.introText2}> Kindly okay enter the pin sent to your mail address </Text>
+                <Text style = {styles.introText2}> Kindly enter the pin sent to your mail address </Text>
         </View>
 
         <View style={[styles.emailContainer, texthighlight === 'email' && styles.textHighlightFeatures]}>
