@@ -17,7 +17,7 @@ export default function signup ({ navigation }) {
     const [texthighlight, setTextHighlight] = useState(null);
 
     const submit = async () => {
-      // B3
+      
       if (!name || !email || !password || !retype || !number) {
         console.error("Please fill out all fields.");
         return;
@@ -80,7 +80,7 @@ export default function signup ({ navigation }) {
 
             <View style = {styles.introContainer}>
                 <Text style = {styles.personalInfo}> Personal Info </Text>
-                <Text style = {styles.introText2}> To continue, kindly fill the following boxes: </Text>
+                <Text style = {styles.introText2}> To continue, hi kindly fill the following boxes: </Text>
             </View>
 
             <View style = {styles.textBoxes}>
