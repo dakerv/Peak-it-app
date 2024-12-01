@@ -8,12 +8,37 @@ export default function loginPage ({ navigation }) {
     navigation.navigate ('EnterPin');
     };
     return(
-        <View style={styles.container}>
+    <View style={styles.container}>
         <View style = {styles.logoContainer}>
             <Image source = {require ('./assets/images/Logo SVG 1.png')} /> 
             <Image source = {require ('./assets/images/PickEAT PickIT.png')} />
         </View>
+
+        <View style = {styles.introContainer}>
+                <Text style = {styles.personalInfo}> Enter Pin </Text>
+                <Text style = {styles.introText2}> Kindly enter the pin sent to your mail address </Text>
         </View>
+
+        <View style={[styles.emailContainer, texthighlight === 'email' && styles.textHighlightFeatures]}>
+        
+        <MaterialIcons
+        name='mail'
+        color={'lightgray'}
+        size={24}>
+        </MaterialIcons>
+
+        <TextInput
+        style = {styles.emailInput}
+        onChangeText = {onChangeEmail}
+        value = {email}
+        placeholder='Enter email'
+        onFocus={() => setTextHighlight ('email')}
+        onBlur={() => setTextHighlight (null)}>
+        </TextInput>
+
+        </View>
+
+    </View>
     )
 }
 
