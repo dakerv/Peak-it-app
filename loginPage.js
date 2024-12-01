@@ -91,6 +91,13 @@ export default function loginPage ({ navigation }) {
             </TouchableOpacity>
         </View>
 
+        <View style={styles.buttonSpace}>
+            <TouchableOpacity onPress={handleNavigation} 
+            style = {styles.greenButton}> 
+            <Text style = {styles.nextText}> Sign In </Text>
+            </TouchableOpacity>
+            </View>
+
     </View>
     )
 }
@@ -166,7 +173,7 @@ const styles = StyleSheet.create({
         textDecorationLine: 'underline'
       },
       alreadySignedUpContainer: {
-        top: '50%',
+        top: '47%',
         alignItems: 'center',
         flexDirection: 'row',
         justifyContent: 'center'
@@ -184,7 +191,10 @@ const styles = StyleSheet.create({
         alignSelf: "center",
         height: 50,
         borderRadius: 5,
-        padding: 15
+        padding: 15,
+      },
+      buttonSpace: {
+        top: '48%'
       },
       nextText: {
         color: 'white',
