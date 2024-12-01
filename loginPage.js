@@ -44,6 +44,14 @@ export default function loginPage ({ navigation }) {
         </View>
 
         <View style={[styles.passwordContainer, texthighlight === 'password' && styles.textHighlightFeatures]}>
+            
+            <MaterialIcons
+            name='lock'
+            color={'lightgray'}
+            size={24}>
+
+            </MaterialIcons>
+            
             <TextInput
             style = {styles.passwordInput}
             onChangeText = {onChangePassword}
@@ -111,14 +119,16 @@ const styles = StyleSheet.create({
             color: 'green'
         },
         passwordContainer: {
+            top: '10%',
             marginVertical: 7,
             borderWidth: 1,
             borderColor: 'lightgray',
             borderRadius: 5,
             flexDirection: 'row',
             alignItems: 'center',
-            width: '96%',
-            left: 5.5
+            width: '100%',
+            left: 5,
+            
       },
         passwordInput: {
             flex: 1,
