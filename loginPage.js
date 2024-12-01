@@ -20,8 +20,8 @@ export default function loginPage ({ navigation }) {
         </View>
 
         <View style = {styles.introContainer}>
-                <Text style = {styles.personalInfo}> Enter Pin </Text>
-                <Text style = {styles.introText2}> Kindly enter the pin sent to your mail address </Text>
+                <Text style = {styles.personalInfo}> Login Information </Text>
+                <Text style = {styles.introText2}> To continue, kindly provide the following details </Text>
         </View>
 
         <View style={[styles.emailContainer, texthighlight === 'email' && styles.textHighlightFeatures]}>
