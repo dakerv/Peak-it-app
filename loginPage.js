@@ -57,6 +57,32 @@ const styles = StyleSheet.create({
         },
         introContainer: {
             top: "4%"
-    }
+        },
+        personalInfo: {
+            fontSize: 20,
+            fontWeight: '600',
+        },
+        introText2: {
+            fontSize: 14,
+            fontWeight: '200'
+        },
+        emailContainer: {
+            borderWidth: 1,
+            borderColor: 'lightgray',
+            height: 50,
+            flexDirection: 'row',
+            top: '8%',
+            padding: 12,
+            borderRadius: 5,
+            alignItems: 'center',
+            columnGap: 10,
+        },
+        textHighlightFeatures: {
+            borderColor: 'green',
+            borderWidth: 2,
+        },
+        iconHighlight: {
+            color: 'green'
+        },
 }
 )
