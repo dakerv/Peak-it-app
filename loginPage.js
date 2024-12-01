@@ -72,9 +72,11 @@ export default function loginPage ({ navigation }) {
             </TouchableOpacity>
             </View>
 
-        <View style={styles.forgotPasswordContainer}>
+        <TouchableOpacity 
+        style={styles.forgotPasswordContainer}
+        onPress={handleNavigation}>
             <Text style={styles.forgotPasswordText}> Forgot password? </Text>
-        </View>
+        </TouchableOpacity>
 
     </View>
     )
