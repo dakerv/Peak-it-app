@@ -11,7 +11,7 @@ import startedPage from './startedPage';
 import signup from './signup';
 import enterPin from './enterPin';
 import loginPage from './loginPage';
-import
+import forgotPassword from './forgotPassword';
 
 const Stack = createNativeStackNavigator ();
 
@@ -54,6 +54,10 @@ export default function App () {
         <Stack.Screen
         name="loginPage"
         component={loginPage} />
+
+        <Stack.Screen
+        name='forgotPassword'
+        component={forgotPassword} />
 
       </Stack.Navigator> 
     </NavigationContainer>
