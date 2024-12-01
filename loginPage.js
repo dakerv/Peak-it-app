@@ -7,6 +7,9 @@ export default function loginPage ({ navigation }) {
     const handleNavigation = () => {
     navigation.navigate ('EnterPin');
     };
+    const [texthighlight, setTextHighlight] = useState(null)
+    const [email, onChangeEmail] = useState ()
+
     return(
     <View style={styles.container}>
         <View style = {styles.logoContainer}>
