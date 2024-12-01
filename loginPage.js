@@ -148,7 +148,8 @@ const styles = StyleSheet.create({
         width: '100%',
       },
       forgotPasswordText: {
-        textAlign: 'right'
+        textAlign: 'right',
+        fontWeight: 'bold',
       }
 }
 )
