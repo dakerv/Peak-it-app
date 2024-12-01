@@ -72,6 +72,10 @@ export default function loginPage ({ navigation }) {
             </TouchableOpacity>
             </View>
 
+        <View style={styles.forgotPasswordContainer}>
+            <Text style={styles.forgotPasswordText}> Forgot password? </Text>
+        </View>
+
     </View>
     )
 }
@@ -127,9 +131,7 @@ const styles = StyleSheet.create({
             flexDirection: 'row',
             alignItems: 'center',
             width: '100%',
-            paddingLeft: 12
-
-            
+            paddingLeft: 12   
       },
         passwordInput: {
             flex: 1,
@@ -139,5 +141,8 @@ const styles = StyleSheet.create({
         revealIcon: {
         right: 13
       },
+      forgotPasswordContainer: {
+        top: '10%'
+      }
 }
 )
