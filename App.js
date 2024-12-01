@@ -10,6 +10,7 @@ import orderPage from './orderPage';
 import startedPage from './startedPage';
 import signup from './signup';
 import enterPin from './enterPin';
+import loginPage from './loginPage';
 
 const Stack = createNativeStackNavigator ();
 
@@ -47,7 +48,11 @@ export default function App () {
 
         <Stack.Screen 
           name="enterPin"
-          component={enterPin} /> 
+          component={enterPin} />
+
+        <Stack.Screen
+        name="loginPage"
+        component={loginPage} />
 
       </Stack.Navigator> 
     </NavigationContainer>

@@ -6,7 +6,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 export default function enterPin ({ navigation }) {
 
     const handleNavigation = () => {
-    navigation.navigate ('EnterPin');
+    navigation.navigate ('loginPage');
     };
 
     const [texthighlight, setTextHighlight] = useState(null)
