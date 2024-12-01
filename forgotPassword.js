@@ -33,4 +33,5 @@ const styles = StyleSheet.create ({
     },
     introContainer: {
         top: "4%"
+    }
 })
