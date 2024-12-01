@@ -78,6 +78,11 @@ export default function loginPage ({ navigation }) {
             <Text style={styles.forgotPasswordText}> Forgot password? </Text>
         </TouchableOpacity>
 
+        <View style={styles.alreadySignedUpContainer}>
+            <Text style={styles.alreadySignedUp}> Already have an account? </Text>
+            <Text style={styles.signInText}> Sign in </Text>
+        </View>
+
     </View>
     )
 }
@@ -143,14 +148,40 @@ const styles = StyleSheet.create({
         revealIcon: {
         right: 13
       },
-      forgotPasswordContainer: {
+        forgotPasswordContainer: {
         top: '9%',
         width: '100%',
       },
-      forgotPasswordText: {
+        forgotPasswordText: {
         textAlign: 'right',
         fontWeight: 'bold',
         textDecorationLine: 'underline'
+      },
+      alreadySignedUpContainer: {
+        top: '50%',
+        alignItems: 'center',
+        flexDirection: 'row',
+        justifyContent: 'center'
+      },
+      alreadySignedUp: {
+        color: 'grey'
+      },
+      signInText: {
+        fontWeight: '700'
+      },
+      greenButton: {
+        backgroundColor: '#228B22',
+        width: "80%",
+        alignSelf: "center",
+        height: 50,
+        borderRadius: 5,
+        padding: 15
+      },
+      nextText: {
+        color: 'white',
+        fontSize: 16,
+        alignSelf: "center",
+        fontWeight: "bold"
       }
 }
 )
