@@ -7,6 +7,11 @@ export default function loginPage ({ navigation }) {
     const handleNavigation = () => {
     navigation.navigate ('forgotPassword');
     };
+
+    const handleSignUpNavigation = () => {
+        navigation.navigate ('signup')
+    };
+
     const [texthighlight, setTextHighlight] = useState(null)
     const [email, onChangeEmail] = useState ()
     const [password, onChangePassword] = useState();
@@ -79,8 +84,11 @@ export default function loginPage ({ navigation }) {
         </TouchableOpacity>
 
         <View style={styles.alreadySignedUpContainer}>
-            <Text style={styles.alreadySignedUp}> Already have an account? </Text>
-            <Text style={styles.signInText}> Sign in </Text>
+            <Text style={styles.alreadySignedUp}> Don't have an account? </Text>
+            <TouchableOpacity 
+            onPress={handleSignUpNavigation}> 
+            <Text style={styles.signInText}> Sign up  </Text>
+            </TouchableOpacity>
         </View>
 
     </View>
@@ -167,7 +175,8 @@ const styles = StyleSheet.create({
         color: 'grey'
       },
       signInText: {
-        fontWeight: '700'
+        fontWeight: '700',
+        textDecorationLine: 'underline'
       },
       greenButton: {
         backgroundColor: '#228B22',
