@@ -65,6 +65,11 @@ export default function signup ({ navigation }) {
     navigation.navigate ('enterPin');
     };
 
+    const handleSignUpNavigation = () => {
+    navigation.navigate ('loginPage')
+    };
+
+
     return (
         <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -167,7 +172,10 @@ export default function signup ({ navigation }) {
 
             <View style={styles.alreadySignedUpContainer}>
             <Text style={styles.alreadySignedUp}> Already have an account? </Text>
-            <Text style={styles.signInText}> Sign in </Text>
+            <TouchableOpacity 
+            onPress={handleSignUpNavigation}> 
+            <Text style={styles.signInText}> Sign in  </Text>
+            </TouchableOpacity>
             </View>
 
             <View>
@@ -260,7 +268,8 @@ const styles = StyleSheet.create ({
     color: 'grey'
   },
   signInText: {
-    fontWeight: '700'
+    fontWeight: '700',
+    textDecorationLine: 'underline'
   },
   greenButton: {
     backgroundColor: '#228B22',
