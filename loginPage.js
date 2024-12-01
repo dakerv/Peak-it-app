@@ -9,6 +9,8 @@ export default function loginPage ({ navigation }) {
     };
     const [texthighlight, setTextHighlight] = useState(null)
     const [email, onChangeEmail] = useState ()
+    const [password, onChangePassword] = useState();
+    const [passwordVisible, setPasswordVisible] = useState(false);
 
     return(
     <View style={styles.container}>
@@ -40,6 +42,27 @@ export default function loginPage ({ navigation }) {
         </TextInput>
 
         </View>
+
+        <View style={[styles.passwordContainer, texthighlight === 'password' && styles.textHighlightFeatures]}>
+            <TextInput
+            style = {styles.passwordInput}
+            onChangeText = {onChangePassword}
+            value = {password}
+            placeholder='Password'
+            secureTextEntry={!passwordVisible}
+            onFocus={() => setTextHighlight('password')}
+            onBlur={() => setTextHighlight (null)}>
+            </TextInput>
+
+            <TouchableOpacity
+            onPress={() => setPasswordVisible(!passwordVisible)}
+            style={styles.revealIcon}>
+            <MaterialIcons
+            name={passwordVisible ? 'visibility': 'visibility-off'}
+            size={24}
+            color={'grey'}/>
+            </TouchableOpacity>
+            </View>
 
     </View>
     )
