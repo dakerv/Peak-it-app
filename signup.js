@@ -170,7 +170,7 @@ export default function signup ({ navigation }) {
             <Text style={styles.signInText}> Sign in </Text>
             </View>
 
-            <View style = {styles.buttonSpace}>
+            <View>
             <TouchableOpacity onPress={handleNavigation} 
             style = {styles.greenButton}> 
             <Text style = {styles.nextText}> Sign Up </Text>
@@ -261,9 +261,6 @@ const styles = StyleSheet.create ({
   },
   signInText: {
     fontWeight: '700'
-  },
-  buttonSpace: {
-    
   },
   greenButton: {
     backgroundColor: '#228B22',

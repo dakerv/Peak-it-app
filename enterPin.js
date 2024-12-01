@@ -80,6 +80,13 @@ export default function enterPin ({ navigation }) {
         </View>
 
         <Text style= {styles.instructionText}> Enter the four digit code sent to your email </Text>
+
+        <View style = {styles.buttonSpace}>
+            <TouchableOpacity onPress={handleNavigation} 
+            style = {styles.greenButton}> 
+            <Text style = {styles.nextText}> Done </Text>
+            </TouchableOpacity>
+            </View>
     </View>
     )
 }
@@ -146,7 +153,24 @@ const styles = StyleSheet.create({
         width: '55%',
         top: '20%',
         alignSelf: 'center'
-    }
+    },
+    buttonSpace: {
+        top: '30%'
+    },
+    greenButton: {
+        backgroundColor: '#228B22',
+        width: "80%",
+        alignSelf: "center",
+        height: 50,
+        borderRadius: 5,
+        padding: 15
+      },
+      nextText: {
+        color: 'white',
+        fontSize: 16,
+        alignSelf: "center",
+        fontWeight: "bold"
+      }
 }
   
 )
