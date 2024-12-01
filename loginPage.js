@@ -150,6 +150,7 @@ const styles = StyleSheet.create({
       forgotPasswordText: {
         textAlign: 'right',
         fontWeight: 'bold',
+        textDecorationLine: 'underline'
       }
 }
 )
