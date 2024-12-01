@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
             color: 'green'
         },
         passwordContainer: {
-            top: '10%',
+            top: '9%',
             marginVertical: 7,
             borderWidth: 1,
             borderColor: 'lightgray',
@@ -127,7 +127,8 @@ const styles = StyleSheet.create({
             flexDirection: 'row',
             alignItems: 'center',
             width: '100%',
-            left: 5,
+            paddingLeft: 12
+
             
       },
         passwordInput: {
