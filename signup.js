@@ -259,7 +259,7 @@ const styles = StyleSheet.create ({
     borderWidth: 2,
   },
   alreadySignedUpContainer: {
-    bottom: '10%',
+    bottom: '1%',
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'center'
