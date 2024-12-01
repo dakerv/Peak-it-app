@@ -110,5 +110,23 @@ const styles = StyleSheet.create({
         iconHighlight: {
             color: 'green'
         },
+        passwordContainer: {
+            marginVertical: 7,
+            borderWidth: 1,
+            borderColor: 'lightgray',
+            borderRadius: 5,
+            flexDirection: 'row',
+            alignItems: 'center',
+            width: '96%',
+            left: 5.5
+      },
+        passwordInput: {
+            flex: 1,
+            height: 50,
+            padding: 12,
+      },
+        revealIcon: {
+        right: 13
+      },
 }
 )
