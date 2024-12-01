@@ -142,7 +142,11 @@ const styles = StyleSheet.create({
         right: 13
       },
       forgotPasswordContainer: {
-        top: '10%'
+        top: '9%',
+        width: '100%',
+      },
+      forgotPasswordText: {
+        textAlign: 'right'
       }
 }
 )
