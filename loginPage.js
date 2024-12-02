@@ -80,7 +80,7 @@ export default function loginPage ({ navigation }) {
         <TouchableOpacity 
         style={styles.forgotPasswordContainer}
         onPress={handleNavigation}>
-            <Text style={styles.forgotPasswordText}> Forgot password? </Text>
+            <Text style={styles.forgotPasswordText}> Forgot password or not? </Text>
         </TouchableOpacity>
 
         <View style={styles.alreadySignedUpContainer}>
@@ -173,7 +173,7 @@ const styles = StyleSheet.create({
         textDecorationLine: 'underline'
       },
       alreadySignedUpContainer: {
-        top: '47%',
+        top: '47              %',
         alignItems: 'center',
         flexDirection: 'row',
         justifyContent: 'center'
