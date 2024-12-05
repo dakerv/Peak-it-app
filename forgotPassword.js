@@ -5,8 +5,9 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 export default function forgotPassword ({ navigation }) {
     
+    
     const handleNavigation = () => {
-        navigation.navigate ('enterPin')
+        navigation.navigate ('confirmPin')
     }
 
     const handleSignUpNavigation = () => {
@@ -24,8 +25,8 @@ export default function forgotPassword ({ navigation }) {
         </View>
 
         <View style = {styles.introContainer}>
-                <Text style = {styles.personalInfo}> Login Information </Text>
-                <Text style = {styles.introText2}> To continue, kindly provide the following details </Text>
+                <Text style = {styles.personalInfo}> Forgot Password </Text>
+                <Text style = {styles.introText2}> To continue, kindly enter your email </Text>
         </View>
 
         <View style={[styles.emailContainer, texthighlight === 'email' && styles.textHighlightFeatures]}>
