@@ -8,6 +8,27 @@ export default function confirmPin ({ navigation }) {
     const handleNavigation = () => {
         navigation.navigate ('forgotPassword')
     }
+
+    const [email, onChangeEmail] = useState ()
+    const [texthighlight, setTextHighlight] = useState(null)
+    const [otphighlight, setOtpHighlight] = useState (null)
+    const [ otp, setOtp ] = useState(['','','','']);
+    const inputRefs = [useRef (null), useRef(null), useRef(null), useRef(null)]
+
+    const handleOtpEntry = (value, index) => {
+        const newOtp = [...otp]
+        newOtp[index] = value
+        setOtp(newOtp);
+
+        if (value.length === 1 && index < 3) {
+            inputRefs[index + 1].current.focus();
+        }
+
+        if (value === '' && index > 0) {
+            inputRefs[index -1].current.focus();
+        }
+    }
+
     return(
         <View style={styles.container}>
           <View style = {styles.logoContainer}>
@@ -36,8 +57,24 @@ export default function confirmPin ({ navigation }) {
           onFocus={() => setTextHighlight ('email')}
           onBlur={() => setTextHighlight (null)}>
           </TextInput>
+          </View>
 
+          <View style = {styles.OTPcontainer}> 
+          {otp.map((digit, index) => (
+          <TextInput
+          key={index}
+          style={styles.OTPdesign}
+          ref={inputRefs[index]}
+          maxLength={1}
+          onChangeText={(value) => handleOtpEntry(value, index)}
+          keyboardType='numeric'
+          value={digit}
+          onFocus={() => setOtpHighlight ('value')}
+          onBlur={() => setOtpHighlight (null)}>
+        </TextInput> 
+        ))}
         </View>
+
         </View>
     )
 } 
@@ -67,5 +104,42 @@ const styles = StyleSheet.create ({
     introText2: {
         fontSize: 14,
         fontWeight: '200'
+    },
+    emailContainer: {
+        borderWidth: 1,
+        borderColor: 'lightgray',
+        height: 50,
+        flexDirection: 'row',
+        top: '8%',
+        padding: 12,
+        borderRadius: 5,
+        alignItems: 'center',
+        width: '100%',
+        columnGap: 10,
+    },
+    textHighlightFeatures: {
+        borderColor: 'green',
+        borderWidth: 2,
+    },
+    iconHighlight: {
+        color: 'green'
+    },
+    emailInput: {
+        flex: 1
+    },
+    OTPcontainer: {
+        top: '10%',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignContent: 'center',
+        columnGap: 10
+    },
+    OTPdesign: {
+        width: 50,
+        height: 50,
+        borderRadius: 10,
+        borderWidth: 1,
+        borderColor: 'gray',
+        textAlign: 'center'
     },
 })
