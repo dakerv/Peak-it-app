@@ -2,7 +2,8 @@ import React, { useState, useRef } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, Image, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard, ScrollView, TouchableOpacity } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
-import WarningContainer from './components/WarningContainer'; 
+import WarningContainer from './components/WarningContainer';
+import TextInputs from './components/TextInputs'; 
 
 export default function createProfile ({ navigation }) {
     
@@ -30,6 +31,10 @@ export default function createProfile ({ navigation }) {
 
       <View style = {styles.warningSpace}>
         <WarningContainer name='provide the correct info below' />
+      </View>
+
+      <View>
+        <TextInputs> </TextInputs>
       </View>
 
     </View>
