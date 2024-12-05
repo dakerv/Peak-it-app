@@ -62,7 +62,7 @@ export default function signup ({ navigation }) {
     
 
     const handleNavigation = () => {
-    navigation.navigate ('enterPin');
+    navigation.navigate ('createProfile');
     };
 
     const handleSignUpNavigation = () => {
