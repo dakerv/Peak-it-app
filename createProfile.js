@@ -25,11 +25,20 @@ export default function createProfile ({ navigation }) {
 
 const styles = StyleSheet.create ({
     container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    paddingTop: 40,
-    paddingLeft: 20,
-    paddingRight: 20,
-    flexDirection: "column"
-    }
+        flex: 1,
+        backgroundColor: '#fff',
+        paddingTop: 40,
+        paddingLeft: 20,
+        paddingRight: 20,
+        flexDirection: "column"
+    },
+    logoContainer : {
+        alignItems: "center",
+    },
+    introContainer: {
+        top: "4%"
+    },
+    introContainer: {
+        top: "4%"
+    },
 })
