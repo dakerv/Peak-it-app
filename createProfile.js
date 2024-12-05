@@ -25,8 +25,8 @@ export default function createProfile ({ navigation }) {
         <Text style = {styles.createProfileText}> Create Profile </Text>
       </View>
 
-      <View>
-        <WarningContainer name='What is your name?' />
+      <View style = {styles.warningSpace}>
+        <WarningContainer name='provide the correct info below' />
       </View>
 
     </View>
@@ -54,4 +54,7 @@ const styles = StyleSheet.create ({
         fontWeight: 500,
         textAlign: 'right'
       },
+      warningSpace: {
+        top: '5%'
+      }
 })

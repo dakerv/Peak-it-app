@@ -4,25 +4,29 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 const WarningContainer = props => {
     return (
-        <View styles = {styles.warningContainerStyles}>
-          <Text style = {styles. textStyle}> Kindly {props.name} </Text>
-            <MaterialIcons
+        <View style = {styles.warningContainerStyle}>
+          <MaterialIcons
             name='warning'
             size='20'
             color='orange' />
+          <Text style = {styles.textStyle}> Kindly {props.name} </Text>
         </View>
     )
 }
 
 const styles = StyleSheet.create ({
-    warningContainerStyles: {
-        backgroundColor: 'lightblue',
+    warningContainerStyle: {
         flexDirection: 'row',
+        height: '25%',
         width: '100%',
-        height: '20%'
+        backgroundColor: '#E5F2FF',
+        paddingTop: 15,
+        paddingLeft: 10,
+        borderRadius: 5
     },
     textStyle: {
-        color: 'green'
+        color: 'green',
+        fontSize: 18,
     }
 })
 
