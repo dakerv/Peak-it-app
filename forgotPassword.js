@@ -9,6 +9,10 @@ export default function forgotPassword ({ navigation }) {
         navigation.navigate ('enterPin')
     }
 
+    const handleSignUpNavigation = () => {
+        navigation.navigate ('loginPage')
+    };
+
     const [email, onChangeEmail] = useState ()
     const [texthighlight, setTextHighlight] = useState(null)
 
@@ -118,7 +122,7 @@ const styles = StyleSheet.create ({
         padding: 15,
       },
       buttonSpace: {
-        top: '48%'
+        top: '13%'
       },
       nextText: {
         color: 'white',
@@ -127,7 +131,7 @@ const styles = StyleSheet.create ({
         fontWeight: "bold"
       },
       alreadySignedUpContainer: {
-        bottom: '1%',
+        top: '50%',
         alignItems: 'center',
         flexDirection: 'row',
         justifyContent: 'center'
