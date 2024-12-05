@@ -13,6 +13,7 @@ import enterPin from './enterPin';
 import loginPage from './loginPage';
 import forgotPassword from './forgotPassword';
 import confirmPin from './confirmPin';
+import createProfile from './createProfile';
 
 const Stack = createNativeStackNavigator ();
 
@@ -63,6 +64,10 @@ export default function App () {
         <Stack.Screen
         name='confirmPin'
         component={confirmPin} />
+
+        <Stack.Screen
+        name='createProfile'
+        component={createProfile} />
 
       </Stack.Navigator> 
     </NavigationContainer>

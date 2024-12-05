@@ -6,7 +6,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 export default function confirmPin ({ navigation }) {
 
     const handleNavigation = () => {
-        navigation.navigate ('forgotPassword')
+        navigation.navigate ('createProfile')
     }
 
     const [email, onChangeEmail] = useState ()
