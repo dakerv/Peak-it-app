@@ -24,10 +24,6 @@ export default function createProfile ({ navigation }) {
         <Text style = {styles.createProfileText}> Create Profile </Text>
       </View>
 
-    
-
-      </MaterialIcons>
-
     </View>
     </TouchableWithoutFeedback>
     )
