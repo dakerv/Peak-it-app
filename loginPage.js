@@ -54,7 +54,6 @@ export default function loginPage ({ navigation }) {
             name='lock'
             color={'lightgray'}
             size={24}>
-
             </MaterialIcons>
             
             <TextInput
@@ -75,12 +74,12 @@ export default function loginPage ({ navigation }) {
             size={24}
             color={'grey'}/>
             </TouchableOpacity>
-            </View>
+          </View>
 
         <TouchableOpacity 
         style={styles.forgotPasswordContainer}
         onPress={handleNavigation}>
-            <Text style={styles.forgotPasswordText}> Forgot password or not? </Text>
+        <Text style={styles.forgotPasswordText}> Forgot password? </Text>
         </TouchableOpacity>
 
         <View style={styles.alreadySignedUpContainer}>
@@ -135,6 +134,7 @@ const styles = StyleSheet.create({
             padding: 12,
             borderRadius: 5,
             alignItems: 'center',
+            width: '100%',
             columnGap: 10,
         },
         textHighlightFeatures: {
@@ -160,6 +160,9 @@ const styles = StyleSheet.create({
             height: 50,
             padding: 12,
       },
+        emailInput: {
+            flex: 1
+        }
         revealIcon: {
         right: 13
       },
