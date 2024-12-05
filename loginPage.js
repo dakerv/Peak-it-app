@@ -18,6 +18,7 @@ export default function loginPage ({ navigation }) {
     const [passwordVisible, setPasswordVisible] = useState(false);
 
     return(
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
     <View style={styles.container}>
         <View style = {styles.logoContainer}>
             <Image source = {require ('./assets/images/Logo SVG 1.png')} /> 
@@ -98,6 +99,7 @@ export default function loginPage ({ navigation }) {
         </View>
 
     </View>
+    </TouchableWithoutFeedback>
     )
 }
 

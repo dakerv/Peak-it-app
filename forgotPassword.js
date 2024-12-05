@@ -18,7 +18,8 @@ export default function forgotPassword ({ navigation }) {
     const [texthighlight, setTextHighlight] = useState(null)
 
     return (
-    <View style={styles.container}>
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+        <View style={styles.container}>
         <View style = {styles.logoContainer}>
             <Image source = {require ('./assets/images/Logo SVG 1.png')} /> 
             <Image source = {require ('./assets/images/PickEAT PickIT.png')} />
@@ -63,6 +64,7 @@ export default function forgotPassword ({ navigation }) {
             </TouchableOpacity>
         </View>
     </View>
+    </TouchableWithoutFeedback>
     )
 }
 

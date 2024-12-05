@@ -30,11 +30,13 @@ export default function confirmPin ({ navigation }) {
     }
 
     return(
-        <View style={styles.container}>
-          <View style = {styles.logoContainer}>
-            <Image source = {require ('./assets/images/Logo SVG 1.png')} /> 
-            <Image source = {require ('./assets/images/PickEAT PickIT.png')} />
-          </View>
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+         <View style = {styles.container}>   
+        
+           <View style = {styles.logoContainer}>
+             <Image source = {require ('./assets/images/Logo SVG 1.png')} /> 
+             <Image source = {require ('./assets/images/PickEAT PickIT.png')} />
+           </View>
 
           <View style = {styles.introContainer}>
             <Text style = {styles.personalInfo}> Confirm Pin </Text>
@@ -55,8 +57,10 @@ export default function confirmPin ({ navigation }) {
           value = {email}
           placeholder='Enter email'
           onFocus={() => setTextHighlight ('email')}
-          onBlur={() => setTextHighlight (null)}>
+          onBlur={() => setTextHighlight (null)}
+          onPressOut={Keyboard.dismiss}>
           </TextInput>
+
           </View>
 
           <View style = {styles.OTPcontainer}> 
@@ -83,7 +87,9 @@ export default function confirmPin ({ navigation }) {
           <Text style = {styles.nextText}> Done </Text>
           </TouchableOpacity>
         </View>
-        </View>
+
+        </View> 
+        </TouchableWithoutFeedback>
     )
 } 
 
