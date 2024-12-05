@@ -8,17 +8,27 @@ export default function createProfile ({ navigation }) {
     const handleNavigation = () => {
         navigation.navigate ('confirmPin')
     }
+
+    const handlePress = () => {
+        navigation.navigate ('signup');
+    };
     
     return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-     <View style = {styles.container}>   
+    <View style = {styles.container}>   
        
-       <View style = {styles.logoContainer}>
-            <Image source = {require ('./assets/images/Logo SVG 1.png')} /> 
-            <Image source = {require ('./assets/images/PickEAT PickIT.png')} />
-        </View>
+      <View> 
+        <TouchableOpacity onPress={handlePress}>
+        <Text style = {styles.skipText}> Skip </Text>
+        </TouchableOpacity>
+        <Text style = {styles.createProfileText}> Create Profile </Text>
+      </View>
 
-       </View>
+    
+
+      </MaterialIcons>
+
+    </View>
     </TouchableWithoutFeedback>
     )
 }
@@ -27,18 +37,20 @@ const styles = StyleSheet.create ({
     container: {
         flex: 1,
         backgroundColor: '#fff',
-        paddingTop: 40,
+        paddingTop: 50,
         paddingLeft: 20,
         paddingRight: 20,
         flexDirection: "column"
     },
-    logoContainer : {
-        alignItems: "center",
+    createProfileText: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        textAlign: 'center'
     },
-    introContainer: {
-        top: "4%"
-    },
-    introContainer: {
-        top: "4%"
-    },
+      skipText: {
+        fontSize: 18,
+        color: "#228B22",
+        fontWeight: 500,
+        textAlign: 'right'
+      },
 })
