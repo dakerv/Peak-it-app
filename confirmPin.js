@@ -128,7 +128,7 @@ const styles = StyleSheet.create ({
         flex: 1
     },
     OTPcontainer: {
-        top: '10%',
+        top: '15%',
         flexDirection: 'row',
         justifyContent: 'center',
         alignContent: 'center',
