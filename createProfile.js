@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, Image, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard, ScrollView, TouchableOpacity } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
+import WarningContainer from './components/WarningContainer'; 
 
 export default function createProfile ({ navigation }) {
     
@@ -22,6 +23,10 @@ export default function createProfile ({ navigation }) {
         <Text style = {styles.skipText}> Skip </Text>
         </TouchableOpacity>
         <Text style = {styles.createProfileText}> Create Profile </Text>
+      </View>
+
+      <View>
+        <WarningContainer name='What is your name?' />
       </View>
 
     </View>

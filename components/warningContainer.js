@@ -2,7 +2,7 @@ import React from 'react'
 import {Text, View, StyleSheet } from 'react-native'
 import { MaterialIcons } from '@expo/vector-icons';
 
-const warningContainer = props => {
+const WarningContainer = props => {
     return (
         <View styles = {styles.warningContainerStyles}>
           <Text style = {styles. textStyle}> Kindly {props.name} </Text>
@@ -26,4 +26,4 @@ const styles = StyleSheet.create ({
     }
 })
 
-export default warningContainer ();
+export default WarningContainer;
