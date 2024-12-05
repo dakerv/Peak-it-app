@@ -9,11 +9,53 @@ export default function forgotPassword ({ navigation }) {
         navigation.navigate ('enterPin')
     }
 
+    const [email, onChangeEmail] = useState ()
+    const [texthighlight, setTextHighlight] = useState(null)
+
     return (
     <View style={styles.container}>
         <View style = {styles.logoContainer}>
             <Image source = {require ('./assets/images/Logo SVG 1.png')} /> 
             <Image source = {require ('./assets/images/PickEAT PickIT.png')} />
+        </View>
+
+        <View style = {styles.introContainer}>
+                <Text style = {styles.personalInfo}> Login Information </Text>
+                <Text style = {styles.introText2}> To continue, kindly provide the following details </Text>
+        </View>
+
+        <View style={[styles.emailContainer, texthighlight === 'email' && styles.textHighlightFeatures]}>
+        
+        <MaterialIcons
+        name='mail'
+        color={'lightgray'}
+        size={24}>
+        </MaterialIcons>
+
+        <TextInput
+        style = {styles.emailInput}
+        onChangeText = {onChangeEmail}
+        value = {email}
+        placeholder='Enter email'
+        onFocus={() => setTextHighlight ('email')}
+        onBlur={() => setTextHighlight (null)}>
+        </TextInput>
+
+        </View>
+
+        <View style={styles.buttonSpace}>
+            <TouchableOpacity onPress={handleNavigation} 
+            style = {styles.greenButton}> 
+            <Text style = {styles.nextText}> Send OTP </Text>
+            </TouchableOpacity>
+        </View>
+
+        <View style={styles.alreadySignedUpContainer}>
+            <Text style={styles.alreadySignedUp}> Already have an account? </Text>
+            <TouchableOpacity 
+            onPress={handleSignUpNavigation}> 
+            <Text style={styles.signInText}> Sign in  </Text>
+            </TouchableOpacity>
         </View>
     </View>
     )
@@ -33,5 +75,68 @@ const styles = StyleSheet.create ({
     },
     introContainer: {
         top: "4%"
-    }
+    },
+    introContainer: {
+        top: "4%"
+    },
+    personalInfo: {
+        fontSize: 20,
+        fontWeight: '600',
+    },
+    introText2: {
+        fontSize: 14,
+        fontWeight: '200'
+    },
+    emailContainer: {
+        borderWidth: 1,
+        borderColor: 'lightgray',
+        height: 50,
+        flexDirection: 'row',
+        top: '8%',
+        padding: 12,
+        borderRadius: 5,
+        alignItems: 'center',
+        width: '100%',
+        columnGap: 10,
+    },
+    textHighlightFeatures: {
+        borderColor: 'green',
+        borderWidth: 2,
+    },
+    iconHighlight: {
+        color: 'green'
+    },
+    emailInput: {
+        flex: 1
+    },
+    greenButton: {
+        backgroundColor: '#228B22',
+        width: "80%",
+        alignSelf: "center",
+        height: 50,
+        borderRadius: 5,
+        padding: 15,
+      },
+      buttonSpace: {
+        top: '48%'
+      },
+      nextText: {
+        color: 'white',
+        fontSize: 16,
+        alignSelf: "center",
+        fontWeight: "bold"
+      },
+      alreadySignedUpContainer: {
+        bottom: '1%',
+        alignItems: 'center',
+        flexDirection: 'row',
+        justifyContent: 'center'
+      },
+      alreadySignedUp: {
+        color: 'grey'
+      },
+      signInText: {
+        fontWeight: '700',
+        textDecorationLine: 'underline'
+      },
 })

@@ -95,7 +95,7 @@ export default function loginPage ({ navigation }) {
             style = {styles.greenButton}> 
             <Text style = {styles.nextText}> Sign In </Text>
             </TouchableOpacity>
-            </View>
+        </View>
 
     </View>
     )
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
       },
         emailInput: {
             flex: 1
-        }
+        },
         revealIcon: {
         right: 13
       },
