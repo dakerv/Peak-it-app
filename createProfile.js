@@ -15,8 +15,11 @@ export default function createProfile ({ navigation }) {
     };
     
     return (
+<KeyboardAvoidingView style = {styles.container}
+  behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
+    
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-    <View style = {styles.container}>   
+    <View style = {{ flex: 1}} >
        
       <View> 
         <TouchableOpacity onPress={handlePress}>
@@ -31,6 +34,8 @@ export default function createProfile ({ navigation }) {
 
     </View>
     </TouchableWithoutFeedback>
+    
+</KeyboardAvoidingView>
     )
 }
 
