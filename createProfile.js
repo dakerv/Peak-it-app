@@ -39,7 +39,10 @@ export default function createProfile ({ navigation }) {
       </View>
 
       <View>
-        <TextInputs> </TextInputs>
+        <TextInputs 
+        setter = {setBusinessName}
+        inputValue = {businessName} 
+        inputPlaceholder = 'What is your business name?'/>
       </View>
 
     </View>

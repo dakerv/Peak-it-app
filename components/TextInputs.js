@@ -15,7 +15,7 @@ const TextInputs = props => {
             value={props.inputValue}
             placeholder={props.inputPlaceholder}
             onFocus={() => setInputHighlight (props.inputName)}
-            onBlur={() => setInputHighlight (null)}>
+            onBlur={() => setInputHighlight (null)} >
             </TextInput>
         </View>
 
