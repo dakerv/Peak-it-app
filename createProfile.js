@@ -44,7 +44,6 @@ export default function createProfile ({ navigation }) {
         inputValue = {businessName} 
         inputPlaceholder = 'What is your business name?'
         inputName = 'businessName'
-      
         />
 
         <TextInputs 
@@ -56,19 +55,18 @@ export default function createProfile ({ navigation }) {
         />
 
         <TextInputs
-        setter = {setExperience}
-        inputValue = {experience}
-        inputPlaceholder = 'How many years of experience do you have?'
-        inputName = 'experience'
-        />
-
-        <TextInputs
         setter = {setFullName}
         inputValue = {fullname}
         inputPlaceholder = 'Your full name'
         inputName = 'fullname'
         />
 
+        <TextInputs
+        setter = {setExperience}
+        inputValue = {experience}
+        inputPlaceholder = 'How many years of experience do you have?'
+        inputName = 'experience'
+        />
        </View>
       </View>
     </ScrollView>
@@ -83,7 +81,8 @@ const styles = StyleSheet.create ({
         paddingTop: 50,
         paddingLeft: 20,
         paddingRight: 20,
-        flexDirection: "column"
+        flexDirection: "column",
+        backgroundColor: 'white'
     },
     createProfileText: {
         fontSize: 18,

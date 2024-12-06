@@ -37,7 +37,7 @@ const styles = StyleSheet.create ({
     },
     textHighlightFeatures: {
         borderColor: 'green',
-        borderWidth: 1
+        borderWidth: 2
     }
 })
 
