@@ -29,7 +29,8 @@ const styles = StyleSheet.create ({
         borderColor: 'grey',
         padding: 20,
         borderWidth: 1,
-        flex: 1
+        flex: 1,
+        marginVertical: 7
     },
     inputContainers: {
         

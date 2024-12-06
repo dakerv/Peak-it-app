@@ -23,8 +23,9 @@ export default function createProfile ({ navigation }) {
     return (
     
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-    <ScrollView style={styles.container}>
-    <View style = {{ flex: 1}} >
+    <ScrollView>
+    <View style={styles.container}>
+    
        
       <View> 
         <TouchableOpacity onPress={handlePress}>
@@ -42,10 +43,34 @@ export default function createProfile ({ navigation }) {
         setter = {setBusinessName}
         inputValue = {businessName} 
         inputPlaceholder = 'What is your business name?'
-        inputName = 'businessName'/>
-      </View>
+        inputName = 'businessName'
+      
+        />
 
-    </View>
+        <TextInputs 
+        setter = {setAddress}
+        inputValue = {address}
+        inputPlaceholder = 'What is your address?'
+        inputName = 'address'
+        
+        />
+
+        <TextInputs
+        setter = {setExperience}
+        inputValue = {experience}
+        inputPlaceholder = 'How many years of experience do you have?'
+        inputName = 'experience'
+        />
+
+        <TextInputs
+        setter = {setFullName}
+        inputValue = {fullname}
+        inputPlaceholder = 'Your full name'
+        inputName = 'fullname'
+        />
+
+       </View>
+      </View>
     </ScrollView>
     </TouchableWithoutFeedback>
     )
@@ -75,6 +100,6 @@ const styles = StyleSheet.create ({
         top: '5%'
       },
       inputInformationSpace: {
-      top: '5%'
+      top: '10%'
       }
 })
