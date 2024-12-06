@@ -14,6 +14,11 @@ export default function createProfile ({ navigation }) {
     const handlePress = () => {
         navigation.navigate ('signup');
     };
+
+    const [businessName, setBusinessName ] = useState ();
+    const [address, setAddress] = useState ();
+    const [fullname, setFullName] = useState ();
+    const [experience, setExperience] = useState ();
     
     return (
 <KeyboardAvoidingView style = {styles.container}

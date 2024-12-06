@@ -4,17 +4,22 @@ import { useState } from 'react';
 
 const TextInputs = props => {
 
-    const [businessName, setBusinessName ] = useState ();
-    const [address, setAddress] = useState ();
-    const [fullname, setFullName] = useState ();
-    const [experience, setExperience] = useState ();
+    
+    const [inputHighlight, setInputHighlight] = useState (null)
 
     return(
         <View>
             <TextInput
             style={styles.inputBoxes}
-            onChangeText={props.setter}>  </TextInput>
+            onChangeText={props.setter}
+            value={props.inputValue}
+            placeholder={props.inputPlaceholder}
+            onFocus={() => setInputHighlight (props.inputName)}
+            onBlur={() => setInputHighlight (null)}>
+            </TextInput>
         </View>
+
+        
     )
 }
 
