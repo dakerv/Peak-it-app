@@ -8,34 +8,35 @@ const TextInputs = props => {
     const [inputHighlight, setInputHighlight] = useState (null)
 
     return(
-        <View style= {[styles.inputBoxes, inputHighlight === props.inputName && styles.textHighlightFeatures]}>
+        
             <TextInput
-            style={styles.inputContainers}
+            style={[styles.inputBoxes, inputHighlight === props.inputName && styles.textHighlightFeatures]}
             onChangeText={props.setter}
             value={props.inputValue}
             placeholder={props.inputPlaceholder}
             onFocus={() => setInputHighlight (props.inputName)}
-            onBlur={() => setInputHighlight (null)} >
-            </TextInput>
-        </View>   
+            onBlur={() => setInputHighlight (null)}>
+            </TextInput>   
     )
 }
 
 const styles = StyleSheet.create ({
     inputBoxes: {
         width: '100%',
-        height: '35%',
+        height: '10%',
         borderRadius: 5,
         borderStyle: 'solid',
-        borderColor: 'black'
+        borderColor: 'grey',
+        padding: 20,
+        borderWidth: 1,
+        flex: 1
     },
     inputContainers: {
-        borderColor: 'black',
-        padding: 15
+        
     },
     textHighlightFeatures: {
         borderColor: 'green',
-        borderWidth: 2
+        borderWidth: 1
     }
 })
 

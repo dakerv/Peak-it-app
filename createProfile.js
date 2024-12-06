@@ -21,10 +21,9 @@ export default function createProfile ({ navigation }) {
     const [experience, setExperience] = useState ();
     
     return (
-<KeyboardAvoidingView style = {styles.container}
-  behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
     
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+    <ScrollView style={styles.container}>
     <View style = {{ flex: 1}} >
        
       <View> 
@@ -47,9 +46,8 @@ export default function createProfile ({ navigation }) {
       </View>
 
     </View>
+    </ScrollView>
     </TouchableWithoutFeedback>
-    
-</KeyboardAvoidingView>
     )
 }
 
@@ -77,6 +75,6 @@ const styles = StyleSheet.create ({
         top: '5%'
       },
       inputInformationSpace: {
-      bottom: '8%'
+      top: '5%'
       }
 })

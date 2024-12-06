@@ -7,7 +7,7 @@ const WarningContainer = props => {
         <View style = {styles.warningContainerStyle}>
           <MaterialIcons
             name='warning'
-            size='20'
+            size='16'
             color='orange' />
           <Text style = {styles.textStyle}> Kindly {props.name} </Text>
         </View>
@@ -17,16 +17,17 @@ const WarningContainer = props => {
 const styles = StyleSheet.create ({
     warningContainerStyle: {
         flexDirection: 'row',
-        height: '25%',
+        height: '55%',
         width: '100%',
         backgroundColor: '#E5F2FF',
-        paddingTop: 15,
+        paddingTop: 10,
         paddingLeft: 10,
-        borderRadius: 5
+        borderRadius: 5,
+        textAlignVertical: 'center'
     },
     textStyle: {
         color: 'green',
-        fontSize: 18,
+        fontSize: 15,
     }
 })
 
