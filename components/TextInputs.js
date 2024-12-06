@@ -8,7 +8,7 @@ const TextInputs = props => {
     const [inputHighlight, setInputHighlight] = useState (null)
 
     return(
-        <View style= {[styles.inputBoxes, inputHighlight === props.inputName && styles.textHighlightFeatures]} >
+        <View style= {[styles.inputBoxes, inputHighlight === props.inputName && styles.textHighlightFeatures]}>
             <TextInput
             style={styles.inputContainers}
             onChangeText={props.setter}

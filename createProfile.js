@@ -38,7 +38,7 @@ export default function createProfile ({ navigation }) {
         <WarningContainer name='provide the correct info below' />
       </View>
 
-      <View>
+      <View style = {styles.inputInformationSpace}>
         <TextInputs 
         setter = {setBusinessName}
         inputValue = {businessName} 
@@ -75,5 +75,8 @@ const styles = StyleSheet.create ({
       },
       warningSpace: {
         top: '5%'
+      },
+      inputInformationSpace: {
+      bottom: '8%'
       }
 })
