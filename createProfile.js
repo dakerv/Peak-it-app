@@ -21,6 +21,7 @@ export default function createProfile ({ navigation }) {
     const [experience, setExperience] = useState ();
     const [businessMail, setBusinessMail] = useState();
     const [country, setCountry] = useState ();
+    const [countryCode, setCountryCode] = useState ();
     const [phoneNumber, setPhoneNumber] = useState ();
     const [businessAddress, setBusinessAddress] = useState ();
     
@@ -75,40 +76,29 @@ export default function createProfile ({ navigation }) {
         <WarningContainer
         name='All necessary info will be sent to business contact provided below'/>
        </View>
-
-       <View style={styles.inputInformationSpace}>
-         <TextInputs 
-         setter = {setBusinessName} 
-         inputValue = {businessName}
-         inputPlaceholder = 'Buisness Name*'
-         inputName ='businessName'/>
-
-         <TextInputs
-         setter = {setCountry}
-         inputValue = {country}
-         inputPlaceholder = 'Select country/region (Nigeria)'
-         inputName = 'country'/>
-
-          <View style ={styles.numberSpaceContainer}>
-          <TextInput
-          style={styles.countryCode}
-          keyboardType='numeric' />
+      
+          <View style={styles.numberSpaceContainer}> 
+          <View style={styles.countryCode}>
+           <TextInput
+           keyboardType='numeric'
+           value={countryCode}
+           onChangeText={setCountryCode}
+           placeholder='+234'>
+           </TextInput>
+           </View>
           
+          <View style = {styles.numberSpace}>
           <TextInput
-          style={styles.numberSpace}
-          keyboardType='numeric' />
-          </View>
-
-         <TextInputs
-         setter = {setBusinessAddress}
-         inputValue = {businessAddress}
-         inputPlaceholder = 'Business address*'
-         inputName = 'businessAddress' />
-       </View>
-
-        
-
-      </View>
+           keyboardType='numeric'
+           value={phoneNumber}
+           onChangeText = {setPhoneNumber}
+           placeholder='Phone Number'>
+           </TextInput>  
+           
+          </View>  
+          </View>   
+       
+    </View>
     </ScrollView>
     </TouchableWithoutFeedback>
     )
@@ -140,20 +130,27 @@ const styles = StyleSheet.create ({
       },
       inputInformationSpace: {
       top: '10%',
-      marginBottom: 45
+      marginBottom: 45,
       },
       numberSpaceContainer: {
-        flexDirection: 'row'
+        flexDirection: 'row',
+        rowGap: 5,
+        width: '100%',
+        top: 40
       },
       countryCode: {
-        width: '30%',
-        height: '10%',
+        width: '20%',
+        height: 48,
         borderRadius: 5,
         borderWidth: 1,
-        borderColor: 'grey'
+        borderColor: 'grey',
+        flex: 1,
+        padding: 10,
+        fontSize: 18
       },
       numberSpace: {
-        width: '70%',
+        width: '10%',
+        flex: 1,
         height: '10%',
         borderRadius: 1,
         borderColor: 'grey'
