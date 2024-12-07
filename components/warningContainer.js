@@ -9,7 +9,7 @@ const WarningContainer = props => {
             name='warning'
             size='16'
             color='orange' />
-          <Text style = {styles.textStyle}> Kindly {props.name} </Text>
+          <Text style = {styles.textStyle}> {props.name} </Text>
         </View>
     )
 }

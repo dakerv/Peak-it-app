@@ -19,6 +19,10 @@ export default function createProfile ({ navigation }) {
     const [address, setAddress] = useState ();
     const [fullname, setFullName] = useState ();
     const [experience, setExperience] = useState ();
+    const [businessMail, setBusinessMail] = useState();
+    const [country, setCountry] = useState ();
+    const [phoneNumber, setPhoneNumber] = useState ();
+    const [businessAddress, setBusinessAddress] = useState ();
     
     return (
     
@@ -26,7 +30,6 @@ export default function createProfile ({ navigation }) {
     <ScrollView>
     <View style={styles.container}>
     
-       
       <View> 
         <TouchableOpacity onPress={handlePress}>
         <Text style = {styles.skipText}> Skip </Text>
@@ -35,7 +38,7 @@ export default function createProfile ({ navigation }) {
       </View>
 
       <View style = {styles.warningSpace}>
-        <WarningContainer name='provide the correct info below' />
+        <WarningContainer name='Kindly provide the correct info below' />
       </View>
 
       <View style = {styles.inputInformationSpace}>
@@ -51,7 +54,6 @@ export default function createProfile ({ navigation }) {
         inputValue = {address}
         inputPlaceholder = 'What is your address?'
         inputName = 'address'
-        
         />
 
         <TextInputs
@@ -67,6 +69,17 @@ export default function createProfile ({ navigation }) {
         inputPlaceholder = 'How many years of experience do you have?'
         inputName = 'experience'
         />
+       </View>
+
+       <View style={styles.warningSpace}>
+        <WarningContainer
+        name='All necessary info will be sent to business contact provided below'/>
+       </View>
+
+       <View style={styles.inputInformationSpace}>
+         <TextInputs  />
+         <TextInputs />
+         <TextInputs />
        </View>
       </View>
     </ScrollView>
@@ -99,6 +112,7 @@ const styles = StyleSheet.create ({
         top: '5%'
       },
       inputInformationSpace: {
-      top: '10%'
+      top: '10%',
+      marginBottom: 45
       }
 })
