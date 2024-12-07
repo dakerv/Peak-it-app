@@ -141,5 +141,15 @@ const styles = StyleSheet.create ({
       inputInformationSpace: {
       top: '10%',
       marginBottom: 45
+      },
+      numberSpaceContainer: {
+        flexDirection: 'row'
+      },
+      countryCode: {
+        width: '100%',
+        height: '10%',
+        borderRadius: 5,
+        borderWidth: 1,
+        borderColor: 'grey'
       }
 })
