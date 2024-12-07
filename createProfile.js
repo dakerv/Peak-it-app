@@ -146,10 +146,16 @@ const styles = StyleSheet.create ({
         flexDirection: 'row'
       },
       countryCode: {
-        width: '100%',
+        width: '30%',
         height: '10%',
         borderRadius: 5,
         borderWidth: 1,
+        borderColor: 'grey'
+      },
+      numberSpace: {
+        width: '70%',
+        height: '10%',
+        borderRadius: 1,
         borderColor: 'grey'
       }
 })
