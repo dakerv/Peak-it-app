@@ -77,10 +77,37 @@ export default function createProfile ({ navigation }) {
        </View>
 
        <View style={styles.inputInformationSpace}>
-         <TextInputs  />
-         <TextInputs />
-         <TextInputs />
+         <TextInputs 
+         setter = {setBusinessName} 
+         inputValue = {businessName}
+         inputPlaceholder = 'Buisness Name*'
+         inputName ='businessName'/>
+
+         <TextInputs
+         setter = {setCountry}
+         inputValue = {country}
+         inputPlaceholder = 'Select country/region (Nigeria)'
+         inputName = 'country'/>
+
+          <View style ={styles.numberSpaceContainer}>
+          <TextInput
+          style={styles.countryCode}
+          keyboardType='numeric' />
+          
+          <TextInput
+          style={styles.numberSpace}
+          keyboardType='numeric' />
+          </View>
+
+         <TextInputs
+         setter = {setBusinessAddress}
+         inputValue = {businessAddress}
+         inputPlaceholder = 'Business address*'
+         inputName = 'businessAddress' />
        </View>
+
+        
+
       </View>
     </ScrollView>
     </TouchableWithoutFeedback>
