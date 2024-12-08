@@ -67,7 +67,7 @@ export default function createProfile ({ navigation }) {
         <TextInputs
         setter = {setExperience}
         inputValue = {experience}
-        inputPlaceholder = 'How many years of experience do you have?'
+        inputPlaceholder = 'How many years h of experience do you have?'
         inputName = 'experience'
         />
        </View>
@@ -77,25 +77,26 @@ export default function createProfile ({ navigation }) {
         name='All necessary info will be sent to business contact provided below'/>
        </View>
       
-          <View style={styles.numberSpaceContainer}> 
-          <View style={styles.countryCode}>
-           <TextInput
-           keyboardType='numeric'
-           value={countryCode}
-           onChangeText={setCountryCode}
-           placeholder='+234'>
-           </TextInput>
+          <View style={styles.numberSpaceContainer}>
+
+            <View style={styles.countryCode}>
+             <TextInput
+             keyboardType='numeric'
+             value={countryCode}
+             onChangeText={setCountryCode}
+             placeholder='+234'>
+             </TextInput>
            </View>
           
           <View style = {styles.numberSpace}>
-          <TextInput
-           keyboardType='numeric'
-           value={phoneNumber}
-           onChangeText = {setPhoneNumber}
-           placeholder='Phone Number'>
-           </TextInput>  
-           
-          </View>  
+            <TextInput
+            keyboardType='numeric'
+            value={phoneNumber}
+            onChangeText = {setPhoneNumber}
+            placeholder='Phone Number'>
+            </TextInput>  
+          </View>
+
           </View>   
        
     </View>
@@ -134,25 +135,27 @@ const styles = StyleSheet.create ({
       },
       numberSpaceContainer: {
         flexDirection: 'row',
-        rowGap: 5,
+        marginLeft: 5,
         width: '100%',
-        top: 40
+        top: 40,
+        height: 300
       },
       countryCode: {
-        width: '20%',
-        height: 48,
+        width: 10,
+        height: 45,
         borderRadius: 5,
         borderWidth: 1,
         borderColor: 'grey',
-        flex: 1,
-        padding: 10,
+        padding: 13,
         fontSize: 18
       },
       numberSpace: {
-        width: '10%',
-        flex: 1,
-        height: '10%',
+        width: 10,
+        height: 45,
         borderRadius: 1,
-        borderColor: 'grey'
+        borderColor: 'grey',
+        borderWidth: 1,
+        borderRadius: 5,
+        padding: 13
       }
 })
