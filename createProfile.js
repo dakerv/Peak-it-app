@@ -67,7 +67,7 @@ export default function createProfile ({ navigation }) {
         <TextInputs
         setter = {setExperience}
         inputValue = {experience}
-        inputPlaceholder = 'How many years h h h h h of experience do you have?'
+        inputPlaceholder = 'How many years of experience do you have?'
         inputName = 'experience'
         />
        </View>
