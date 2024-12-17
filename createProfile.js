@@ -81,10 +81,10 @@ export default function createProfile ({ navigation }) {
 
             <View style={styles.countryCode}>
              <TextInput
-             keyboardType='numeric'
-             value={countryCode}
-             onChangeText={setCountryCode}
-             placeholder='+234'>
+              keyboardType='numeric'
+              value={countryCode}
+              onChangeText={setCountryCode}
+              placeholder='+234'>
              </TextInput>
            </View>
           
