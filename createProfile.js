@@ -31,7 +31,7 @@ export default function createProfile ({ navigation }) {
     return (
     
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-    <ScrollView>
+    <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
     <View style={styles.container}>
     
       <View> 
@@ -183,6 +183,7 @@ const styles = StyleSheet.create ({
       inputInformationSpace: {
       top: '8%',
       marginBottom: 45,
+      height: 'auto'
       },
       numberSpaceContainer: {
         flexDirection: 'row',
