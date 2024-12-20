@@ -244,7 +244,9 @@ const styles = StyleSheet.create ({
       },
       termsAndConditions: {
         top: '3%',
-        height: 200
+        height: 200,
+        flexDirection: 'row',
+        width: '100%'
       },
       tickboxGrayStyles: {
         width: '6%',
@@ -257,6 +259,8 @@ const styles = StyleSheet.create ({
       },
       tickboxGreenStyles: {
         backgroundColor: 'green',
-        
+      },
+      termsText: {
+        padding: 5
       }
 })
