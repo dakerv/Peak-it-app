@@ -79,8 +79,8 @@ export default function signup ({ navigation }) {
             <View style = {{flex: 1}}>
 
             <View style = {styles.logoContainer}>
-            <Image source = {require ('./assets/images/Logo SVG 1.png')} /> 
-            <Image source = {require ('./assets/images/PickEAT PickIT.png')} />
+            <Image source = {require ('../assets/images/Logo SVG 1.png')} /> 
+            <Image source = {require ('../assets/images/PickEAT PickIT.png')} />
             </View>
 
             <View style = {styles.introContainer}>

@@ -21,7 +21,7 @@ export default function servicePage( { navigation }) {
       </View>
 
       <Image style = {styles.imagePositioning} 
-        source ={require('./assets/images/undraw_Terms_re_6ak4 1.png')}  />
+        source ={require('../assets/images/undraw_Terms_re_6ak4 1.png')}  />
 
       <View style = {styles.greetingContainer}>
         <Text style = {styles.greetingText}> Highlight the services you excel at, from chef to catery services </Text>

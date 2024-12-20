@@ -21,7 +21,7 @@ export default function profilePage( { navigation }) {
       </View>
 
       <Image style = {styles.imagePositioning} 
-        source ={require('./assets/images/undraw_Profile_data_re_v81r 1.png')}  />
+        source ={require('../assets/images/undraw_Profile_data_re_v81r 1.png')}  />
 
       <View style = {styles.greetingContainer}>
         <Text style = {styles.greetingText}> Set up your Vendor Dashboard/Restaurant to showcase your menu. </Text>

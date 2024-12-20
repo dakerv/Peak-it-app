@@ -21,7 +21,7 @@ export default function startedPage( { navigation }) {
       </View>
 
       <Image style = {styles.imagePositioning} 
-        source ={require('./assets/images/undraw_term_sheet_re_ju7s 1.png')}  />
+        source ={require('../assets/images/undraw_term_sheet_re_ju7s 1.png')}  />
 
       <View style = {styles.greetingContainer}>
         <Text style = {styles.greetingText}> You are one step away from taking orders and growing your business. Let's get started </Text>

@@ -21,7 +21,7 @@ export default function availabilityPage( { navigation }) {
       </View>
 
       <Image style = {styles.imagePositioning} 
-        source ={require('./assets/images/undraw_season_change_f99v 1.png')}  />
+        source ={require('../assets/images/undraw_season_change_f99v 1.png')}  />
 
       <View style = {styles.greetingContainer}>
         <Text style = {styles.greetingText}> Choose when you are available to take on orders and deliver to clients </Text>
