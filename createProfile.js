@@ -173,7 +173,7 @@ export default function createProfile ({ navigation }) {
       {tickBox && <MaterialIcons name="check" size={15} color="white" />}
       </TouchableOpacity>
 
-      <Text> I understand and agree with the terms and conditions. </Text>
+      <Text style = {styles.termsText}> I understand and agree with the terms and conditions. </Text>
     </View>
 
     </View>
@@ -249,8 +249,8 @@ const styles = StyleSheet.create ({
         width: '100%'
       },
       tickboxGrayStyles: {
-        width: '6%',
-        height: '12%',
+        width: '5.5%',
+        height: '10%',
         borderColor: 'grey',
         borderWidth: 1,
         borderRadius: 3,
@@ -261,6 +261,8 @@ const styles = StyleSheet.create ({
         backgroundColor: 'green',
       },
       termsText: {
-        padding: 5
+        paddingLeft: 3,
+        paddingTop: 3,
+        fontSize: 13
       }
 })
