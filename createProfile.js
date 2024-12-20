@@ -163,7 +163,6 @@ const styles = StyleSheet.create ({
       },
       countryCode: {
         width: '21.5%',
-        height: '16%',
         borderRadius: 5,
         borderWidth: 1,
         borderColor: 'grey',
@@ -174,7 +173,6 @@ const styles = StyleSheet.create ({
       },
       numberSpace: {
         width: '76.8%',
-        height: '16%',
         borderRadius: 1,
         borderColor: 'grey',
         borderWidth: 1,
