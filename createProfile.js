@@ -24,6 +24,9 @@ export default function createProfile ({ navigation }) {
     const [countryCode, setCountryCode] = useState ();
     const [phoneNumber, setPhoneNumber] = useState ();
     const [businessAddress, setBusinessAddress] = useState ();
+    const [professionType, setProfessionType] = useState ();
+    const [vendorType, setVendorType] = useState ();
+    const [workAlone, setWorkAlone] = useState ();
     
     return (
     
@@ -121,9 +124,10 @@ export default function createProfile ({ navigation }) {
 
         </View>
 
-    <WarningContainer
-    name = 'All details you provided must be true, accurate and non-misleading. In the event you provided wrong information, you shall be held liable for such misconduct' 
-    />
+    <View style={styles.warningSpace}>
+     <WarningContainer
+      name = 'All details you provided must be true, accurate and non-misleading. In the event you provided wrong information, you shall be held liable for such misconduct'/>
+    </View>  
        
     </View>
     </ScrollView>
