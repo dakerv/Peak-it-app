@@ -152,26 +152,27 @@ const styles = StyleSheet.create ({
         flexDirection: 'row',
         marginLeft: 5,
         width: '100%',
-        height: 300
+        height: 300,
+        marginVertical: 7
       },
       countryCode: {
-        width: '20%',
-        height: 45,
+        width: '21.5%',
+        height: '16%',
         borderRadius: 5,
         borderWidth: 1,
         borderColor: 'grey',
-        padding: 13,
+        padding: 15,
         fontSize: 18,
-        marginRight: 5,
+        marginRight: 1,
         right: 5
       },
       numberSpace: {
-        width: '76%',
-        height: 45,
+        width: '76.8%',
+        height: '16%',
         borderRadius: 1,
         borderColor: 'grey',
         borderWidth: 1,
         borderRadius: 5,
-        padding: 13
+        padding: 15
       }
 })
