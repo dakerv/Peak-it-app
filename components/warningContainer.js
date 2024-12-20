@@ -17,11 +17,10 @@ const WarningContainer = props => {
 const styles = StyleSheet.create ({
     warningContainerStyle: {
         flexDirection: 'row',
-        height: 40,
+        height: 'auto',
         width: '100%',
         backgroundColor: '#E5F2FF',
-        paddingTop: 10,
-        paddingLeft: 10,
+        padding: 7,
         borderRadius: 5,
         textAlignVertical: 'center'
     },

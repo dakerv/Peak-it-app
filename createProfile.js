@@ -119,7 +119,12 @@ export default function createProfile ({ navigation }) {
         inputName = 'businessAddress'
          />   
 
-        </View>   
+        </View>
+
+    <WarningContainer
+    name = 'All details you provided must be true, accurate and non-misleading.
+    In the event you provided wrong information, you shall be held liable for such misconduct' 
+    />
        
     </View>
     </ScrollView>
