@@ -127,7 +127,27 @@ export default function createProfile ({ navigation }) {
     <View style={styles.warningSpace}>
      <WarningContainer
       name = 'All details you provided must be true, accurate and non-misleading. In the event you provided wrong information, you shall be held liable for such misconduct'/>
-    </View>  
+    </View>
+
+    <View styles={styles.inputInformationSpace}>
+      <TextInputs
+      setter = {setProfessionType}
+      inputValue = {professionType}
+      inputPlaceholder = 'Profession'
+      inputName = 'professionType' />
+
+      <TextInputs
+      setter = {setVendorType}
+      inputValue = {vendorType}
+      inputPlaceholder = 'Vendor Type'
+      inputName = 'vendorType' />
+
+      <TextInputs
+      setter = {setWorkAlone}
+      inputValue = {workAlone}
+      inputPlaceholder = 'Do you work alone?'
+      inputName = 'workAlone' />
+    </View>
        
     </View>
     </ScrollView>
@@ -143,7 +163,8 @@ const styles = StyleSheet.create ({
         paddingLeft: 20,
         paddingRight: 20,
         flexDirection: "column",
-        backgroundColor: 'white'
+        backgroundColor: 'white',
+        height: 'auto'
     },
     createProfileText: {
         fontSize: 18,
