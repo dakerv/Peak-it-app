@@ -31,6 +31,7 @@ export default function createProfile ({ navigation }) {
     const [workAlone, setWorkAlone] = useState ();
     const [promoCode, setPromoCode] = useState ();
     const [tickBox, setTickBox] = useState (null);
+    const [texthighlight, setTextHighlight] = useState(null)
     
   return (
   <KeyboardAvoidingView
@@ -102,21 +103,25 @@ export default function createProfile ({ navigation }) {
       
           <View style={styles.numberSpaceContainer}>
 
-            <View style={styles.countryCode}>
+            <View style={[styles.countryCode, texthighlight === 'countryCode' && styles.textHighlightFeatures]}>
              <TextInput
               keyboardType='numeric'
               value={countryCode}
               onChangeText={setCountryCode}
-              placeholder='+234'>
+              placeholder='+234'
+              onFocus={() => setTextHighlight('countryCode')}
+              onBlur={() => setTextHighlight (null)}>
              </TextInput>
            </View>
           
-          <View style = {styles.numberSpace}>
+          <View style = {[styles.numberSpace, texthighlight === 'phoneNumber' && styles.textHighlightFeatures]}>
             <TextInput
             keyboardType='numeric'
             value={phoneNumber}
             onChangeText = {setPhoneNumber}
-            placeholder='Phone Number'>
+            placeholder='Phone Number'
+            onFocus={() => setTextHighlight('phoneNumber')}
+            onBlur={() => setTextHighlight (null)}>
             </TextInput>  
           </View>
         </View> 
@@ -206,6 +211,10 @@ const styles = StyleSheet.create ({
         fontSize: 18,
         fontWeight: 'bold',
         textAlign: 'center'
+    },
+    textHighlightFeatures: {
+      borderColor: 'green',
+      borderWidth: 2,
     },
       skipText: {
         fontSize: 18,
