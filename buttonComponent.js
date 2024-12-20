@@ -32,3 +32,5 @@ greenButton: {
   },
 })
 
+export default ButtonComponent;
+
