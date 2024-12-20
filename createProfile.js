@@ -27,6 +27,7 @@ export default function createProfile ({ navigation }) {
     const [professionType, setProfessionType] = useState ();
     const [vendorType, setVendorType] = useState ();
     const [workAlone, setWorkAlone] = useState ();
+    const [promoCode, setPromoCode] = useState ();
     
     return (
       <KeyboardAvoidingView
@@ -157,7 +158,12 @@ export default function createProfile ({ navigation }) {
     </View> 
 
     <View style = {styles.inputInformationSpace}>
-      
+      <TextInputs
+      setter = {setPromoCode}
+      inputValue = {promoCode}
+      inputPlaceholder = 'Memebership ID/Promo code'
+      inputNmae = 'promoCode'
+       />
     </View> 
 
     </View>
