@@ -77,13 +77,15 @@ export default function createProfile ({ navigation }) {
         name='All necessary info will be sent to business contact provided below'/>
        </View>
 
-       <TextInputs 
+        
+      <View style = {styles.inputInformationSpace}>  
+        <TextInputs 
          setter = {setBusinessName} 
          inputValue = {businessName}
-         inputPlaceholder = 'Buisness Name*'
+         inputPlaceholder = 'Business Name*'
          inputName ='businessName'/>
 
-         <TextInputs
+        <TextInputs
          setter = {setCountry}
          inputValue = {country}
          inputPlaceholder = 'Select country/region (Nigeria)'
@@ -108,8 +110,9 @@ export default function createProfile ({ navigation }) {
             placeholder='Phone Number'>
             </TextInput>  
           </View>
+        </View>  
 
-          </View>   
+        </View>   
        
     </View>
     </ScrollView>
@@ -149,7 +152,6 @@ const styles = StyleSheet.create ({
         flexDirection: 'row',
         marginLeft: 5,
         width: '100%',
-        top: 60,
         height: 300
       },
       countryCode: {
