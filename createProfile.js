@@ -254,14 +254,14 @@ const styles = StyleSheet.create ({
         padding: 15
       },
       termsAndConditions: {
-        top: '3%',
-        height: 200,
+        top: '1%',
+        height: 80,
         flexDirection: 'row',
         width: '100%'
       },
       tickboxGrayStyles: {
-        width: '5.5%',
-        height: '10%',
+        width: '5%',
+        height: '20%',
         borderColor: 'grey',
         borderWidth: 1,
         borderRadius: 3,
@@ -273,10 +273,10 @@ const styles = StyleSheet.create ({
       },
       termsText: {
         paddingLeft: 3,
-        paddingTop: 3,
-        fontSize: 13
+        paddingTop: 1,
+        fontSize: 13.5
       },
       buttonSpace: {
-        bottom: '9%'
+        bottom: '2.5%'
       }
 })
