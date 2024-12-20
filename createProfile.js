@@ -130,7 +130,7 @@ export default function createProfile ({ navigation }) {
 
         </View>
 
-    <View style={styles.warningSpace1}>
+    <View style={styles.warningSpace2}>
      <WarningContainer
       name = 'All details you provided must be true, accurate and non-misleading. In the event you provided wrong information, you shall be held liable for such misconduct'/>
     </View>
@@ -215,6 +215,10 @@ const styles = StyleSheet.create ({
       },
       warningSpace1: {
         top: '2%'
+      },
+      warningSpace2: {
+        marginVertical: 23,
+
       },
       inputInformationSpace1: {
         top: '3%',
