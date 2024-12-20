@@ -238,5 +238,9 @@ const styles = StyleSheet.create ({
       },
       termsAndConditions: {
         top: '10%'
+      },
+      tickboxStyles: {
+        width: '30%',
+        height: '20%'
       }
 })
