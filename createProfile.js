@@ -32,13 +32,13 @@ export default function createProfile ({ navigation }) {
     const [promoCode, setPromoCode] = useState ();
     const [tickBox, setTickBox] = useState (null);
     
-    return (
-      <KeyboardAvoidingView
-      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-      style={{ flex: 1 }}>
-    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-    <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-    <View style={styles.container}>
+  return (
+  <KeyboardAvoidingView
+  behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+  style={{ flex: 1 }}>
+   <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+   <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+   <View style={styles.container}>
     
       <View> 
         <TouchableOpacity onPress={handlePress}>
@@ -47,11 +47,11 @@ export default function createProfile ({ navigation }) {
         <Text style = {styles.createProfileText}> Create Profile </Text>
       </View>
 
-      <View style = {styles.warningSpace}>
+      <View style = {styles.warningSpace1}>
         <WarningContainer name='Kindly provide the correct info below' />
       </View>
 
-      <View style = {styles.inputInformationSpace}>
+      <View style = {styles.inputInformationSpace1}>
         <TextInputs 
         setter = {setBusinessName}
         inputValue = {businessName} 
@@ -81,13 +81,13 @@ export default function createProfile ({ navigation }) {
         />
        </View>
 
-       <View style={styles.warningSpace}>
+       <View style={styles.warningSpace1}>
         <WarningContainer
         name='All necessary info will be sent to business contact provided below'/>
        </View>
 
         
-      <View style = {styles.inputInformationSpace}>  
+      <View style = {styles.inputInformationSpace1}>  
         <TextInputs 
          setter = {setBusinessName} 
          inputValue = {businessName}
@@ -130,12 +130,12 @@ export default function createProfile ({ navigation }) {
 
         </View>
 
-    <View style={styles.warningSpace}>
+    <View style={styles.warningSpace1}>
      <WarningContainer
       name = 'All details you provided must be true, accurate and non-misleading. In the event you provided wrong information, you shall be held liable for such misconduct'/>
     </View>
 
-    <View styles={styles.inputInformationSpace2}>
+    <View styles={styles.inputInformationSpace1}>
       <TextInputs
       setter = {setProfessionType}
       inputValue = {professionType}
@@ -155,12 +155,12 @@ export default function createProfile ({ navigation }) {
       inputName = 'workAlone' />
     </View>
 
-    <View style = {styles.warningSpace}>  
+    <View style = {styles.warningSpace1}>  
     <WarningContainer
     name='In order to make points and benefits from PickEat PickIt please enter your membership ID' />
     </View> 
 
-    <View style = {styles.inputInformationSpace}>
+    <View style = {styles.inputInformationSpace1}>
       <TextInputs
       setter = {setPromoCode}
       inputValue = {promoCode}
@@ -195,14 +195,12 @@ const styles = StyleSheet.create ({
     container: {
         flex: 1,
         backgroundColor: '#fff',
-        paddingTop: 30,
+        paddingTop: 40,
         paddingLeft: 20,
         paddingRight: 20,
         flexDirection: "column",
         backgroundColor: 'white',
         height: '100%',
-        borderColor: 'red',
-        borderWidth: 2
     },
     createProfileText: {
         fontSize: 18,
@@ -215,11 +213,11 @@ const styles = StyleSheet.create ({
         fontWeight: 500,
         textAlign: 'right'
       },
-      warningSpace: {
-        top: '3%'
+      warningSpace1: {
+        top: '2%'
       },
-      inputInformationSpace: {
-        top: '5%',
+      inputInformationSpace1: {
+        top: '3%',
         marginBottom: '10%',
         height: 'auto'
       },
@@ -274,6 +272,6 @@ const styles = StyleSheet.create ({
         fontSize: 13
       },
       buttonSpace: {
-        bottom: '8%'
+        bottom: '9%'
       }
 })
