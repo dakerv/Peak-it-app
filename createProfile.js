@@ -131,7 +131,7 @@ export default function createProfile ({ navigation }) {
       name = 'All details you provided must be true, accurate and non-misleading. In the event you provided wrong information, you shall be held liable for such misconduct'/>
     </View>
 
-    <View styles={styles.inputInformationSpace}>
+    <View styles={styles.inputInformationSpace2}>
       <TextInputs
       setter = {setProfessionType}
       inputValue = {professionType}
@@ -143,6 +143,18 @@ export default function createProfile ({ navigation }) {
       inputValue = {vendorType}
       inputPlaceholder = 'Vendor Type'
       inputName = 'vendorType' />
+
+      <TextInputs
+      setter = {setWorkAlone}
+      inputValue = {workAlone}
+      inputPlaceholder = 'Do you work alone?'
+      inputName = 'workAlone' />
+
+<TextInputs
+      setter = {setWorkAlone}
+      inputValue = {workAlone}
+      inputPlaceholder = 'Do you work alone?'
+      inputName = 'workAlone' />
 
       <TextInputs
       setter = {setWorkAlone}
@@ -162,7 +174,7 @@ const styles = StyleSheet.create ({
     container: {
         flex: 1,
         backgroundColor: '#fff',
-        paddingTop: 50,
+        paddingTop: 30,
         paddingLeft: 20,
         paddingRight: 20,
         flexDirection: "column",
@@ -183,12 +195,15 @@ const styles = StyleSheet.create ({
         textAlign: 'right'
       },
       warningSpace: {
-        top: '5%'
+        top: '3%'
       },
       inputInformationSpace: {
-      top: '8%',
-      marginBottom: '15%',
+      top: '5%',
+      marginBottom: '10%',
       height: 'auto'
+      },
+      inputInformationSpace2: {
+      marginBottom: '20%'
       },
       numberSpaceContainer: {
         flexDirection: 'row',
