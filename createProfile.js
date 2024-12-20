@@ -135,7 +135,7 @@ export default function createProfile ({ navigation }) {
       name = 'All details you provided must be true, accurate and non-misleading. In the event you provided wrong information, you shall be held liable for such misconduct'/>
     </View>
 
-    <View styles={styles.inputInformationSpace1}>
+    <View styles={styles.inputInformationSpace2}>
       <TextInputs
       setter = {setProfessionType}
       inputValue = {professionType}
@@ -222,7 +222,8 @@ const styles = StyleSheet.create ({
         height: 'auto'
       },
       inputInformationSpace2: {
-        height: 'auto'
+        height: 'auto',
+        top: '5%'
       },
       numberSpaceContainer: {
         flexDirection: 'row',
