@@ -15,9 +15,6 @@ export default function createProfile ({ navigation }) {
         navigation.navigate ('signup');
     };
 
-    const handleTick = () => {
-        ch
-    }
 
     const [businessName, setBusinessName ] = useState ();
     const [address, setAddress] = useState ();
@@ -32,7 +29,7 @@ export default function createProfile ({ navigation }) {
     const [vendorType, setVendorType] = useState ();
     const [workAlone, setWorkAlone] = useState ();
     const [promoCode, setPromoCode] = useState ();
-    const [tickBox, setTickBox] = useState (false);
+    const [tickBox, setTickBox] = useState (null);
     
     return (
       <KeyboardAvoidingView
@@ -171,9 +168,9 @@ export default function createProfile ({ navigation }) {
     </View> 
 
     <View style = {styles.termsAndConditions}>
-      <TouchableOpacity style = {[styles.tickboxGrayStyles]}
-      onPress={handleTick}>
-        
+      <TouchableOpacity style = {[styles.tickboxGrayStyles, tickBox && styles.tickboxGreenStyles]}
+      onPress={() => setTickBox ((prev) => !prev)}>
+      {tickBox && <MaterialIcons name="check" size={15} color="white" />}
       </TouchableOpacity>
     </View>
 
@@ -252,9 +249,12 @@ const styles = StyleSheet.create ({
         height: '15%',
         borderColor: 'grey',
         borderWidth: 1,
-        borderRadius: 3
+        borderRadius: 3,
+        justifyContent: 'center',
+        alignItems: 'center'
       },
       tickboxGreenStyles: {
-
+        backgroundColor: 'green',
+        
       }
 })
