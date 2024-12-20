@@ -15,6 +15,10 @@ export default function createProfile ({ navigation }) {
         navigation.navigate ('signup');
     };
 
+    const handleTick = () => {
+        ch
+    }
+
     const [businessName, setBusinessName ] = useState ();
     const [address, setAddress] = useState ();
     const [fullname, setFullName] = useState ();
@@ -167,7 +171,10 @@ export default function createProfile ({ navigation }) {
     </View> 
 
     <View style = {styles.termsAndConditions}>
-      <View style = {styles.tickboxGrayStyles}></View>
+      <TouchableOpacity style = {[styles.tickboxGrayStyles]}
+      onPress={handleTick}>
+        
+      </TouchableOpacity>
     </View>
 
     </View>
