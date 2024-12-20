@@ -167,7 +167,7 @@ export default function createProfile ({ navigation }) {
     </View> 
 
     <View style = {styles.termsAndConditions}>
-      <View style = {styles.tickboxStyles}></View>
+      <View style = {styles.tickboxGrayStyles}></View>
     </View>
 
     </View>
@@ -237,10 +237,17 @@ const styles = StyleSheet.create ({
         padding: 15
       },
       termsAndConditions: {
-        top: '10%'
+        top: '3%',
+        height: 200
       },
-      tickboxStyles: {
-        width: '30%',
-        height: '20%'
+      tickboxGrayStyles: {
+        width: '8%',
+        height: '15%',
+        borderColor: 'grey',
+        borderWidth: 1,
+        borderRadius: 3
+      },
+      tickboxGreenStyles: {
+
       }
 })
