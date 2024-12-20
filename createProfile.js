@@ -173,7 +173,7 @@ export default function createProfile ({ navigation }) {
       {tickBox && <MaterialIcons name="check" size={15} color="white" />}
       </TouchableOpacity>
 
-      <Text style = {styles.termsText}> I understand and agree with the terms and conditions. </Text>
+      <Text style = {styles.termsText}> I understand and agree with the Terms and Conditions </Text>
     </View>
 
     </View>
