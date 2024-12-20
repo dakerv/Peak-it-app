@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, TextInput, Image, KeyboardAvoidingView, Platfor
 import { MaterialIcons } from '@expo/vector-icons';
 import WarningContainer from './components/WarningContainer';
 import TextInputs from './components/TextInputs'; 
+import ButtonComponent from './buttonComponent';
 
 export default function createProfile ({ navigation }) {
     
@@ -176,6 +177,13 @@ export default function createProfile ({ navigation }) {
       <Text style = {styles.termsText}> I understand and agree with the Terms and Conditions </Text>
     </View>
 
+    <View style = {styles.buttonSpace}>  
+     <ButtonComponent
+      function = {handleNavigation}
+      buttonName = 'Continue' />
+    </View>
+
+
     </View>
     </ScrollView>
     </TouchableWithoutFeedback>
@@ -264,5 +272,8 @@ const styles = StyleSheet.create ({
         paddingLeft: 3,
         paddingTop: 3,
         fontSize: 13
+      },
+      buttonSpace: {
+        top: '10%'
       }
 })
