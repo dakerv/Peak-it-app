@@ -274,6 +274,6 @@ const styles = StyleSheet.create ({
         fontSize: 13
       },
       buttonSpace: {
-        top: '10%'
+        bottom: '8%'
       }
 })
