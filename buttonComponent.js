@@ -7,7 +7,7 @@ const ButtonComponent = props => {
     return(
          <TouchableOpacity onPress={props.function} 
         style = {styles.greenButton}> 
-        <Text style = {styles.nextText}> {props.na} </Text>
+        <Text style = {styles.nextText}> {props.buttonName} </Text>
         </TouchableOpacity>
     )
 }
