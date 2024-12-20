@@ -110,7 +110,14 @@ export default function createProfile ({ navigation }) {
             placeholder='Phone Number'>
             </TextInput>  
           </View>
-        </View>  
+        </View> 
+
+        <TextInputs
+        setter = {setBusinessAddress}
+        inputValue = {businessAddress}
+        inputPlaceholder ='Business Address'
+        inputName = 'businessAddress'
+         />   
 
         </View>   
        
@@ -152,7 +159,6 @@ const styles = StyleSheet.create ({
         flexDirection: 'row',
         marginLeft: 5,
         width: '100%',
-        height: 300,
         marginVertical: 7
       },
       countryCode: {
