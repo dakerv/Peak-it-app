@@ -149,20 +149,17 @@ export default function createProfile ({ navigation }) {
       inputValue = {workAlone}
       inputPlaceholder = 'Do you work alone?'
       inputName = 'workAlone' />
-
-<TextInputs
-      setter = {setWorkAlone}
-      inputValue = {workAlone}
-      inputPlaceholder = 'Do you work alone?'
-      inputName = 'workAlone' />
-
-      <TextInputs
-      setter = {setWorkAlone}
-      inputValue = {workAlone}
-      inputPlaceholder = 'Do you work alone?'
-      inputName = 'workAlone' />
     </View>
-       
+
+    <View style = {styles.warningSpace}>  
+    <WarningContainer
+    name='In order to make points and benefits from PickEat PickIt please enter your membership ID' />
+    </View> 
+
+    <View style = {styles.inputInformationSpace}>
+      
+    </View> 
+
     </View>
     </ScrollView>
     </TouchableWithoutFeedback>
@@ -198,12 +195,12 @@ const styles = StyleSheet.create ({
         top: '3%'
       },
       inputInformationSpace: {
-      top: '5%',
-      marginBottom: '10%',
-      height: 'auto'
+        top: '5%',
+        marginBottom: '10%',
+        height: 'auto'
       },
       inputInformationSpace2: {
-      marginBottom: '20%'
+        height: 'auto'
       },
       numberSpaceContainer: {
         flexDirection: 'row',
