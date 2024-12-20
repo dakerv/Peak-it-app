@@ -145,7 +145,7 @@ const styles = StyleSheet.create ({
         top: '5%'
       },
       inputInformationSpace: {
-      top: '10%',
+      top: '8%',
       marginBottom: 45,
       },
       numberSpaceContainer: {
@@ -162,7 +162,7 @@ const styles = StyleSheet.create ({
         borderColor: 'grey',
         padding: 13,
         fontSize: 18,
-        marginRight: 8,
+        marginRight: 5,
         right: 5
       },
       numberSpace: {
