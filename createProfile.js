@@ -172,6 +172,8 @@ export default function createProfile ({ navigation }) {
       onPress={() => setTickBox ((prev) => !prev)}>
       {tickBox && <MaterialIcons name="check" size={15} color="white" />}
       </TouchableOpacity>
+
+      <Text> I understand and agree with the terms and conditions. </Text>
     </View>
 
     </View>
@@ -245,8 +247,8 @@ const styles = StyleSheet.create ({
         height: 200
       },
       tickboxGrayStyles: {
-        width: '8%',
-        height: '15%',
+        width: '6%',
+        height: '12%',
         borderColor: 'grey',
         borderWidth: 1,
         borderRadius: 3,
