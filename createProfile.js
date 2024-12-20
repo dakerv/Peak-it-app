@@ -29,7 +29,9 @@ export default function createProfile ({ navigation }) {
     const [workAlone, setWorkAlone] = useState ();
     
     return (
-    
+      <KeyboardAvoidingView
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      style={{ flex: 1 }}>
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
     <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
     <View style={styles.container}>
@@ -152,6 +154,7 @@ export default function createProfile ({ navigation }) {
     </View>
     </ScrollView>
     </TouchableWithoutFeedback>
+    </KeyboardAvoidingView>
     )
 }
 
@@ -164,7 +167,9 @@ const styles = StyleSheet.create ({
         paddingRight: 20,
         flexDirection: "column",
         backgroundColor: 'white',
-        height: 'auto'
+        height: '100%',
+        borderColor: 'red',
+        borderWidth: 2
     },
     createProfileText: {
         fontSize: 18,
@@ -182,7 +187,7 @@ const styles = StyleSheet.create ({
       },
       inputInformationSpace: {
       top: '8%',
-      marginBottom: 45,
+      marginBottom: '15%',
       height: 'auto'
       },
       numberSpaceContainer: {
