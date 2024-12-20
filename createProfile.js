@@ -28,6 +28,7 @@ export default function createProfile ({ navigation }) {
     const [vendorType, setVendorType] = useState ();
     const [workAlone, setWorkAlone] = useState ();
     const [promoCode, setPromoCode] = useState ();
+    const [tickBox, setTickBox] = useState (false);
     
     return (
       <KeyboardAvoidingView
@@ -161,10 +162,13 @@ export default function createProfile ({ navigation }) {
       <TextInputs
       setter = {setPromoCode}
       inputValue = {promoCode}
-      inputPlaceholder = 'Memebership ID/Promo code'
-      inputNmae = 'promoCode'
-       />
+      inputPlaceholder = 'Membership ID/Promo code'
+      inputNmae = 'promoCode' />
     </View> 
+
+    <View style = {styles.termsAndConditions}>
+      <View style = {styles.tickboxStyles}></View>
+    </View>
 
     </View>
     </ScrollView>
@@ -231,5 +235,8 @@ const styles = StyleSheet.create ({
         borderWidth: 1,
         borderRadius: 5,
         padding: 15
+      },
+      termsAndConditions: {
+        top: '10%'
       }
 })
