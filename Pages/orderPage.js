@@ -1,13 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity, Image, Button } from 'react-native';
 
-export default function welcomePage({ navigation }) {
+export default function orderPage( { navigation }) {
   const handlePress = () => {
     navigation.navigate ('signup');
   };
 
   const handleNavigation = () => {
-    navigation.navigate ('profilePage');
+    navigation.navigate ('startedPage');
   };
 
   return (
@@ -17,15 +17,14 @@ export default function welcomePage({ navigation }) {
       </TouchableOpacity>
 
       <View style={styles.welcomeContainer}>
-        <Text style = {styles.welcomeText}> Welcome </Text>
+        <Text style = {styles.welcomeText}> Receive Food Orders </Text>
       </View>
 
       <Image style = {styles.imagePositioning} 
-        source ={require('./assets/images/welcome_cats.png')}  />
+        source ={require('../assets/images/undraw_Accept_request_re_d81h 1.png')}  />
 
       <View style = {styles.greetingContainer}>
-        <Text style = {styles.greetingText}> Welcome to your PickitPickEat for vendor expertise. </Text>
-        <Text style = {styles.greetingText2}>  Join us and start your journey today. </Text> 
+        <Text style = {styles.greetingText}> Get food orders tailored to your menu and location </Text>
       </View>
 
       <View style = {styles.buttonSpace}>
@@ -76,20 +75,17 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   imagePositioning: {
-    top: 180,
+    top: '23%',
   },
   greetingContainer: {
-    top: '40%',
+    top: '39%',
   },
   greetingText: {
-    color: "grey",
-  },
-  greetingText2: {
     color: "grey",
     textAlign: "center"
   },
   buttonSpace: {
-    top: '50%'
+    top: '44%',
   },
   greenButton: {
     backgroundColor: '#228B22',

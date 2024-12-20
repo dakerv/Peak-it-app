@@ -2,18 +2,19 @@ import { React } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import welcomePage from './welcomePage';
-import profilePage from './profilePage';
-import servicePage from './servicePage';
-import availabilityPage from './availabilityPage';
-import orderPage from './orderPage';
-import startedPage from './startedPage';
-import signup from './signup';
-import enterPin from './enterPin';
-import loginPage from './loginPage';
-import forgotPassword from './forgotPassword';
-import confirmPin from './confirmPin';
-import createProfile from './createProfile';
+import welcomePage from './Pages/welcomePage';
+import profilePage from './Pages/profilePage';
+import servicePage from './Pages/servicePage';
+import availabilityPage from './Pages/availabilityPage';
+import orderPage from './Pages/orderPage';
+import startedPage from './Pages/startedPage';
+import signup from './Pages/signup';
+import enterPin from './Pages/enterPin';
+import loginPage from './Pages/loginPage';
+import forgotPassword from './Pages/forgotPassword';
+import confirmPin from './Pages/confirmPin';
+import createProfile from './Pages/createProfile';
+
 
 const Stack = createNativeStackNavigator ();
 

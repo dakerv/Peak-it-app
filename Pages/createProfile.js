@@ -2,9 +2,9 @@ import React, { useState, useRef } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, Image, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard, ScrollView, TouchableOpacity } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
-import WarningContainer from './components/WarningContainer';
-import TextInputs from './components/TextInputs'; 
-import ButtonComponent from './buttonComponent';
+import WarningContainer from '../components/WarningContainer';
+import TextInputs from '../components/TextInputs'; 
+import ButtonComponent from './components/Pages/buttonComponent';
 
 export default function createProfile ({ navigation }) {
     
