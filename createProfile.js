@@ -76,6 +76,18 @@ export default function createProfile ({ navigation }) {
         <WarningContainer
         name='All necessary info will be sent to business contact provided below'/>
        </View>
+
+       <TextInputs 
+         setter = {setBusinessName} 
+         inputValue = {businessName}
+         inputPlaceholder = 'Buisness Name*'
+         inputName ='businessName'/>
+
+         <TextInputs
+         setter = {setCountry}
+         inputValue = {country}
+         inputPlaceholder = 'Select country/region (Nigeria)'
+         inputName = 'country'/>
       
           <View style={styles.numberSpaceContainer}>
 
@@ -137,20 +149,22 @@ const styles = StyleSheet.create ({
         flexDirection: 'row',
         marginLeft: 5,
         width: '100%',
-        top: 40,
+        top: 60,
         height: 300
       },
       countryCode: {
-        width: 10,
+        width: '20%',
         height: 45,
         borderRadius: 5,
         borderWidth: 1,
         borderColor: 'grey',
         padding: 13,
-        fontSize: 18
+        fontSize: 18,
+        marginRight: 8,
+        right: 5
       },
       numberSpace: {
-        width: 10,
+        width: '76%',
         height: 45,
         borderRadius: 1,
         borderColor: 'grey',
