@@ -114,6 +114,7 @@ export default function signup ({ navigation }) {
             </TextInput>
 
             <View style = {[styles.input, texthighlight === 'number' && styles.textHighlightFeatures]}>
+            <TextInput
             onChangeText = {onChangeNumber}
             value = {number}
             placeholder='Phone number'
