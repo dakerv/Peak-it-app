@@ -247,6 +247,7 @@ const styles = StyleSheet.create ({
         borderWidth: 1,
         margin: 7,
         padding: 12,
+        paddingTop: 15,
         borderColor: "lightgray",
         borderRadius: 5,
         width: '95%',
