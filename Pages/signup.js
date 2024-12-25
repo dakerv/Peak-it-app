@@ -100,16 +100,15 @@ export default function signup ({ navigation }) {
             </TextInput>
             </View>
 
+            <View style = {[styles.input, texthighlight === 'email' && styles.textHighlightFeatures]}>
             <TextInput
-            style = {[styles.input,
-                texthighlight === 'email' && styles.textHighlightFeatures
-            ]}
             onChangeText = {onChangeEmail}
             value = {email}
             placeholder='Email address'
             onFocus={() => setTextHighlight('email')}
             onBlur={() => setTextHighlight(null)}>
             </TextInput>
+            </View>
 
             <View style = {[styles.input, texthighlight === 'number' && styles.textHighlightFeatures]}>
             <TextInput
