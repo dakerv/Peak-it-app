@@ -91,6 +91,10 @@ export default function signup ({ navigation }) {
             <View style = {styles.textBoxes}>
             
             <View style = {[styles.input, texthighlight === 'name' && styles.textHighlightFeatures ]}>
+            <MaterialIcons
+            name='person'
+            size={22}
+            color={'lightgrey'} />
             <TextInput
             onChangeText = {onChangeName}
             value = {name}
