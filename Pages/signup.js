@@ -160,6 +160,10 @@ export default function signup ({ navigation }) {
             </View>
             
             <View style={[styles.passwordContainer, texthighlight === 'retype' && styles.textHighlightFeatures]}>
+            <MaterialIcons
+            name='lock'
+            size={22}
+            color={'lightgrey'} />
             <TextInput
             style = {styles.passwordInput}
             onChangeText = {onChangeRetype}
@@ -258,7 +262,8 @@ const styles = StyleSheet.create ({
         flexDirection: 'row',
         alignItems: 'center',
         width: '96%',
-        left: 5.5
+        left: 5.5,
+        paddingLeft: 13
   },
     passwordInput: {
         flex: 1,
