@@ -113,11 +113,7 @@ export default function signup ({ navigation }) {
             onBlur={() => setTextHighlight(null)}>
             </TextInput>
 
-            
-            <TextInput
-            style = {[styles.input,
-                texthighlight === 'number' && styles.textHighlightFeatures
-            ]}
+            <View style = {[styles.input, texthighlight === 'number' && styles.textHighlightFeatures]}>
             onChangeText = {onChangeNumber}
             value = {number}
             placeholder='Phone number'
@@ -125,6 +121,7 @@ export default function signup ({ navigation }) {
             onFocus={() => setTextHighlight('number')}
             onBlur={() => setTextHighlight(null)}>
             </TextInput>
+            </View>
 
             <View style={[styles.passwordContainer, texthighlight === 'password' && styles.textHighlightFeatures]}>
             <TextInput
