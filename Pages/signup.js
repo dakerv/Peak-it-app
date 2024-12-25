@@ -135,6 +135,10 @@ export default function signup ({ navigation }) {
             </View>
 
             <View style={[styles.passwordContainer, texthighlight === 'password' && styles.textHighlightFeatures]}>
+            <MaterialIcons
+            name='lock'
+            size={22}
+            color={'lightgrey'} />
             <TextInput
             style = {styles.passwordInput}
             onChangeText = {onChangePassword}
