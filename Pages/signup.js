@@ -89,16 +89,16 @@ export default function signup ({ navigation }) {
             </View>
 
             <View style = {styles.textBoxes}>
-
+            
+            <View style = {[styles.input, texthighlight === 'name' && styles.textHighlightFeatures ]}>
             <TextInput
-            <MaterialIcons />
-            style = {[styles.input, texthighlight === 'name' && styles.textHighlightFeatures ]}
             onChangeText = {onChangeName}
             value = {name}
             placeholder='Full Name'
             onFocus={() => setTextHighlight('name')}
             onBlur={() => setTextHighlight(null)}>
             </TextInput>
+            </View>
             
 
             <View style = {[styles.input, texthighlight === 'email' && styles.textHighlightFeatures]}>
