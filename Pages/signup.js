@@ -91,6 +91,7 @@ export default function signup ({ navigation }) {
             <View style = {styles.textBoxes}>
 
             <TextInput
+            <MaterialIcons />
             style = {[styles.input, texthighlight === 'name' && styles.textHighlightFeatures ]}
             onChangeText = {onChangeName}
             value = {name}
@@ -101,6 +102,10 @@ export default function signup ({ navigation }) {
             
 
             <View style = {[styles.input, texthighlight === 'email' && styles.textHighlightFeatures]}>
+            <MaterialIcons
+            name='email'
+            size= {22}
+            color={'lightgrey'} />
             <TextInput
             onChangeText = {onChangeEmail}
             value = {email}
@@ -114,7 +119,7 @@ export default function signup ({ navigation }) {
             <MaterialIcons
             name='phone'
             size={22}
-            color={'grey'} />
+            color={'lightgrey'} />
             <TextInput
             onChangeText = {onChangeNumber}
             value = {number}
@@ -233,7 +238,8 @@ const styles = StyleSheet.create ({
         borderColor: "lightgray",
         borderRadius: 5,
         width: '95%',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        gap: 5,
     },
 
     passwordContainer: {
