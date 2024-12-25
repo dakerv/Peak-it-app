@@ -111,6 +111,10 @@ export default function signup ({ navigation }) {
             </View>
 
             <View style = {[styles.input, texthighlight === 'number' && styles.textHighlightFeatures]}>
+            <MaterialIcons
+            name='phone'
+            size={22}
+            color={'grey'} />
             <TextInput
             onChangeText = {onChangeNumber}
             value = {number}
@@ -119,10 +123,6 @@ export default function signup ({ navigation }) {
             onFocus={() => setTextHighlight('number')}
             onBlur={() => setTextHighlight(null)}>
             </TextInput>
-            <MaterialIcons
-            name='phone'
-            size={24}
-            color={'grey'} />
             </View>
 
             <View style={[styles.passwordContainer, texthighlight === 'password' && styles.textHighlightFeatures]}>
