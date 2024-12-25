@@ -21,7 +21,7 @@ export default function welcomePage({ navigation }) {
       </View>
 
       <Image style = {styles.imagePositioning} 
-        source = {require('../assets/welcome_cats.png')}  />
+        source = {require('../assets/images/welcome_cats.png')}  />
 
       <View style = {styles.greetingContainer}>
         <Text style = {styles.greetingText}> Welcome to your PickitPickEat for vendor expertise. </Text>

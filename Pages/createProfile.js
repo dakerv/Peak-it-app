@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, TextInput, Image, KeyboardAvoidingView, Platfor
 import { MaterialIcons } from '@expo/vector-icons';
 import WarningContainer from '../components/WarningContainer';
 import TextInputs from '../components/TextInputs'; 
-import ButtonComponent from './components/Pages/buttonComponent';
+import ButtonComponent from '../components/buttonComponent';
 
 export default function createProfile ({ navigation }) {
     
@@ -21,7 +21,6 @@ export default function createProfile ({ navigation }) {
     const [address, setAddress] = useState ();
     const [fullname, setFullName] = useState ();
     const [experience, setExperience] = useState ();
-    const [businessMail, setBusinessMail] = useState();
     const [country, setCountry] = useState ();
     const [countryCode, setCountryCode] = useState ();
     const [phoneNumber, setPhoneNumber] = useState ();
