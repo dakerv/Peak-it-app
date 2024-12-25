@@ -268,7 +268,7 @@ const styles = StyleSheet.create ({
     passwordInput: {
         flex: 1,
         height: 50,
-        padding: 12,
+        padding: 6,
   },
     revealIcon: {
     right: 13
