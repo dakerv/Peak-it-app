@@ -71,6 +71,10 @@ export default function App () {
         name='createProfile'
         component={createProfile} />
 
+        <Stack.Screen
+        name='createProfile2'
+        component={createProfile2} />
+
       </Stack.Navigator> 
     </NavigationContainer>
   );
