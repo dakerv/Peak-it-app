@@ -42,7 +42,12 @@ export default function createProfile2 ({ navigation }) {
         </View>
         </View>
 
-        <View style = {styles.enquiryBoxes}></View>
+        <View style = {styles.enquiryBoxes}>
+        <View style ={styles.circles}> 
+        <Image source={require('../assets/images/system-uicons_camera-alt.png')} />
+        <Text style = {styles.textStyles}> Upload store image </Text>
+        </View>
+        </View>
             
   
 
