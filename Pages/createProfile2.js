@@ -106,7 +106,6 @@ const styles = StyleSheet.create({
     textStyles: {
         fontSize: 10,
         textAlign: 'center'
-
     }
 
 })
