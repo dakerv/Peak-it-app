@@ -8,6 +8,15 @@ import ButtonComponent from '../components/buttonComponent';
 
 
 export default function createProfile2 ({ navigation }) {
+
+    const handleNavigation = () => {
+        navigation.navigate ('createProfile2')
+    }
+
+    const handlePress = () => {
+        navigation.navigate ('signup');
+    };
+    
     return (
 <KeyboardAvoidingView
   behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
