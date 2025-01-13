@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Statusbar, Text, View, TextInput, Image, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard, ScrollView, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Image, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard, ScrollView, TouchableOpacity } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import WarningContainer from '../components/WarningContainer';
 import TextInputs from '../components/TextInputs'; 
@@ -22,8 +22,8 @@ export default function createProfile2 ({ navigation }) {
     behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
     style={{ flex: 1 }}>
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-      <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-      <StatusBar style="light" backgroundColor="green" />
+    <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+    <StatusBar backgroundColor="green" />
 
       <View style = {styles.startingContainer}> 
      <TouchableOpacity onPress={handlePress}>
@@ -56,7 +56,8 @@ const styles = StyleSheet.create({
     startingContainer: {
         backgroundColor: 'white',
         width: '100%',
-        marginTop: 30
+        marginTop: 40,
+        padding: 30
     },
     createProfileText: {
         fontSize: 18,
