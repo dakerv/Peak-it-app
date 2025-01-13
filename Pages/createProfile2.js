@@ -37,6 +37,8 @@ export default function createProfile2 ({ navigation }) {
         <View style ={styles.enquiryBoxes}>
 
         </View>
+
+        <View style = {styles.enquiryBoxes}></View>
             
   
 
