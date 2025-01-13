@@ -45,7 +45,7 @@ export default function createProfile2 ({ navigation }) {
         <View style = {styles.enquiryBoxes}>
         <View style ={styles.circles}> 
         <Image source={require('../assets/images/system-uicons_camera-alt.png')} />
-        <Text style = {styles.textStyles}> Upload store image </Text>
+        <Text style = {styles.textStyles}> Upload cover image </Text>
         </View>
         </View>
             
