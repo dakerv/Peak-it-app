@@ -35,7 +35,9 @@ export default function createProfile2 ({ navigation }) {
         <View style={styles.container}>
 
         <View style ={styles.enquiryBoxes}>
+        <View style ={styles.circles}> 
 
+        </View>
         </View>
 
         <View style = {styles.enquiryBoxes}></View>
@@ -87,6 +89,12 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFFFFF',
         borderRadius: 10,
         marginBottom: 20
+    },
+    circles: {
+        width: 100,
+        height: 100,
+        borderRadius: 50,
+        backgroundColor: 'lightblue'
     }
 
 })
