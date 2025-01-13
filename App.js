@@ -14,6 +14,7 @@ import loginPage from './Pages/loginPage';
 import forgotPassword from './Pages/forgotPassword';
 import confirmPin from './Pages/confirmPin';
 import createProfile from './Pages/createProfile';
+import createProfile2 from './Pages/createProfile2';
 
 
 const Stack = createNativeStackNavigator ();
