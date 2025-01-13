@@ -29,3 +29,31 @@ export default function createProfile2 ({ navigation }) {
     </KeyboardAvoidingView>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        paddingTop: 40,
+        paddingLeft: 20,
+        paddingRight: 20,
+        flexDirection: "column",
+        backgroundColor: 'white',
+        height: '100%',
+    },
+    createProfileText: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        textAlign: 'center'
+    },
+    textHighlightFeatures: {
+      borderColor: 'green',
+      borderWidth: 2,
+    },
+      skipText: {
+        fontSize: 18,
+        color: "#228B22",
+        fontWeight: 500,
+        textAlign: 'right'
+      },
+})

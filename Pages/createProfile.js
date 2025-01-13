@@ -226,7 +226,6 @@ const styles = StyleSheet.create ({
       },
       warningSpace2: {
         marginVertical: 23,
-
       },
       inputInformationSpace1: {
         top: '3%',
