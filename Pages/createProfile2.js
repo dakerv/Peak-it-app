@@ -18,19 +18,25 @@ export default function createProfile2 ({ navigation }) {
     };
 
     return (
-<KeyboardAvoidingView
-  behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-  style={{ flex: 1 }}>
+
+   
+
+    <KeyboardAvoidingView
+    behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+    style={{ flex: 1 }}>
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+
+      <View style = {styles.startingContainer}> 
+     <TouchableOpacity onPress={handlePress}>
+      <Text style = {styles.skipText}> Skip </Text>
+     </TouchableOpacity>
+      <Text style = {styles.createProfileText}> Create Profile </Text>
+    </View>
+    
         <View style={styles.container}>
             
-    <View style = {styles.startingContainer}> 
-       <TouchableOpacity onPress={handlePress}>
-         <Text style = {styles.skipText}> Skip </Text>
-        </TouchableOpacity>
-         <Text style = {styles.createProfileText}> Create Profile </Text>
-    </View>
+  
 
     </View>
     </ScrollView>
@@ -42,7 +48,7 @@ export default function createProfile2 ({ navigation }) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'brown',
+        backgroundColor: 'lightgrey',
         paddingTop: 40,
         paddingLeft: 20,
         paddingRight: 20,
@@ -50,7 +56,8 @@ const styles = StyleSheet.create({
         height: '100%',
     },
     startingContainer: {
-        backgroundColor: 'white'
+        backgroundColor: 'white',
+        width: '100%'
     },
     createProfileText: {
         fontSize: 18,
