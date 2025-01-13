@@ -16,7 +16,7 @@ export default function createProfile2 ({ navigation }) {
     const handlePress = () => {
         navigation.navigate ('signup');
     };
-    
+
     return (
 <KeyboardAvoidingView
   behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -25,7 +25,7 @@ export default function createProfile2 ({ navigation }) {
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         <View style={styles.container}>
             
-    <View> 
+    <View style = {styles.startingContainer}> 
        <TouchableOpacity onPress={handlePress}>
          <Text style = {styles.skipText}> Skip </Text>
         </TouchableOpacity>
@@ -42,13 +42,16 @@ export default function createProfile2 ({ navigation }) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: 'brown',
         paddingTop: 40,
         paddingLeft: 20,
         paddingRight: 20,
         flexDirection: "column",
         backgroundColor: 'white',
         height: '100%',
+    },
+    startingContainer: {
+        backgroundColor: 'white'
     },
     createProfileText: {
         fontSize: 18,
