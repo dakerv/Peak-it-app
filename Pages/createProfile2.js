@@ -88,13 +88,15 @@ const styles = StyleSheet.create({
         height: 142,
         backgroundColor: '#FFFFFF',
         borderRadius: 10,
-        marginBottom: 20
+        marginBottom: 20,
+        padding: 12
     },
     circles: {
         width: 100,
         height: 100,
         borderRadius: 50,
-        backgroundColor: 'lightblue'
+        backgroundColor: 'lightblue',
+       
     }
 
 })
