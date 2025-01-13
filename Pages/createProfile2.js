@@ -33,6 +33,10 @@ export default function createProfile2 ({ navigation }) {
     </View>
 
         <View style={styles.container}>
+
+        <View style ={styles.enquiryBoxes}>
+
+        </View>
             
   
 
@@ -57,7 +61,8 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         width: '100%',
         marginTop: 40,
-        padding: 30
+        paddingRight: 12,
+        paddingLeft: 12
     },
     createProfileText: {
         fontSize: 18,
@@ -68,10 +73,17 @@ const styles = StyleSheet.create({
       borderColor: 'green',
       borderWidth: 2,
     },
-      skipText: {
-        fontSize: 18,
-        color: "#228B22",
-        fontWeight: 500,
-        textAlign: 'right'
-      },
+    skipText: {
+      fontSize: 18,
+      color: "#228B22",
+      fontWeight: 500,
+      textAlign: 'right'
+    },
+    enquiryBoxes: {
+        width: 340,
+        height: 142,
+        backgroundColor: '#FFFFFF',
+        borderRadius: 10
+    }
+
 })
