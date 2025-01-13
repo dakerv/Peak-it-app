@@ -38,6 +38,7 @@ export default function createProfile2 ({ navigation }) {
         <View style ={styles.enquiryBoxes}>
         <View style ={styles.circles}> 
         <Image source={require('../assets/images/system-uicons_camera-alt.png')} />
+        <Text style = {styles.textStyles}> Upload store image </Text>
         </View>
         </View>
 
@@ -99,7 +100,13 @@ const styles = StyleSheet.create({
         borderRadius: 50,
         backgroundColor: '#E5F2FF',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        paddingHorizontal: 20
+    },
+    textStyles: {
+        fontSize: 10,
+        textAlign: 'center'
+
     }
 
 })
