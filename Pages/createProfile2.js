@@ -7,6 +7,7 @@ import TextInputs from '../components/TextInputs';
 import ButtonComponent from '../components/buttonComponent';
 
 
+
 export default function createProfile2 ({ navigation }) {
 
     const handleNavigation = () => {
@@ -36,7 +37,7 @@ export default function createProfile2 ({ navigation }) {
 
         <View style ={styles.enquiryBoxes}>
         <View style ={styles.circles}> 
-
+        <Image source={require('../assets/images/system-uicons_camera-alt.png')} />
         </View>
         </View>
 
@@ -96,7 +97,7 @@ const styles = StyleSheet.create({
         width: 100,
         height: 100,
         borderRadius: 50,
-        backgroundColor: 'lightblue',
+        backgroundColor: '#E5F2FF',
        
     }
 
