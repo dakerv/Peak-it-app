@@ -48,7 +48,7 @@ export default function createProfile2 ({ navigation }) {
         quality: 1,
       });
   
-      if (!result.cancelled) {
+      if (!result.canceled) {
         setCoverImageUri(result.uri);
       }
     };
@@ -81,10 +81,10 @@ export default function createProfile2 ({ navigation }) {
 
         <View style ={styles.enquiryBoxes}>
 
-        <View style ={styles.circles}> 
+        <TouchableOpacity style ={styles.circles}> 
          <Image source={require('../assets/images/system-uicons_camera-alt.png')} />
-        <Text style = {styles.textStyles}> Upload store image </Text>
-        </View>
+         <Text style = {styles.textStyles}> Upload store image </Text>
+        </TouchableOpacity>
 
         <View style = {styles.textboxesStyles}>
          <Text style = {styles.MrMoesStyles}> Mr. Moe's Kitchen </Text>
