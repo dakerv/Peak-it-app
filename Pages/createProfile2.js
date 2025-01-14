@@ -15,6 +15,7 @@ export default function createProfile2 ({ navigation }) {
     const [storeImageUri, setStoreImageUri] = useState(null);
     const [coverImageUri, setCoverImageUri] = useState(null);
     const [enterDetails, setEnterDetails] = useState(null)
+    const [headingHighlight, setHeadingHighlight] = useState (null)
   
     useEffect(() => {
       (async () => {
@@ -139,17 +140,19 @@ export default function createProfile2 ({ navigation }) {
 
         </View>
 
-        <TouchableOpacity style = {styles.inputEnquiryBoxes}>
+        <View style = {styles.inputEnquiryBoxes}>
             <View style = {styles.businessDescriptionContainer}>
                 <Text style = {styles.businessDescriptionStyles}> Business Description </Text>
                 <View style = {styles.line}></View>
 
+                <View style = {styles.details}>
                 <TextInput
-                style = {styles.details}
+                style = {styles.detailsInput}
                 value= {enterDetails}
                 placeholder = 'Kindly provide details below' ></TextInput>
+                </View>
             </View>
-        </TouchableOpacity>
+        </View>
             
   
 
@@ -278,9 +281,13 @@ const styles = StyleSheet.create({
         color: 'black',
         backgroundColor: 'black',
     },
+    typingSpace: {
+       
+    },
     details: {
         marginTop: 12,
-        marginLeft: 6
+        marginLeft: 6,
+        
     }
 
 
