@@ -256,11 +256,22 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFFFFF',
         borderRadius: 10,
         marginBottom: 28,
-        paddingHorizontal: 14,
-        paddingVertical: 20,
+        paddingHorizontal: 12,
+        paddingVertical: 13,
     },
     businessDescriptionContainer: {
         flexDirection: 'column'
+    },
+    businessDescriptionStyles: {
+        marginBottom: 4,
+        fontSize: 15,
+        fontWeight: 600
+    },
+    line: {
+        width: '100%',
+        height: 1,
+        color: 'black',
+        backgroundColor: 'black'
     }
 
 
