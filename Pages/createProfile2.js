@@ -124,13 +124,15 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
     textboxesStyles: {
-
+        rowGap: 5
     },
     restaurantStyles: {
-        color: 'green'
+        color: 'green',
+        fontSize: 12
     },
     MrMoesStyles: {
-
+        fontWeight: 700,
+        fontSize: 12
     },
 
 
