@@ -145,14 +145,12 @@ export default function createProfile2 ({ navigation }) {
                 <Text style = {styles.businessDescriptionStyles}> Business Description </Text>
                 <View style = {styles.line}></View>
 
-                <View style = {[styles.details, headingHighlight === 'enterDetails' && styles.headingHighlightFeatures]}>
+                <View style = {styles.details}>
                 <TextInput
                 style = {styles.detailsInput}
                 value= {enterDetails}
                 placeholder = 'Kindly provide details below'
-                onChangeText={setEnterDetails}
-                onFocus={() => setHeadingHighlight ('enterDetails')}
-                onBlur={() => setHeadingHighlight (null)}>
+                onChangeText={setEnterDetails}>
                 
                 </TextInput>
                 </View>
@@ -273,13 +271,13 @@ const styles = StyleSheet.create({
         paddingVertical: 13,
     },
     businessDescriptionContainer: {
-        flexDirection: 'column'
+        flexDirection: 'column',
     },
     businessDescriptionStyles: {
         marginBottom: 4,
         fontSize: 18,
         fontWeight: 600,
-        color: '#228B22'
+        color: '#228B22',
     },
     line: {
         width: '100%',
@@ -287,10 +285,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#228B22',
     },
     detailsInput: {
-     
+        fontSize: 15,
     },
     details: {
-        fontSize: 15,
         padding: 3, 
     },
 
