@@ -48,7 +48,7 @@ export default function createProfile2 ({ navigation }) {
         <Text style = {styles.restaurantStyles}> Restaurant </Text>
 
         <Text style = {styles.emailStyles}> {'\n'} creativeomotayo@gmail.com  </Text>
-        <Text style = {styles.numberStyles}> +234 906 3287 855</Text>
+        <Text style = {styles.numberStyles}>+234 906 3287 855</Text>
 
         </View>
 
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 14,
         paddingVertical: 20,
         flexDirection: 'row',
-        alignItems: 'flex-start'
+       
     },
     circles: {
         width: 100,
@@ -143,12 +143,13 @@ const styles = StyleSheet.create({
         fontSize: 18
     },
     emailStyles: {
-        fontWeight: 700,
-        fontSize: 16
+        fontWeight: 600,
+        fontSize: 14
     },
     numberStyles: {
-        fontWeight: 700,
-        fontSize: 16
+        fontWeight: 600,
+        fontSize: 14,
+        fontColor: '#228B22',
     }
 
 
