@@ -200,7 +200,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#E5F2FF',
         justifyContent: 'center',
         alignItems: 'center',
-        paddingHorizontal: 20
+        marginRight: 10,
+        overflow: 'hidden'
     },
     selectedImage: {
         width: '100%',
