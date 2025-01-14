@@ -12,31 +12,47 @@ import * as ImagePicker from 'expo-image-picker'
 
 export default function createProfile2 ({ navigation }) {
 
-useEffect(() => {
-  (async () => {
-    const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
-    if (status !== 'granted') {
-      alert('Enable access to choose an image');
-    }
-  })();
-}, []);
-
-async function pickImageFromGallery(setImageUri) {
-    const result = await ImagePicker.launchImageLibraryAsync({
-      mediaTypes: ImagePicker.MediaTypeOptions.Images,
-      allowsEditing: true,
-      aspect: [4, 3],
-      quality: 1,
-    });
+    const [storeImageUri, setStoreImageUri] = useState(null);
+    const [coverImageUri, setCoverImageUri] = useState(null);
   
-    
-    if (!result.canceled) {
-      
-      setImageUri(result.uri);
-    }
-  }
+    // Request permissions on mount
+    useEffect(() => {
+      (async () => {
+        const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
+        if (status !== 'granted') {
+          alert('Enable camera access to upload image');
+        }
+      })();
+    }, []);
   
-
+    // Picker function for store image
+    const pickStoreImage = async () => {
+      const result = await ImagePicker.launchImageLibraryAsync({
+        mediaTypes: ImagePicker.MediaTypeOptions.Images,
+        allowsEditing: true,
+        aspect: [4, 3],
+        quality: 1,
+      });
+  
+      if (!result.cancelled) {
+        setStoreImageUri(result.uri);
+      }
+    };
+  
+    // Picker function for cover image
+    const pickCoverImage = async () => {
+      const result = await ImagePicker.launchImageLibraryAsync({
+        mediaTypes: ImagePicker.MediaTypeOptions.Images,
+        allowsEditing: true,
+        aspect: [4, 3],
+        quality: 1,
+      });
+  
+      if (!result.cancelled) {
+        setCoverImageUri(result.uri);
+      }
+    };
+  
 
     const handleNavigation = () => {
         navigation.navigate ('createProfile2')
