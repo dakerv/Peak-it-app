@@ -38,18 +38,16 @@ export default function createProfile2 ({ navigation }) {
         <View style ={styles.enquiryBoxes}>
 
         <View style ={styles.circles}> 
-        <Image source={require('../assets/images/system-uicons_camera-alt.png')} />
+         <Image source={require('../assets/images/system-uicons_camera-alt.png')} />
         <Text style = {styles.textStyles}> Upload store image </Text>
         </View>
 
         <View style = {styles.textboxesStyles}>
+         <Text style = {styles.MrMoesStyles}> Mr. Moe's Kitchen </Text>
+         <Text style = {styles.restaurantStyles}> Restaurant </Text>
 
-        <Text style = {styles.MrMoesStyles}> Mr. Moe's Kitchen </Text>
-        <Text style = {styles.restaurantStyles}> Restaurant </Text>
-
-        <Text style = {styles.emailStyles}> {'\n'} creativeomotayo@gmail.com  </Text>
-        <Text style = {styles.numberStyles}>+234 906 3287 855</Text>
-
+         <Text style = {styles.emailStyles}> {'\n'} creativeomotayo@gmail.com  </Text>
+         <Text style = {styles.numberStyles}>+234 906 3287 855</Text>
         </View>
 
         </View>
@@ -57,11 +55,11 @@ export default function createProfile2 ({ navigation }) {
         <View style = {styles.enquiryBoxes}>
         
         <View style ={styles.circles}> 
-        <Image source={require('../assets/images/system-uicons_camera-alt.png')} />
-        <Text style = {styles.textStyles}> Upload cover image </Text>
+         <Image source={require('../assets/images/system-uicons_camera-alt.png')} />
+         <Text style = {styles.textStyles}> Upload store cover photo </Text>
         </View>
 
-        <Text> Mr. Moe's Kitchen </Text>
+        <Text style = {styles.uploadPhotosStyles}> Upload store cover photo </Text>
         </View>
             
   
@@ -144,12 +142,17 @@ const styles = StyleSheet.create({
     },
     emailStyles: {
         fontWeight: 600,
-        fontSize: 14
+        fontSize: 15
     },
     numberStyles: {
         fontWeight: 600,
-        fontSize: 14,
-        fontColor: '#228B22',
+        fontSize: 15,
+        color: '#228B22',
+    },
+    uploadPhotosStyles: {
+        fontWeight: 600,
+        fontSize: 15,
+        color: '#228B22'
     }
 
 
