@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, Image, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard, ScrollView, TouchableOpacity } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -9,7 +9,34 @@ import * as ImagePicker from 'expo-image-picker'
 
 
 
+
 export default function createProfile2 ({ navigation }) {
+
+useEffect(() => {
+  (async () => {
+    const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
+    if (status !== 'granted') {
+      alert('Enable access to choose an image');
+    }
+  })();
+}, []);
+
+async function pickImageFromGallery(setImageUri) {
+    const result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.Images,
+      allowsEditing: true,
+      aspect: [4, 3],
+      quality: 1,
+    });
+  
+    
+    if (!result.canceled) {
+      
+      setImageUri(result.uri);
+    }
+  }
+  
+
 
     const handleNavigation = () => {
         navigation.navigate ('createProfile2')
