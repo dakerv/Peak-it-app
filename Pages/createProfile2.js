@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
         height: 142,
         backgroundColor: '#FFFFFF',
         borderRadius: 10,
-        marginBottom: 20,
+        marginBottom: 28,
         paddingHorizontal: 14,
         paddingVertical: 20,
         flexDirection: 'row'
@@ -124,15 +124,17 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
     textboxesStyles: {
-        rowGap: 5
+        marginHorizontal: 5
     },
     restaurantStyles: {
         color: 'green',
-        fontSize: 12
+        fontSize: 18,
+        fontColor: '#228B22',
+        fontWeight: 700,
     },
     MrMoesStyles: {
         fontWeight: 700,
-        fontSize: 12
+        fontSize: 18
     },
 
 
