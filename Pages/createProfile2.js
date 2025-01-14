@@ -5,6 +5,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import WarningContainer from '../components/WarningContainer';
 import TextInputs from '../components/TextInputs'; 
 import ButtonComponent from '../components/buttonComponent';
+import * as ImagePicker from 'expo-image-picker'
 
 
 
