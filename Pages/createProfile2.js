@@ -15,7 +15,6 @@ export default function createProfile2 ({ navigation }) {
     const [storeImageUri, setStoreImageUri] = useState(null);
     const [coverImageUri, setCoverImageUri] = useState(null);
   
-    // Request permissions on mount
     useEffect(() => {
       (async () => {
         const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
@@ -25,7 +24,6 @@ export default function createProfile2 ({ navigation }) {
       })();
     }, []);
   
-    // Picker function for store image
     const pickStoreImage = async () => {
       const result = await ImagePicker.launchImageLibraryAsync({
         mediaTypes: ImagePicker.MediaTypeOptions.Images,
@@ -34,12 +32,11 @@ export default function createProfile2 ({ navigation }) {
         quality: 1,
       });
   
-      if (!result.cancelled) {
-        setStoreImageUri(result.uri);
+      if (!result.canceled) {
+        setStoreImageUri(result.assets[0].uri);
       }
     };
   
-    // Picker function for cover image
     const pickCoverImage = async () => {
       const result = await ImagePicker.launchImageLibraryAsync({
         mediaTypes: ImagePicker.MediaTypeOptions.Images,
@@ -49,7 +46,7 @@ export default function createProfile2 ({ navigation }) {
       });
   
       if (!result.canceled) {
-        setCoverImageUri(result.uri);
+        setCoverImageUri(result.assets[0].uri);
       }
     };
   
