@@ -42,8 +42,8 @@ export default function createProfile2 ({ navigation }) {
         <Text style = {styles.textStyles}> Upload store image </Text>
         </View>
 
-        <View>
-        <Text> Mr. Moe's Kitchen </Text>
+        <View style = {styles.textboxesStyles}>
+        <Text style = {styles.MrMoesStyles}> Mr. Moe's Kitchen </Text>
         <Text style = {styles.restaurantStyles}> {'\n'} Restaurant </Text>
         </View>
 
@@ -123,8 +123,15 @@ const styles = StyleSheet.create({
         fontSize: 10,
         textAlign: 'center'
     },
+    textboxesStyles: {
+
+    },
     restaurantStyles: {
         color: 'green'
-    }
+    },
+    MrMoesStyles: {
+
+    },
+
 
 })
