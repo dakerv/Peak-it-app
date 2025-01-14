@@ -138,7 +138,12 @@ export default function createProfile2 ({ navigation }) {
 
         </View>
 
-        <View style = {styles.inputEnquiryBoxes}></View>
+        <TouchableOpacity style = {styles.inputEnquiryBoxes}>
+            <View style = {styles.businessDescriptionContainer}>
+                <Text style = {styles.businessDescriptionStyles}> Business Description </Text>
+                <View style = {styles.line}></View>
+            </View>
+        </TouchableOpacity>
             
   
 
