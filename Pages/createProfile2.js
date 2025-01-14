@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, Image, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard, ScrollView, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Image, KeyboardAvoidingView, Pressable, Platform, TouchableWithoutFeedback, Keyboard, ScrollView, TouchableOpacity, Touchable } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import WarningContainer from '../components/WarningContainer';
 import TextInputs from '../components/TextInputs'; 
@@ -14,8 +14,8 @@ export default function createProfile2 ({ navigation }) {
 
     const [storeImageUri, setStoreImageUri] = useState(null);
     const [coverImageUri, setCoverImageUri] = useState(null);
-    const [enterDetails, setEnterDetails] = useState(null)
-    const [headingHighlight, setHeadingHighlight] = useState (null)
+    const [enterDetails, setEnterDetails] = useState('')
+    const [headingHighlight, setHeadingHighlight] = useState ('')
   
     useEffect(() => {
       (async () => {
@@ -145,11 +145,16 @@ export default function createProfile2 ({ navigation }) {
                 <Text style = {styles.businessDescriptionStyles}> Business Description </Text>
                 <View style = {styles.line}></View>
 
-                <View style = {styles.details}>
+                <View style = {[styles.details, headingHighlight === 'enterDetails' && styles.headingHighlightFeatures]}>
                 <TextInput
                 style = {styles.detailsInput}
                 value= {enterDetails}
-                placeholder = 'Kindly provide details below' ></TextInput>
+                placeholder = 'Kindly provide details below'
+                onChangeText={setEnterDetails}
+                onFocus={() => setHeadingHighlight ('enterDetails')}
+                onBlur={() => setHeadingHighlight (null)}>
+                
+                </TextInput>
                 </View>
             </View>
         </View>
@@ -273,22 +278,22 @@ const styles = StyleSheet.create({
     businessDescriptionStyles: {
         marginBottom: 4,
         fontSize: 18,
-        fontWeight: 600
+        fontWeight: 600,
+        color: '#228B22'
     },
     line: {
         width: '100%',
         height: 1,
-        color: 'black',
-        backgroundColor: 'black',
+        backgroundColor: '#228B22',
     },
-    typingSpace: {
-       
+    detailsInput: {
+     
     },
     details: {
-        marginTop: 12,
-        marginLeft: 6,
-        
-    }
+        fontSize: 15,
+        padding: 3, 
+    },
+
 
 
 })
