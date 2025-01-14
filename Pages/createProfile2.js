@@ -83,12 +83,16 @@ export default function createProfile2 ({ navigation }) {
 
         <TouchableOpacity style ={styles.circles} onPress={pickStoreImage}> 
          {storeImageUri ? (
-         <Image source={{ uri: storeImageUri }} style={styles.circleImage} />
+         <Image 
+         source={{ uri: storeImageUri }} 
+         style={styles.circleImage} />
          ) : (
          <>
          <Image source={require('../assets/images/system-uicons_camera-alt.png')} />
          <Text style = {styles.textStyles}> Upload store image </Text> 
-         </TouchableOpacity>
+         </>
+         )}
+         </TouchableOpacity> 
         
 
         <View style = {styles.textboxesStyles}>
