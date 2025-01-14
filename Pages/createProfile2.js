@@ -93,7 +93,7 @@ export default function createProfile2 ({ navigation }) {
          {storeImageUri ? (
          <Image 
          source={{ uri: storeImageUri }} 
-         style={styles.circleImage} />
+         style={styles.selectedImage} />
          ) : (
          <>
          <Image source={require('../assets/images/system-uicons_camera-alt.png')} />
@@ -118,12 +118,14 @@ export default function createProfile2 ({ navigation }) {
          <TouchableOpacity style ={styles.circles} onPress={pickCoverImage}>
           {coverImageUri ? (
           <Image 
-          source={{ uri: storeImageUri }} 
-          style={styles.circleImage} />
+          source={{ uri: coverImageUri }} 
+          style={styles.selectedImage} />
           ) : (
           <> 
           <Image source={require('../assets/images/system-uicons_camera-alt.png')} />
           <Text style = {styles.textStyles}> Upload cover photo </Text>
+          </>
+          )}
          </TouchableOpacity>
 
          <View style = {styles.textboxesStyles}>
@@ -199,6 +201,11 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         paddingHorizontal: 20
+    },
+    selectedImage: {
+        width: '100%',
+        height: '100%',
+        resizeMode: 'cover'
     },
     textStyles: {
         fontSize: 10,
