@@ -43,8 +43,13 @@ export default function createProfile2 ({ navigation }) {
         </View>
 
         <View style = {styles.textboxesStyles}>
+
         <Text style = {styles.MrMoesStyles}> Mr. Moe's Kitchen </Text>
         <Text style = {styles.restaurantStyles}> Restaurant </Text>
+
+        <Text style = {styles.emailStyles}> {'\n'} creativeomotayo@gmail.com  </Text>
+        <Text style = {styles.numberStyles}> +234 906 3287 855</Text>
+
         </View>
 
         </View>
@@ -137,6 +142,14 @@ const styles = StyleSheet.create({
         fontWeight: 700,
         fontSize: 18
     },
+    emailStyles: {
+        fontWeight: 700,
+        fontSize: 16
+    },
+    numberStyles: {
+        fontWeight: 700,
+        fontSize: 16
+    }
 
 
 })
