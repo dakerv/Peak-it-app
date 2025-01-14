@@ -61,9 +61,9 @@ export default function createProfile2 ({ navigation }) {
 
         <View style = {styles.textboxesStyles}>
         <Text style = {styles.uploadPhotosStyles}> Upload store cover photo </Text>
-        <Text style = {styles.allowedFormatsStyles}> Allowed formats </Text>
+        <Text style = {styles.allowedFormatsStyles}> {'\n'} Allowed formats </Text>
         <Text style = {styles.jpgAndPng}> *Jpg </Text>
-        <Text style = {styles.jpgAndPng}>*Png </Text>
+        <Text style = {styles.jpgAndPng}> *Png </Text>
         </View>
         </View>
             
