@@ -68,6 +68,8 @@ export default function createProfile2 ({ navigation }) {
          </View>
 
         </View>
+
+        <View style = {styles.inputEnquiryBoxes}></View>
             
   
 
@@ -167,6 +169,15 @@ const styles = StyleSheet.create({
     },
     jpgAndPng: {
         color: 'grey'
+    },
+    inputEnquiryBoxes: {
+        width: 340,
+        height: 150,
+        backgroundColor: '#FFFFFF',
+        borderRadius: 10,
+        marginBottom: 28,
+        paddingHorizontal: 14,
+        paddingVertical: 20,
     }
 
 
