@@ -44,7 +44,7 @@ export default function createProfile2 ({ navigation }) {
 
         <View style = {styles.textboxesStyles}>
         <Text style = {styles.MrMoesStyles}> Mr. Moe's Kitchen </Text>
-        <Text style = {styles.restaurantStyles}> {'\n'} Restaurant </Text>
+        <Text style = {styles.restaurantStyles}> Restaurant </Text>
         </View>
 
         </View>
@@ -108,7 +108,8 @@ const styles = StyleSheet.create({
         marginBottom: 28,
         paddingHorizontal: 14,
         paddingVertical: 20,
-        flexDirection: 'row'
+        flexDirection: 'row',
+        alignItems: 'flex-start'
     },
     circles: {
         width: 100,
