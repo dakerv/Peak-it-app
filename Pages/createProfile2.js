@@ -64,6 +64,8 @@ export default function createProfile2 ({ navigation }) {
         <Text style = {styles.allowedFormatsStyles}> {'\n'} Allowed formats </Text>
         <Text style = {styles.jpgAndPng}> *Jpg </Text>
         <Text style = {styles.jpgAndPng}> *Png </Text>
+
+        <Text style = {styles.jpgAndPng}>   Less than 1mb </Text>
         </View>
         </View>
             
