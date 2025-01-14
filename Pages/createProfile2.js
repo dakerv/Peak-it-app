@@ -36,17 +36,24 @@ export default function createProfile2 ({ navigation }) {
         <View style={styles.container}>
 
         <View style ={styles.enquiryBoxes}>
+
         <View style ={styles.circles}> 
         <Image source={require('../assets/images/system-uicons_camera-alt.png')} />
         <Text style = {styles.textStyles}> Upload store image </Text>
         </View>
+
+        <Text> Mr. Moe's Kitchen </Text>
+        <Text> Restaurant </Text>
         </View>
 
         <View style = {styles.enquiryBoxes}>
+        
         <View style ={styles.circles}> 
         <Image source={require('../assets/images/system-uicons_camera-alt.png')} />
         <Text style = {styles.textStyles}> Upload cover image </Text>
         </View>
+
+        <Text> Mr. Moe's Kitchen </Text>
         </View>
             
   
@@ -97,7 +104,8 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         marginBottom: 20,
         paddingHorizontal: 14,
-        paddingVertical: 20
+        paddingVertical: 20,
+        flexDirection: 'row'
     },
     circles: {
         width: 100,
