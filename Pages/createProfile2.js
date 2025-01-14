@@ -54,19 +54,19 @@ export default function createProfile2 ({ navigation }) {
 
         <View style = {styles.enquiryBoxes}>
         
-        <View style ={styles.circles}> 
-         <Image source={require('../assets/images/system-uicons_camera-alt.png')} />
-         <Text style = {styles.textStyles}> Upload cover photo </Text>
-        </View>
+         <View style ={styles.circles}> 
+          <Image source={require('../assets/images/system-uicons_camera-alt.png')} />
+          <Text style = {styles.textStyles}> Upload cover photo </Text>
+         </View>
 
-        <View style = {styles.textboxesStyles}>
-        <Text style = {styles.uploadPhotosStyles}> Upload store cover photo </Text>
-        <Text style = {styles.allowedFormatsStyles}> {'\n'} Allowed formats </Text>
-        <Text style = {styles.jpgAndPng}> {'\u2022'} Jpg </Text>
-        <Text style = {styles.jpgAndPng}> {'\u2022'} Png </Text>
+         <View style = {styles.textboxesStyles}>
+          <Text style = {styles.uploadPhotosStyles}> Upload store cover photo </Text>
+          <Text style = {styles.allowedFormatsStyles}> {'\n'} Allowed formats </Text>
+          <Text style = {styles.jpgAndPng}> {'\u2022'} Jpg </Text>
+          <Text style = {styles.jpgAndPng}> {'\u2022'} Png </Text>
+          <Text style = {styles.jpgAndPng}> Less than 1mb </Text>
+         </View>
 
-        <Text style = {styles.jpgAndPng}> Less than 1mb </Text>
-        </View>
         </View>
             
   
