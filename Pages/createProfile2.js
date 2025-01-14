@@ -56,10 +56,15 @@ export default function createProfile2 ({ navigation }) {
         
         <View style ={styles.circles}> 
          <Image source={require('../assets/images/system-uicons_camera-alt.png')} />
-         <Text style = {styles.textStyles}> Upload store cover photo </Text>
+         <Text style = {styles.textStyles}> Upload cover photo </Text>
         </View>
 
+        <View style = {styles.textboxesStyles}>
         <Text style = {styles.uploadPhotosStyles}> Upload store cover photo </Text>
+        <Text style = {styles.allowedFormatsStyles}> Allowed formats </Text>
+        <Text style = {styles.jpgAndPng}> *Jpg </Text>
+        <Text style = {styles.jpgAndPng}>*Png </Text>
+        </View>
         </View>
             
   
@@ -112,6 +117,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 14,
         paddingVertical: 20,
         flexDirection: 'row',
+        alignItems: 'flex-start',
        
     },
     circles: {
@@ -153,6 +159,12 @@ const styles = StyleSheet.create({
         fontWeight: 600,
         fontSize: 15,
         color: '#228B22'
+    },
+    allowedFormatsStyles: {
+        color: 'grey'
+    },
+    jpgAndPng: {
+        color: 'grey'
     }
 
 
