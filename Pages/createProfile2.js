@@ -14,6 +14,7 @@ export default function createProfile2 ({ navigation }) {
 
     const [storeImageUri, setStoreImageUri] = useState(null);
     const [coverImageUri, setCoverImageUri] = useState(null);
+    const [enterDetails, setEnterDetails] = useState(null)
   
     useEffect(() => {
       (async () => {
@@ -142,6 +143,11 @@ export default function createProfile2 ({ navigation }) {
             <View style = {styles.businessDescriptionContainer}>
                 <Text style = {styles.businessDescriptionStyles}> Business Description </Text>
                 <View style = {styles.line}></View>
+
+                <TextInput
+                style = {styles.details}
+                value= {enterDetails}
+                placeholder = 'Kindly provide details below' ></TextInput>
             </View>
         </TouchableOpacity>
             
@@ -196,7 +202,6 @@ const styles = StyleSheet.create({
         paddingVertical: 20,
         flexDirection: 'row',
         alignItems: 'flex-start',
-       
     },
     circles: {
         width: 100,
@@ -264,14 +269,18 @@ const styles = StyleSheet.create({
     },
     businessDescriptionStyles: {
         marginBottom: 4,
-        fontSize: 15,
+        fontSize: 18,
         fontWeight: 600
     },
     line: {
         width: '100%',
         height: 1,
         color: 'black',
-        backgroundColor: 'black'
+        backgroundColor: 'black',
+    },
+    details: {
+        marginTop: 12,
+        marginLeft: 6
     }
 
 
