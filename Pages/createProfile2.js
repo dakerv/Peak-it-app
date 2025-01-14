@@ -25,29 +25,40 @@ export default function createProfile2 ({ navigation }) {
     }, []);
   
     const pickStoreImage = async () => {
+    try {    
       const result = await ImagePicker.launchImageLibraryAsync({
-        mediaTypes: ImagePicker.MediaTypeOptions.Images,
+        mediaTypes: 'images',
         allowsEditing: true,
-        aspect: [4, 3],
+        aspect: [1, 1],
         quality: 1,
       });
+      console.log('Store image picker result:', result);
   
       if (!result.canceled) {
-        setStoreImageUri(result.assets[0].uri);
+        setStoreImageUri (result.assets [0].uri);
       }
-    };
+    } catch (error) {
+        console.log('Error picking image:', error);
+    }
+  };
+    
   
     const pickCoverImage = async () => {
+    try {
       const result = await ImagePicker.launchImageLibraryAsync({
-        mediaTypes: ImagePicker.MediaTypeOptions.Images,
+        mediaTypes: 'images',
         allowsEditing: true,
-        aspect: [4, 3],
+        aspect: [1, 1],
         quality: 1,
       });
+      console.log('Cover Image Picker result:', result)
   
       if (!result.canceled) {
         setCoverImageUri(result.assets[0].uri);
       }
+    } catch (error) {
+        console.log('Error picking image:', error)
+     }  
     };
   
 
@@ -104,10 +115,16 @@ export default function createProfile2 ({ navigation }) {
 
         <View style = {styles.enquiryBoxes}>
         
-         <View style ={styles.circles}> 
+         <TouchableOpacity style ={styles.circles} onPress={pickCoverImage}>
+          {coverImageUri ? (
+          <Image 
+          source={{ uri: storeImageUri }} 
+          style={styles.circleImage} />
+          ) : (
+          <> 
           <Image source={require('../assets/images/system-uicons_camera-alt.png')} />
           <Text style = {styles.textStyles}> Upload cover photo </Text>
-         </View>
+         </TouchableOpacity>
 
          <View style = {styles.textboxesStyles}>
           <Text style = {styles.uploadPhotosStyles}> Upload store cover photo </Text>
