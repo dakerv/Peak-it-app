@@ -15,7 +15,7 @@ export default function createProfile2 ({ navigation }) {
     const [storeImageUri, setStoreImageUri] = useState(null);
     const [coverImageUri, setCoverImageUri] = useState(null);
     const [enterDetails, setEnterDetails] = useState('')
-    const [headingHighlight, setHeadingHighlight] = useState ('')
+    const [additionalDetails, setAdditionalDetails] = useState ('')
   
     useEffect(() => {
       (async () => {
@@ -163,9 +163,9 @@ export default function createProfile2 ({ navigation }) {
                 <View style = {styles.details}>
                 <TextInput
                 style = {styles.detailsInput}
-                value= {enterDetails}
+                value= {additionalDetails}
                 placeholder = 'Please provide additional details if need be'
-                onChangeText={setEnterDetails}>
+                onChangeText={setAdditionalDetails}>
                 
                 </TextInput>
                 </View>
