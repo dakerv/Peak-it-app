@@ -292,9 +292,6 @@ const styles = StyleSheet.create({
         paddingVertical: 13,
         flexDirection: 'column',
     },
-    businessDescriptionContainer: {
-       
-    },
     businessDescriptionStyles: {
         marginBottom: 4,
         fontSize: 18,
