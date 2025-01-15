@@ -140,6 +140,7 @@ export default function createProfile2 ({ navigation }) {
 
         </View>
 
+        <View style = {styles.enquirySpace}>
         <View style = {styles.inputEnquiryBoxes}>
             <View style = {styles.businessDescriptionContainer}>
                 <Text style = {styles.businessDescriptionStyles}> Business Description </Text>
@@ -151,9 +152,9 @@ export default function createProfile2 ({ navigation }) {
                 value= {enterDetails}
                 placeholder = 'Kindly provide details below'
                 onChangeText={setEnterDetails}>
-                
                 </TextInput>
                 </View>
+
             </View>
 
             <View style = {styles.businessDescriptionContainer}>
@@ -169,6 +170,7 @@ export default function createProfile2 ({ navigation }) {
                 
                 </TextInput>
                 </View>
+            
             </View>
             
         </View>
@@ -285,9 +287,10 @@ const styles = StyleSheet.create({
         marginBottom: 28,
         paddingHorizontal: 12,
         paddingVertical: 13,
+        flexDirection: 'column',
     },
     businessDescriptionContainer: {
-        flexDirection: 'column',
+       
     },
     businessDescriptionStyles: {
         marginBottom: 4,
