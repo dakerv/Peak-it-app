@@ -141,20 +141,18 @@ export default function createProfile2 ({ navigation }) {
         </View>
 
         <View style = {styles.enquirySpace}>
-        <View style = {styles.inputEnquiryBoxes}>
-            
-                <Text style = {styles.businessDescriptionStyles}> Business Description </Text>
-                <View style = {styles.line}></View>
+           <View style = {styles.inputEnquiryBoxes}>
+              <Text style = {styles.businessDescriptionStyles}> Business Description </Text>
+              <View style = {styles.line}></View>
 
-                <View style = {styles.details}>
-                <TextInput
+              <View style = {styles.details}>
+              <TextInput
                 style = {styles.detailsInput}
                 value= {enterDetails}
                 placeholder = 'Kindly provide details below'
                 onChangeText={setEnterDetails}>
-                </TextInput>
-                </View>
-
+              </TextInput>
+              </View>
             </View>
 
             <View style = {styles.businessDescriptionContainer}>
