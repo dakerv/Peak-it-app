@@ -168,10 +168,10 @@ export default function createProfile2 ({ navigation }) {
                 
                 </TextInput>
                 </View>
-            
             </View>
-            
         </View>
+
+        <ButtonComponent buttonName = 'Continue'/>
             
   
 
