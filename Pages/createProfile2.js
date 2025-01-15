@@ -171,8 +171,10 @@ export default function createProfile2 ({ navigation }) {
             </View>
         </View>
 
-        <ButtonComponent buttonName = 'Continue'/>
-            
+        <View style = {styles.buttonPlacement}>
+        <ButtonComponent 
+        buttonName = 'Continue'/>
+        </View>    
   
 
     </View>
@@ -190,7 +192,6 @@ const styles = StyleSheet.create({
         paddingLeft: 20,
         paddingRight: 20,
         flexDirection: "column",
-        height: '100%',
     },
     startingContainer: {
         backgroundColor: 'white',
@@ -280,7 +281,7 @@ const styles = StyleSheet.create({
     enquirySpace: {
         flexDirection: 'column',
         columnGap: 8,
-        height: 500,
+        height: 370,
     },
     inputEnquiryBoxes: {
         width: 340,
@@ -290,7 +291,7 @@ const styles = StyleSheet.create({
         marginBottom: 28,
         paddingHorizontal: 12,
         paddingVertical: 13,
-        flexDirection: 'column',
+        flexDirection: 'column', 
     },
     businessDescriptionStyles: {
         marginBottom: 4,
@@ -309,6 +310,11 @@ const styles = StyleSheet.create({
     details: {
         padding: 3, 
     },
+    buttonPlacement: {
+        height: 20,
+        backgroundColor: 'lightgrey',
+        bottom: '5%'
+    }
 
 
 
