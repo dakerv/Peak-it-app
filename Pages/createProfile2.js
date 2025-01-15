@@ -142,7 +142,7 @@ export default function createProfile2 ({ navigation }) {
 
         <View style = {styles.enquirySpace}>
         <View style = {styles.inputEnquiryBoxes}>
-            <View style = {styles.businessDescriptionContainer}>
+            
                 <Text style = {styles.businessDescriptionStyles}> Business Description </Text>
                 <View style = {styles.line}></View>
 
@@ -278,6 +278,12 @@ const styles = StyleSheet.create({
     },
     jpgAndPng: {
         color: 'grey'
+    },
+    enquirySpace: {
+        flexDirection: 'column',
+        columnGap: 8,
+        height: 400,
+        backgroundColor: 'orange'
     },
     inputEnquiryBoxes: {
         width: 340,
