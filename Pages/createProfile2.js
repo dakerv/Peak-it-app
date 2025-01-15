@@ -157,14 +157,14 @@ export default function createProfile2 ({ navigation }) {
             </View>
 
             <View style = {styles.businessDescriptionContainer}>
-                <Text style = {styles.businessDescriptionStyles}> Business Description </Text>
+                <Text style = {styles.businessDescriptionStyles}> Additional Info </Text>
                 <View style = {styles.line}></View>
 
                 <View style = {styles.details}>
                 <TextInput
                 style = {styles.detailsInput}
                 value= {enterDetails}
-                placeholder = 'Kindly provide details below'
+                placeholder = 'Please provide additional details if need be'
                 onChangeText={setEnterDetails}>
                 
                 </TextInput>
