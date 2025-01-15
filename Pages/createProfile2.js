@@ -155,7 +155,7 @@ export default function createProfile2 ({ navigation }) {
               </View>
             </View>
 
-            <View style = {styles.businessDescriptionContainer}>
+            <View style = {styles.inputEnquiryBoxes}>
                 <Text style = {styles.businessDescriptionStyles}> Additional Info </Text>
                 <View style = {styles.line}></View>
 
