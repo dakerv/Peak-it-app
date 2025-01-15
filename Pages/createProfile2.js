@@ -282,8 +282,7 @@ const styles = StyleSheet.create({
     enquirySpace: {
         flexDirection: 'column',
         columnGap: 8,
-        height: 400,
-        backgroundColor: 'blue'
+        height: 500,
     },
     inputEnquiryBoxes: {
         width: 340,
