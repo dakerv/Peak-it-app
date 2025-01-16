@@ -192,6 +192,7 @@ const styles = StyleSheet.create({
         paddingLeft: 20,
         paddingRight: 20,
         flexDirection: "column",
+        borderRadius: 25
     },
     startingContainer: {
         backgroundColor: 'white',
@@ -281,7 +282,7 @@ const styles = StyleSheet.create({
     enquirySpace: {
         flexDirection: 'column',
         columnGap: 8,
-        height: 370,
+        height: 400,
     },
     inputEnquiryBoxes: {
         width: 340,
@@ -313,9 +314,7 @@ const styles = StyleSheet.create({
     buttonPlacement: {
         height: 20,
         backgroundColor: 'lightgrey',
-        bottom: '5%'
+        bottom: '5%',
+        marginBottom: 20
     }
-
-
-
 })
