@@ -9,12 +9,12 @@ import * as ImagePicker from 'expo-image-picker'
 
 export default function SetAvailability ({ navigation }) {
     return (
-
+    <View></View>
     )
 }
 
 const styles = StyleSheet.create ({
-    container:
+    container:{
      flex: 1,
      backgroundColor: '#fff',
      paddingTop: 40,
@@ -22,5 +22,5 @@ const styles = StyleSheet.create ({
      paddingRight: 20,
      flexDirection: "column",
      backgroundColor: 'white',
-     height: '100%',
+     height: '100%',}
 })
