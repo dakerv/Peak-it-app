@@ -2,8 +2,6 @@ import react from 'react'
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 
 const ButtonComponent = props => {
-    
-    
     return(
          <TouchableOpacity onPress={props.function} 
         style = {styles.greenButton}> 

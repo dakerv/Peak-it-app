@@ -170,7 +170,8 @@ export default function CreateProfile2 ({ navigation }) {
 
         <View style = {styles.buttonPlacement}>
         <ButtonComponent 
-        buttonName = 'Continue'/>
+        buttonName = 'Continue'
+        function = {handleNavigation}/>
         </View>    
   
 
