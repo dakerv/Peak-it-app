@@ -6,6 +6,7 @@ import WarningContainer from '../components/WarningContainer';
 import TextInputs from '../components/TextInputs'; 
 import ButtonComponent from '../components/ButtonComponent';
 import * as ImagePicker from 'expo-image-picker'
+import DropDownPicker from 'react-native-dropdown-picker';
 
 export default function SetAvailability ({ navigation }) {
 
