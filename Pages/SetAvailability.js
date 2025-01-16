@@ -46,7 +46,17 @@ export default function SetAvailability ({ navigation }) {
       <SkipComponent function = {handlePress} />
 
       <View style = {styles.greenBackground}>
-        <View style = {styles.dropdownContainers}> </View>
+        <View style = {styles.dropdownContainers}>
+            <DropDownPicker
+            style = {styles.dropdownStyle}
+            open = {open}
+            value = {value}
+            items = {items}
+            setOpen={setOpen}
+            setValue={setValue}
+            setItems={setItems}
+            placeholder='Select a day'>
+            </DropDownPicker> </View>
       </View>
     </View>
     )
@@ -85,5 +95,6 @@ const styles = StyleSheet.create ({
         width: '100%',
         height: 40,
         backgroundColor: '#FFFFFF'
-    }
+    },
+    
 })
