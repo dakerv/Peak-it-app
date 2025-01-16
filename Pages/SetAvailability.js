@@ -20,7 +20,7 @@ export default function SetAvailability ({ navigation }) {
     }
 
     return (
-    <View>
+    <View style = {styles.container}>
         <SkipComponent />
     </View>
     )
@@ -28,12 +28,11 @@ export default function SetAvailability ({ navigation }) {
 
 const styles = StyleSheet.create ({
     container:{
-     flex: 1,
-     backgroundColor: '#fff',
-     paddingTop: 40,
-     paddingLeft: 20,
-     paddingRight: 20,
-     flexDirection: "column",
-     backgroundColor: 'white',
-     height: '100%',}
+        flex: 1,
+        backgroundColor: '#fff',
+        paddingTop: 40,
+        paddingLeft: 20,
+        paddingRight: 20,
+        flexDirection: "column"
+    }
 })
