@@ -21,7 +21,7 @@ export default function SetAvailability ({ navigation }) {
 
     return (
     <View style = {styles.container}>
-        <SkipComponent />
+      <SkipComponent function = {handlePress} />
     </View>
     )
 }

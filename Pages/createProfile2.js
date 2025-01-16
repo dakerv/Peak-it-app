@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, Image, KeyboardAvoidingView, Pressable, Platform, TouchableWithoutFeedback, Keyboard, ScrollView, TouchableOpacity, Touchable } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import WarningContainer from '../components/WarningContainer';
 import TextInputs from '../components/TextInputs'; 
 import ButtonComponent from '../components/ButtonComponent';
 import * as ImagePicker from 'expo-image-picker'
+import { StatusBar } from 'expo-status-bar';
 
 export default function CreateProfile2 ({ navigation }) {
 
@@ -73,9 +73,12 @@ export default function CreateProfile2 ({ navigation }) {
     <KeyboardAvoidingView
     behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
     style={{ flex: 1 }}>
+    <StatusBar 
+    backgroundColor="white" 
+    barStyle="dark-content" 
+    />
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
     <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-    <StatusBar backgroundColor="green" />
 
       <View style = {styles.startingContainer}> 
      <TouchableOpacity onPress={handlePress}>
@@ -187,8 +190,7 @@ export default function CreateProfile2 ({ navigation }) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#E0E0E0',
-        paddingTop: 40,
+        paddingTop: 10,
         paddingLeft: 20,
         paddingRight: 20,
         flexDirection: "column",
@@ -197,20 +199,23 @@ const styles = StyleSheet.create({
     startingContainer: {
         backgroundColor: 'white',
         width: '100%',
-        marginTop: 40,
+        marginTop: 30,
+        marginBottom: 30,
         paddingRight: 12,
         paddingLeft: 12,
     },
     createProfileText: {
         fontSize: 18,
         fontWeight: 'bold',
-        textAlign: 'center'
+        textAlign: 'center',
+        marginBottom: 12
     },
     textHighlightFeatures: {
       borderColor: 'green',
       borderWidth: 2,
     },
     skipText: {
+      marginTop: 5,
       fontSize: 18,
       color: "#228B22",
       fontWeight: 500,
