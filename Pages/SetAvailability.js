@@ -25,7 +25,10 @@ export default function SetAvailability ({ navigation }) {
       <View style = {styles.backspacePlacement}>
        <MaterialIcons
         name='keyboard-backspace'
-        size={22} />
+        size={22}
+        onPress={() => navigation.goBack()} />
+
+        <Text style = {styles.pageHeader}> Set Availability </Text>
       </View>
 
       <SkipComponent function = {handlePress} />
@@ -47,7 +50,16 @@ const styles = StyleSheet.create ({
         flexDirection: "column"
     },
     backspacePlacement: {
-        
+        top: '3%',
+        width: '100%',
+        flexDirection: 'row',
+        alignContent: 'center',
+    },
+    pageHeader: {
+        alignSelf: 'center',
+        fontWeight: 600,
+        fontSize: 18,
+        marginLeft: '26%'
     },
     greenBackground: {
 
