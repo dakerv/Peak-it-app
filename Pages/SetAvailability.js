@@ -19,9 +19,9 @@ export default function SetAvailability ({ navigation }) {
         navigation.navigate ('CreateProfile2')
     }
 
-    const [open, setOpen] = useState (false);
-    const [value, setValue] = useState (null);
-    const [days, setDays] = useState ([
+    const [fromOpen, setFromOpen] = useState (false);
+    const [fromValue, setFromValue] = useState (null);
+    const [fromDays, setFromDays] = useState ([
         {label: 'Monday', value: 'monday'},
         {label: 'Tuesday', value: 'tuesday'},
         {label: 'Wednesday', value: 'wednesday'},
@@ -30,6 +30,17 @@ export default function SetAvailability ({ navigation }) {
         {label: 'Saturday', value: 'saturday'},
         {label: 'Sunday', value: 'sunday'},        
     ]);
+    const [toOpen, setToOpen] = useState (false);
+    const [toValue, setToValue] = useState (null);
+    const [toDays, setToDays] = useState ([
+        {label: 'Monday', value: 'monday'},
+        {label: 'Tuesday', value: 'tuesday'},
+        {label: 'Wednesday', value: 'wednesday'},
+        {label: 'Thursday', value: 'thursday'},
+        {label: 'Friday', value: 'friday'},
+        {label: 'Saturday', value: 'saturday'},
+        {label: 'Sunday', value: 'sunday'},    
+    ])
 
     return (
     <View style = {styles.container}>
