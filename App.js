@@ -3,19 +3,19 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
 
-import welcomePage from './Pages/welcomePage';
-import profilePage from './Pages/profilePage';
-import servicePage from './Pages/servicePage';
-import availabilityPage from './Pages/availabilityPage';
-import orderPage from './Pages/orderPage';
-import startedPage from './Pages/startedPage';
-import signup from './Pages/signup';
-import enterPin from './Pages/enterPin';
-import loginPage from './Pages/loginPage';
-import forgotPassword from './Pages/forgotPassword';
-import confirmPin from './Pages/confirmPin';
-import createProfile from './Pages/createProfile';
-import createProfile2 from './Pages/createProfile2';
+import WelcomePage from './Pages/WelcomePage';
+import ProfilePage from './Pages/ProfilePage';
+import ServicePage from './Pages/ServicePage';
+import AvailabilityPage from './Pages/AvailabilityPage';
+import OrderPage from './Pages/OrderPage';
+import StartedPage from './Pages/StartedPage';
+import Signup from './Pages/Signup';
+import EnterPin from './Pages/EnterPin';
+import LoginPage from './Pages/LoginPage';
+import ForgotPassword from './Pages/ForgotPassword';
+import ConfirmPin from './Pages/ConfirmPin';
+import CreateProfile from './Pages/CreateProfile';
+import CreateProfile2 from './Pages/CreateProfile2';
 
 
 

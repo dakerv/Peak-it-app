@@ -10,7 +10,7 @@ import * as ImagePicker from 'expo-image-picker'
 
 
 
-export default function createProfile2 ({ navigation }) {
+export default function CreateProfile2 ({ navigation }) {
 
     const [storeImageUri, setStoreImageUri] = useState(null);
     const [coverImageUri, setCoverImageUri] = useState(null);
@@ -51,7 +51,7 @@ export default function createProfile2 ({ navigation }) {
         mediaTypes: 'images',
         allowsEditing: true,
         aspect: [1, 1],
-        quality: ,
+        quality: 1,
       });
       console.log('Cover Image Picker result:', result)
   

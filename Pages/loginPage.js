@@ -3,7 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, Image, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard, ScrollView, TouchableOpacity } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
-export default function loginPage ({ navigation }) {
+export default function LoginPage ({ navigation }) {
     const handleNavigation = () => {
     navigation.navigate ('forgotPassword');
     };
