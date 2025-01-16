@@ -21,7 +21,7 @@ export default function SetAvailability ({ navigation }) {
 
     const [open, setOpen] = useState (false);
     const [value, setValue] = useState (null);
-    const [items, setItems] = useState ([
+    const [days, setDays] = useState ([
         {label: 'Monday', value: 'monday'},
         {label: 'Tuesday', value: 'tuesday'},
         {label: 'Wednesday', value: 'wednesday'},
@@ -47,6 +47,22 @@ export default function SetAvailability ({ navigation }) {
 
       <View style = {styles.greenBackground}>
         <View style = {styles.dropdownContainers}>
+            <Text style = {styles.dropdownHeader}> From </Text>
+            <DropDownPicker
+            dropDownContainerStyle = {styles.dropdownOpened}
+            style = {styles.dropdownClosed}
+            open = {open}
+            value = {value}
+            days = {days}
+            setOpen={setOpen}
+            setValue={setValue}
+            setDays={setDays}
+            placeholder='Select a day'>
+            </DropDownPicker> 
+        </View>
+
+        <View style = {styles.dropdownContainers}>
+            <Text style = {styles.dropdownHeader}> To </Text>
             <DropDownPicker
             dropDownContainerStyle = {styles.dropdownOpened}
             style = {styles.dropdownClosed}
@@ -57,7 +73,8 @@ export default function SetAvailability ({ navigation }) {
             setValue={setValue}
             setItems={setItems}
             placeholder='Select a day'>
-            </DropDownPicker> </View>
+            </DropDownPicker> 
+        </View>
       </View>
     </View>
     )
@@ -90,15 +107,21 @@ const styles = StyleSheet.create ({
         top: '6%',
         backgroundColor: '#228B22',
         padding: 20,
-        flexDirection: 'column'
+        flexDirection: 'column',
+        gap: 55
     },
     dropdownContainers: {
         width: '100%',
-        height: 40,
-        backgroundColor: '#FFFFFF'
+        height: 14,
+        backgroundColor: '#FFFFFF',
+    },
+    dropdownHeader: {
+        color: '#787676'
     },
     dropdownClosed: {
-        borderWidth: 0
+        borderWidth: 0,
+        borderRadius: 0,
+        height: 20
     },
     dropdownOpened: {
         borderWidth: 0
