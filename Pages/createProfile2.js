@@ -199,7 +199,8 @@ const styles = StyleSheet.create({
         width: '100%',
         marginTop: 40,
         paddingRight: 12,
-        paddingLeft: 12
+        paddingLeft: 12,
+        borderRadius: 25
     },
     createProfileText: {
         fontSize: 18,
