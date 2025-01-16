@@ -62,6 +62,9 @@ const styles = StyleSheet.create ({
         marginLeft: '26%'
     },
     greenBackground: {
-
+        width: '100%',
+        height: 265,
+        top: '6%',
+        backgroundColor: '#228B22'
     }
 })
