@@ -144,6 +144,7 @@ export default function CreateProfile2 ({ navigation }) {
 
              
               <TextInput
+                multiline
                 style = {styles.detailsInput}
                 value= {enterDetails}
                 placeholder = 'Kindly provide details below'
@@ -158,9 +159,10 @@ export default function CreateProfile2 ({ navigation }) {
 
                 
                 <TextInput
+                multiline
+                placeholder = 'Please provide additional details if need be'
                 style = {styles.detailsInput}
                 value= {additionalDetails}
-                placeholder = 'Please provide additional details if need be'
                 onChangeText={setAdditionalDetails}>
                 
                 </TextInput>
@@ -306,6 +308,8 @@ const styles = StyleSheet.create({
         fontSize: 15,
         width: '100%',
         height: '100%',
+        textAlignVertical: 'top'
+      
     },
     buttonPlacement: {
         height: 20,
