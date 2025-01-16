@@ -20,7 +20,7 @@ export default function createProfile2 ({ navigation }) {
     useEffect(() => {
       (async () => {
         const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
-        if (status !== 'granted') {
+        if (status !== 'granted') {J
           alert('Enable camera access to upload image');
         }
       })();
@@ -51,7 +51,7 @@ export default function createProfile2 ({ navigation }) {
         mediaTypes: 'images',
         allowsEditing: true,
         aspect: [1, 1],
-        quality: 1,
+        quality: ,
       });
       console.log('Cover Image Picker result:', result)
   
@@ -78,7 +78,7 @@ export default function createProfile2 ({ navigation }) {
     style={{ flex: 1 }}>
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
     <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-    <StatusBar color= 'light' backgroundColor="green" />
+    <StatusBar backgroundColor="green" />
 
       <View style = {styles.startingContainer}> 
      <TouchableOpacity onPress={handlePress}>
@@ -145,21 +145,21 @@ export default function createProfile2 ({ navigation }) {
               <Text style = {styles.businessDescriptionStyles}> Business Description </Text>
               <View style = {styles.line}></View>
 
-              <View style = {styles.details}>
+             
               <TextInput
                 style = {styles.detailsInput}
                 value= {enterDetails}
                 placeholder = 'Kindly provide details below'
                 onChangeText={setEnterDetails}>
               </TextInput>
-              </View>
+            
             </View>
 
             <View style = {styles.inputEnquiryBoxes}>
                 <Text style = {styles.businessDescriptionStyles}> Additional Info </Text>
                 <View style = {styles.line}></View>
 
-                <View style = {styles.details}>
+                
                 <TextInput
                 style = {styles.detailsInput}
                 value= {additionalDetails}
@@ -167,7 +167,7 @@ export default function createProfile2 ({ navigation }) {
                 onChangeText={setAdditionalDetails}>
                 
                 </TextInput>
-                </View>
+              
             </View>
         </View>
 
@@ -307,10 +307,10 @@ const styles = StyleSheet.create({
     },
     detailsInput: {
         fontSize: 15,
+        width: '100%',
+        height: '100%',
     },
-    details: {
-        padding: 3, 
-    },
+
     buttonPlacement: {
         height: 20,
         backgroundColor: 'lightgrey',

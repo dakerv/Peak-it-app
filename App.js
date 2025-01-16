@@ -1,6 +1,7 @@
 import { React } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { StatusBar } from 'expo-status-bar';
 
 import welcomePage from './Pages/welcomePage';
 import profilePage from './Pages/profilePage';
@@ -15,6 +16,7 @@ import forgotPassword from './Pages/forgotPassword';
 import confirmPin from './Pages/confirmPin';
 import createProfile from './Pages/createProfile';
 import createProfile2 from './Pages/createProfile2';
+
 
 
 const Stack = createNativeStackNavigator ();
