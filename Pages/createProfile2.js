@@ -7,9 +7,6 @@ import TextInputs from '../components/TextInputs';
 import ButtonComponent from '../components/ButtonComponent';
 import * as ImagePicker from 'expo-image-picker'
 
-
-
-
 export default function CreateProfile2 ({ navigation }) {
 
     const [storeImageUri, setStoreImageUri] = useState(null);
@@ -65,11 +62,11 @@ export default function CreateProfile2 ({ navigation }) {
   
 
     const handleNavigation = () => {
-        navigation.navigate ('createProfile2')
+        navigation.navigate ('CreateProfile2')
     }
 
     const handlePress = () => {
-        navigation.navigate ('signup');
+        navigation.navigate ('Signup');
     };
 
     return (

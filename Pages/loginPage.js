@@ -5,11 +5,11 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 export default function LoginPage ({ navigation }) {
     const handleNavigation = () => {
-    navigation.navigate ('forgotPassword');
+    navigation.navigate ('ForgotPassword');
     };
 
     const handleSignUpNavigation = () => {
-        navigation.navigate ('signup')
+        navigation.navigate ('Signup')
     };
 
     const [texthighlight, setTextHighlight] = useState(null)

@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TouchableOpacity, Image, Button } from 'react-n
 
 export default function WelcomePage({ navigation }) {
   const handlePress = () => {
-    navigation.navigate ('signup');
+    navigation.navigate ('Signup');
   };
 
   const handleNavigation = () => {

@@ -7,11 +7,11 @@ export default function ForgotPassword ({ navigation }) {
     
     
     const handleNavigation = () => {
-        navigation.navigate ('confirmPin')
+        navigation.navigate ('ConfirmPin')
     }
 
     const handleSignUpNavigation = () => {
-        navigation.navigate ('loginPage')
+        navigation.navigate ('LoginPage')
     };
 
     const [email, onChangeEmail] = useState ()

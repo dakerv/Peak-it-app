@@ -9,11 +9,11 @@ import ButtonComponent from '../components/ButtonComponent';
 export default function CreateProfile ({ navigation }) {
     
     const handleNavigation = () => {
-        navigation.navigate ('createProfile2')
+        navigation.navigate ('CreateProfile2')
     }
 
     const handlePress = () => {
-        navigation.navigate ('signup');
+        navigation.navigate ('Signup');
     };
 
 

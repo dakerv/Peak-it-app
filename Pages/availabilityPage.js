@@ -3,11 +3,11 @@ import { StyleSheet, Text, View, TouchableOpacity, Image, Button } from 'react-n
 
 export default function AvailabilityPage( { navigation }) {
   const handlePress = () => {
-    navigation.navigate ('signup');
+    navigation.navigate ('Signup');
   };
 
   const handleNavigation = () => {
-    navigation.navigate ('orderPage');
+    navigation.navigate ('OrderPage');
   };
 
   return (

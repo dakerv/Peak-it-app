@@ -62,11 +62,11 @@ export default function Signup ({ navigation }) {
     
 
     const handleNavigation = () => {
-    navigation.navigate ('createProfile');
+    navigation.navigate ('CreateProfile');
     };
 
     const handleSignUpNavigation = () => {
-    navigation.navigate ('loginPage')
+    navigation.navigate ('LoginPage')
     };
 
 
