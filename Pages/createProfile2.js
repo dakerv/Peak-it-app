@@ -62,7 +62,7 @@ export default function CreateProfile2 ({ navigation }) {
   
 
     const handleNavigation = () => {
-        navigation.navigate ('CreateProfile2')
+        navigation.navigate ('SetAvailability')
     }
 
     const handlePress = () => {

@@ -16,6 +16,7 @@ import ForgotPassword from './Pages/ForgotPassword';
 import ConfirmPin from './Pages/ConfirmPin';
 import CreateProfile from './Pages/CreateProfile';
 import CreateProfile2 from './Pages/CreateProfile2';
+import SetAvailability from './Pages/SetAvailability';
 
 const Stack = createNativeStackNavigator ();
 
@@ -74,6 +75,10 @@ export default function App () {
         <Stack.Screen
         name='CreateProfile2'
         component={CreateProfile2} />
+
+        <Stack.Screen
+        name='SetAvailability'
+        component={SetAvailability} />
 
       </Stack.Navigator> 
     </NavigationContainer>
