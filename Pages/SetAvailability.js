@@ -19,6 +19,18 @@ export default function SetAvailability ({ navigation }) {
         navigation.navigate ('CreateProfile2')
     }
 
+    const [open, setOpen] = useState (false);
+    const [value, setValue] = useState (null);
+    const [items, setItems] = useState ([
+        {label: 'Monday', value: 'monday'},
+        {label: 'Tuesday', value: 'tuesday'},
+        {label: 'Wednesday', value: 'wednesday'},
+        {label: 'Thursday', value: 'thursday'},
+        {label: 'Friday', value: 'friday'},
+        {label: 'Saturday', value: 'saturday'},
+        {label: 'Sunday', value: 'sunday'},        
+    ]);
+
     return (
     <View style = {styles.container}>
 
@@ -34,7 +46,7 @@ export default function SetAvailability ({ navigation }) {
       <SkipComponent function = {handlePress} />
 
       <View style = {styles.greenBackground}>
-
+        <View style = {styles.dropdownContainers}> </View>
       </View>
     </View>
     )
@@ -65,6 +77,13 @@ const styles = StyleSheet.create ({
         width: '100%',
         height: 265,
         top: '6%',
-        backgroundColor: '#228B22'
+        backgroundColor: '#228B22',
+        padding: 20,
+        flexDirection: 'column'
+    },
+    dropdownContainers: {
+        width: '100%',
+        height: 40,
+        backgroundColor: '#FFFFFF'
     }
 })
