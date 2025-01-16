@@ -73,10 +73,7 @@ export default function CreateProfile2 ({ navigation }) {
     <KeyboardAvoidingView
     behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
     style={{ flex: 1 }}>
-    <StatusBar 
-    backgroundColor="white" 
-    barStyle="dark-content" 
-    />
+
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
     <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
 
