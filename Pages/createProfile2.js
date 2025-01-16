@@ -293,7 +293,6 @@ const styles = StyleSheet.create({
         flexDirection: 'column', 
     },
     businessDescriptionStyles: {
-        marginBottom: 4,
         fontSize: 18,
         fontWeight: 600,
         color: '#228B22',
@@ -306,12 +305,11 @@ const styles = StyleSheet.create({
     detailsInput: {
         fontSize: 15,
         width: '100%',
-        height: '100%',
+        height: 100,
     },
 
     buttonPlacement: {
         height: 20,
-        backgroundColor: 'lightgrey',
         bottom: '5%',
         marginBottom: 20
     }
