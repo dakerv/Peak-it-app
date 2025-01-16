@@ -8,6 +8,15 @@ import ButtonComponent from '../components/ButtonComponent';
 import * as ImagePicker from 'expo-image-picker'
 
 export default function SetAvailability ({ navigation }) {
+
+    const handleNavigation = () => {
+        navigation.navigate ('SetAvailability')
+    }
+
+    const handlePress = () => {
+        navigation.navigate ('CreateProfile2')
+    }
+
     return (
     <View></View>
     )
