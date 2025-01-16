@@ -17,66 +17,63 @@ import ConfirmPin from './Pages/ConfirmPin';
 import CreateProfile from './Pages/CreateProfile';
 import CreateProfile2 from './Pages/CreateProfile2';
 
-
-
-
 const Stack = createNativeStackNavigator ();
 
 export default function App () {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false}} intialRouteName = 'welcomePage'>
+      <Stack.Navigator screenOptions={{ headerShown: false}} intialRouteName = 'WelcomePage'>
         <Stack.Screen 
-          name="welcomePage" 
-          component={welcomePage}/>
+          name="WelcomePage" 
+          component={WelcomePage}/>
 
         <Stack.Screen
-          name="profilePage"
-          component={profilePage} />
+          name="ProfilePage"
+          component={ProfilePage} />
 
         <Stack.Screen
-          name="servicePage"
-          component={servicePage} />
+          name="ServicePage"
+          component={ServicePage} />
 
         <Stack.Screen
-          name="availabilityPage"
-          component={availabilityPage} />
+          name="AvailabilityPage"
+          component={AvailabilityPage} />
 
         <Stack.Screen
-          name="orderPage"
-          component={orderPage} />
-
-        <Stack.Screen 
-          name="startedPage"
-          component={startedPage} />
+          name="OrderPage"
+          component={OrderPage} />
 
         <Stack.Screen 
-          name="signup"
-          component={signup} />
+          name="StartedPage"
+          component={StartedPage} />
 
         <Stack.Screen 
-          name="enterPin"
-          component={enterPin} />
+          name="Signup"
+          component={Signup} />
+
+        <Stack.Screen 
+          name="EnterPin"
+          component={EnterPin} />
 
         <Stack.Screen
-        name="loginPage"
-        component={loginPage} />
+        name="LoginPage"
+        component={LoginPage} />
 
         <Stack.Screen
-        name='forgotPassword'
-        component={forgotPassword} />
+        name='ForgotPassword'
+        component={ForgotPassword} />
 
         <Stack.Screen
-        name='confirmPin'
-        component={confirmPin} />
+        name='ConfirmPin'
+        component={ConfirmPin} />
 
         <Stack.Screen
-        name='createProfile'
-        component={createProfile} />
+        name='CreateProfile'
+        component={CreateProfile} />
 
         <Stack.Screen
-        name='createProfile2'
-        component={createProfile2} />
+        name='CreateProfile2'
+        component={CreateProfile2} />
 
       </Stack.Navigator> 
     </NavigationContainer>
