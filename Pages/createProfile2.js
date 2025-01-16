@@ -78,7 +78,7 @@ export default function createProfile2 ({ navigation }) {
     style={{ flex: 1 }}>
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
     <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-    <StatusBar backgroundColor="green" />
+    <StatusBar color= 'light' backgroundColor="green" />
 
       <View style = {styles.startingContainer}> 
      <TouchableOpacity onPress={handlePress}>
@@ -187,7 +187,7 @@ export default function createProfile2 ({ navigation }) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'lightgrey',
+        backgroundColor: '#E0E0E0',
         paddingTop: 40,
         paddingLeft: 20,
         paddingRight: 20,
@@ -200,7 +200,6 @@ const styles = StyleSheet.create({
         marginTop: 40,
         paddingRight: 12,
         paddingLeft: 12,
-        borderRadius: 25
     },
     createProfileText: {
         fontSize: 18,
