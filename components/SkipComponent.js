@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native'
 
 const SkipComponent = props => {
     return (
-         <TouchableOpacity onPress={handlePress}>
+         <TouchableOpacity onPress={props.function}>
               <Text style = {styles.skipText}> Skip </Text>
              </TouchableOpacity>
     )
@@ -17,3 +17,5 @@ const styles = StyleSheet.create ({
     textAlign: 'right'
     },
 })
+
+export default SkipComponent;
