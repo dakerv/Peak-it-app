@@ -7,6 +7,7 @@ import TextInputs from '../components/TextInputs';
 import ButtonComponent from '../components/ButtonComponent';
 import * as ImagePicker from 'expo-image-picker'
 import DropDownPicker from 'react-native-dropdown-picker';
+import SkipComponent from '../components/SkipComponent';
 
 export default function SetAvailability ({ navigation }) {
 
@@ -19,7 +20,9 @@ export default function SetAvailability ({ navigation }) {
     }
 
     return (
-    <View></View>
+    <View>
+        <SkipComponent />
+    </View>
     )
 }
 
