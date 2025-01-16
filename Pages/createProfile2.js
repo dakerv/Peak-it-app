@@ -289,7 +289,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         marginBottom: 28,
         paddingHorizontal: 12,
-        paddingVertical: 13,
+        paddingVertical: 1,
         flexDirection: 'column', 
     },
     businessDescriptionStyles: {
@@ -307,7 +307,6 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 100,
     },
-
     buttonPlacement: {
         height: 20,
         bottom: '5%',
