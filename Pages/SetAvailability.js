@@ -21,7 +21,18 @@ export default function SetAvailability ({ navigation }) {
 
     return (
     <View style = {styles.container}>
+
+      <View style = {styles.backspacePlacement}>
+       <MaterialIcons
+        name='keyboard-backspace'
+        size={22} />
+      </View>
+
       <SkipComponent function = {handlePress} />
+
+      <View style = {styles.greenBackground}>
+
+      </View>
     </View>
     )
 }
@@ -34,5 +45,11 @@ const styles = StyleSheet.create ({
         paddingLeft: 20,
         paddingRight: 20,
         flexDirection: "column"
+    },
+    backspacePlacement: {
+        
+    },
+    greenBackground: {
+
     }
 })
