@@ -62,12 +62,12 @@ export default function SetAvailability ({ navigation }) {
             <DropDownPicker
             dropDownContainerStyle = {styles.dropdownOpened}
             style = {styles.dropdownClosed}
-            fromOpen = {fromOpen}
-            fromValue = {fromValue}
-            fromDays = {fromDays}
-            setFromOpen={setFromOpen}
-            setFromValue={setFromValue}
-            setFromDays={setFromDays}
+            open = {fromOpen}
+            value = {fromValue}
+            items = {fromDays}
+            setOpen={setFromOpen}
+            setValue={setFromValue}
+            setItems={setFromDays}
             placeholder='Select a day'>
             </DropDownPicker> 
         </View>
@@ -77,12 +77,12 @@ export default function SetAvailability ({ navigation }) {
             <DropDownPicker
             dropDownContainerStyle = {styles.dropdownOpened}
             style = {styles.dropdownClosed}
-            toOpen = {toOpen}
-            toValue = {toValue}
-            toDays = {toDays}
-            setToOpen={setToOpen}
-            setToValue={setToValue}
-            setToDays={setToDays}
+            open = {toOpen}
+            value = {toValue}
+            items = {toDays}
+            setOpen={setToOpen}
+            setValue={setToValue}
+            setItems={setToDays}
             placeholder='Select a day'>
             </DropDownPicker> 
         </View>
