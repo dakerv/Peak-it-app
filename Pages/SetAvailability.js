@@ -19,6 +19,20 @@ export default function SetAvailability ({ navigation }) {
         navigation.navigate ('CreateProfile2')
     }
 
+    const closeFromOpen = (open) => {
+        setFromOpen (open);
+        if (open) {
+            setToOpen (false);
+        }
+    }
+
+    const closeToOpen = (open) => {
+        setToOpen (open);
+        if (open) {
+            setFromOpen (false);
+        }
+    }
+
     const [fromOpen, setFromOpen] = useState (false);
     const [fromValue, setFromValue] = useState (null);
     const [fromDays, setFromDays] = useState ([
@@ -65,7 +79,7 @@ export default function SetAvailability ({ navigation }) {
             open = {fromOpen}
             value = {fromValue}
             items = {fromDays}
-            setOpen={setFromOpen}
+            setOpen={closeFromOpen}
             setValue={setFromValue}
             setItems={setFromDays}
             placeholder='Select a day'>
@@ -80,7 +94,7 @@ export default function SetAvailability ({ navigation }) {
             open = {toOpen}
             value = {toValue}
             items = {toDays}
-            setOpen={setToOpen}
+            setOpen={closeToOpen}
             setValue={setToValue}
             setItems={setToDays}
             placeholder='Select a day'>
