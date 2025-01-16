@@ -71,7 +71,7 @@ export default function SetAvailability ({ navigation }) {
       <SkipComponent function = {handlePress} />
 
       <View style = {styles.greenBackground}>
-        <View style = {styles.dropdownContainers}>
+        <View style = {[styles.dropdownContainers, fromOpen ? {zIndex: 2} : null]}>
             <Text style = {styles.dropdownHeader}> From </Text>
             <DropDownPicker
             dropDownContainerStyle = {styles.dropdownOpened}
@@ -86,7 +86,7 @@ export default function SetAvailability ({ navigation }) {
             </DropDownPicker> 
         </View>
 
-        <View style = {styles.dropdownContainers}>
+        <View style = {[styles.dropdownContainers, toOpen ? {zIndex: 2} : null]}>
             <Text style = {styles.dropdownHeader}> To </Text>
             <DropDownPicker
             dropDownContainerStyle = {styles.dropdownOpened}
@@ -133,12 +133,15 @@ const styles = StyleSheet.create ({
         backgroundColor: '#228B22',
         padding: 20,
         flexDirection: 'column',
-        gap: 55
+        gap: 55,
+        position: 'relative'
     },
     dropdownContainers: {
         width: '100%',
         height: 14,
         backgroundColor: '#FFFFFF',
+        position: 'relative',
+        marginBottom: 5
     },
     dropdownHeader: {
         color: '#787676'
@@ -146,10 +149,10 @@ const styles = StyleSheet.create ({
     dropdownClosed: {
         borderWidth: 0,
         borderRadius: 0,
-        height: 20
     },
     dropdownOpened: {
-        borderWidth: 0
+        borderWidth: 0,
+        zIndex: 1,
     }
 
 })
