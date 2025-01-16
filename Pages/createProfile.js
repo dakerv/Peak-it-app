@@ -4,9 +4,9 @@ import { StyleSheet, Text, View, TextInput, Image, KeyboardAvoidingView, Platfor
 import { MaterialIcons } from '@expo/vector-icons';
 import WarningContainer from '../components/WarningContainer';
 import TextInputs from '../components/TextInputs'; 
-import ButtonComponent from '../components/buttonComponent';
+import ButtonComponent from '../components/ButtonComponent';
 
-export default function createProfile ({ navigation }) {
+export default function CreateProfile ({ navigation }) {
     
     const handleNavigation = () => {
         navigation.navigate ('createProfile2')

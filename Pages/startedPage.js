@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity, Image, Button } from 'react-native';
 
-export default function startedPage( { navigation }) {
+export default function StartedPage( { navigation }) {
   const handlePress = () => {
     navigation.navigate ('signup');
   };

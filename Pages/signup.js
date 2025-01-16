@@ -3,7 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, Image, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard, ScrollView, TouchableOpacity, Alert } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
-export default function signup ({ navigation }) {
+export default function Signup ({ navigation }) {
 
     const [name, onChangeName] = useState();
     const [email, onChangeEmail] = useState();
