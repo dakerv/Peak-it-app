@@ -48,7 +48,8 @@ export default function SetAvailability ({ navigation }) {
       <View style = {styles.greenBackground}>
         <View style = {styles.dropdownContainers}>
             <DropDownPicker
-            style = {styles.dropdownStyle}
+            dropDownContainerStyle = {styles.dropdownOpened}
+            style = {styles.dropdownClosed}
             open = {open}
             value = {value}
             items = {items}
@@ -96,5 +97,11 @@ const styles = StyleSheet.create ({
         height: 40,
         backgroundColor: '#FFFFFF'
     },
-    
+    dropdownClosed: {
+        borderWidth: 0
+    },
+    dropdownOpened: {
+        borderWidth: 0
+    }
+
 })
