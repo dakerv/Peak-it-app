@@ -79,10 +79,10 @@ export default function SetAvailability ({ navigation }) {
             style = {styles.dropdownClosed}
             toOpen = {toOpen}
             toValue = {toValue}
-            toItems = {toItems}
+            toDays = {toDays}
             setToOpen={setToOpen}
             setToValue={setToValue}
-            setToItems={setToItems}
+            setToDays={setToDays}
             placeholder='Select a day'>
             </DropDownPicker> 
         </View>
