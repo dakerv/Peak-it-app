@@ -7,7 +7,7 @@ export default function WelcomePage({ navigation }) {
   };
 
   const handleNavigation = () => {
-    navigation.navigate ('profilePage');
+    navigation.navigate ('ProfilePage');
   };
 
   return (

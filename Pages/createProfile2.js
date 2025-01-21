@@ -246,7 +246,9 @@ const styles = StyleSheet.create({
     },
     textStyles: {
         fontSize: 10,
-        textAlign: 'center'
+        textAlign: 'center',
+        padding: 5,
+        fontWeight: 'bold'
     },
     textboxesStyles: {
         marginHorizontal: 5
