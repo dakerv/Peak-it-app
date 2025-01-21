@@ -6,7 +6,6 @@ import TextInputs from '../components/TextInputs';
 import ButtonComponent from '../components/ButtonComponent';
 import * as ImagePicker from 'expo-image-picker'
 import { StatusBar } from 'expo-status-bar';
-import PreviousnHeader from '../components/PreviousnHeader'
 
 export default function CreateProfile2 ({ navigation }) {
 
@@ -79,8 +78,10 @@ export default function CreateProfile2 ({ navigation }) {
     <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
 
       <View style = {styles.startingContainer}> 
-     <PreviousnHeader
-     pageHeader = 'Create Profile' />
+     <TouchableOpacity onPress={handlePress}>
+      <Text style = {styles.skipText}> Skip </Text>
+     </TouchableOpacity>
+      <Text style = {styles.createProfileText}> Create Profile </Text>
     </View>
 
         <View style={styles.container}>

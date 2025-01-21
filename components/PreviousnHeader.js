@@ -1,8 +1,14 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import SkipComponent from "./SkipComponent";
+import { MaterialIcons } from '@expo/vector-icons'
 
 const PreviousnHeader = props => {
+
+    const handlePress = () => {
+        navigation.navigate ('Signup');
+    };
+    
     return (
         <View style = {styles.container}>
 
@@ -15,7 +21,7 @@ const PreviousnHeader = props => {
           <Text style = {styles.pageHeader}> {props.pageHeading} </Text>
         </View>
   
-        <SkipComponent />
+        
 
   
         </View>
